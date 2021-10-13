@@ -1,4 +1,4 @@
-svg.material-icons {
+  svg.material-icons {
     height: 24px;
     width: auto;
   }
@@ -226,12 +226,15 @@ svg.material-icons {
 
   .boardImage {
       width:100%;
+      margin-bottom: 10px;
   }
 
   .boardPosition{
      font-size: 12px;
      line-height: 1.8em;
      text-align: center;
+     font-family: Raleway;
+     font-weight: 500;
   }
 
   .boardName {
@@ -239,6 +242,8 @@ svg.material-icons {
       text-align: center;
       font-size: 15px;
       line-height: 1.6em;
+      font-family: Raleway;
+      font-weight: 500;
   }
  
 
