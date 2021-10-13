@@ -244,11 +244,11 @@ svg.material-icons {
 
   .header {
     height: 400px;
-    width: 100vw;
+    width: 100%;
     margin-bottom: 20px;
     background: black;
     overflow: hidden;
     background: lightskyblue; 
-    background: -webkit-linear-gradient(20deg, #fdf86db0 0%, #5fb5eeb0 75%), url("https://scontent-lga3-2.xx.fbcdn.net/v/t1.6435-9/84383254_2748301828595407_4449252060394684416_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=e3f864&_nc_ohc=mcBEGDtLIggAX8G-nT-&_nc_ht=scontent-lga3-2.xx&oh=e89848ac1632b26e252b8bf5923b48cb&oe=618D9182");
-    background: linear-gradient(20deg, #fdf86db0 0%, #5fb5eeb0 75%), url("https://scontent-lga3-2.xx.fbcdn.net/v/t1.6435-9/84383254_2748301828595407_4449252060394684416_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=e3f864&_nc_ohc=mcBEGDtLIggAX8G-nT-&_nc_ht=scontent-lga3-2.xx&oh=e89848ac1632b26e252b8bf5923b48cb&oe=618D9182"); /* The least supported option. */
+    background: -webkit-linear-gradient(20deg, #fdf86dd0 0%, #5fb5eed0 75%), url("../../assets/background.png");
+    background: linear-gradient(20deg, #fdf86dd0 0%, #5fb5eed0 75%), url("../../assets/background.png"); /* The least supported option. */
 }

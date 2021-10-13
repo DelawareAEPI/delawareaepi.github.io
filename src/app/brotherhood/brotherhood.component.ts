@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BrotherhoodComponent implements OnInit {
 
+  events: string[] = ["DC Trip", "Philly Trip","Barbecues","Formal","Paintball","Movie Trips","Bowling","Intramural Sports","Much More!"];
+  
   constructor() { }
 
   ngOnInit(): void {
