@@ -4,3 +4,9 @@ p {
     font-size: 14pt;
 }
 
+img {
+    flex: 1;
+    height: 100%;
+    object-fit: contain;
+    max-width: -webkit-fill-available;
+  }

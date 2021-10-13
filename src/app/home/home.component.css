@@ -250,10 +250,17 @@
   .header {
     height: 400px;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     background: black;
     overflow: hidden;
     background: lightskyblue; 
     background: -webkit-linear-gradient(20deg, #fdf86dd0 0%, #5fb5eed0 75%), url("../../assets/background.png");
     background: linear-gradient(20deg, #fdf86dd0 0%, #5fb5eed0 75%), url("../../assets/background.png"); /* The least supported option. */
+}
+
+.aboutImg {
+  flex: 1;
+  max-height: 350px;
+  height: auto;
+  max-width: -webkit-fill-available;
 }

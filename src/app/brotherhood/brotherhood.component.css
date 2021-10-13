@@ -3,12 +3,15 @@ h1 {
     font-size: 36pt;
     margin-top: 10%;
     margin-bottom: 5%;
-
+    font-family: Oswald;
+    font-weight: 200;
 }
 
 p {
     color: white;
     font-size: 14pt;
+    font-family: Raleway;
+    font-weight: 300;
 }
 
 p.event{
@@ -18,8 +21,9 @@ p.event{
 
 .imagecontainer {
     position: relative;
-    width: 40%;
-    margin: 15px;
+    width: 30%;
+    margin: 10px;
+    align-self: center;
   }
   
   .image {
