@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
+    
     title = 'aepi';
     pages=['home', 'rush', 'brotherhood', 'academic', 'contact', 'newsletter'];
 
