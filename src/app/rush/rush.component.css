@@ -99,6 +99,24 @@ img {
     background: -moz-linear-gradient(45deg, #FFD700, #5fb5ee);
     background: linear-gradient(45deg, #FFD700, #5fb5ee);
   }
+
+  .focus-input2.no-validate::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+  
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+  
+    background: rgb(236, 25, 25);
+  }
+  
   
   .focus-input2::after {
     content: attr(data-placeholder);
