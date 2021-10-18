@@ -11,10 +11,15 @@ import { BoardService } from '../services/board.service';
 export class HomeComponent implements OnInit {
 
     board: { name: string, position: string, image:string }[] = [];
-
+    isMobile: boolean;
+    
     constructor(private boardService: BoardService) { }
 
     ngOnInit(): void {
+
+        if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+            this.isMobile = true;
+        }
 
         this.boardService.getBoard().then((snapshot: any)=>{
             let data = snapshot.val();

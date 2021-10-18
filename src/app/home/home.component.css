@@ -225,7 +225,7 @@
   }
 
   .boardImage {
-      width:100%;
+      width:fit-content;
       margin-bottom: 10px;
   }
 

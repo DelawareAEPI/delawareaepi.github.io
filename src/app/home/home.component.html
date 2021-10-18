@@ -58,9 +58,9 @@
 
     <div class="row">  
 
-        <div class="col-4"></div>
+        <div class="col-4" [style.display]="isMobile == true ? 'none' : 'block'"></div>
 
-        <div class="col-8">
+        <div class="col">
             <h1 style="font-size:30pt; font-family: Raleway; font-weight: 300;"> ABOUT US </h1>
         </div>
 
@@ -68,11 +68,11 @@
 
     <div class="row">
 
-        <div class="col-4" align="center">
+        <div class="col-4" align="center" [style.display]="isMobile == true ? 'none' : 'block'">
             <img class="rounded-circle aboutImg" src="assets/image.jpg">
         </div>
 
-        <div class="col-8" style="width:75%;">
+        <div class="col" style="width:75%;">
             <p>"The Rho Deuteron chapter of Alpha Epsilon Pi is a quickly growing and award winning fraternity where we emphasize academic success, philanthropy opportunities, campus engagement, incredible social experiences and more for all our Brothers. Originally founded in 1947 and re-chartered in 2017, we’ve initiated over 1000 Brothers over the years and we’ll continue to provide a great brotherhood experience to many more in the years to come.</p>
             <p>AEPi stresses all aspects of fraternity life from academics to philanthropy and Jewish student life to socials and athletics. We consider academic excellence to be central to college life and continue to expand on a legacy of success in and out of college. Furthermore, nearly all of our Brothers partake in additional student organizations including Jewish student groups, intramurals, major-specific organizations, pre-professional student groups, political advocacy groups and more. Our men continue to prove themselves as community leaders and strive to be the best at whatever they do.</p>
             <p>Our chapter hosts amazing programming as well. Each year, our Brothers go on trips to local cities like Philadelphia and Washington DC with our biggest trip of the year being our Formal Weekend in Ocean City, Maryland every May. Our intramural teams include football, basketball, soccer and even wiffle ball, in which we won the championship! Our Brothers can enjoy a calendar packed with brotherhood events, social events, philanthropy opportunities, Jewish programs and so much more.</p>
@@ -96,7 +96,7 @@
 
     <div class="row">
 
-        <div *ngFor="let member of board" class="col">
+        <div *ngFor="let member of board" class="col" align="center">
             <img class="boardImage" src="{{member.image}}">
             <p class="boardName">{{member.name}}</p>
             <p class="boardPosition">{{member.position}}</p>    

@@ -14,10 +14,14 @@ export class RushComponent implements OnInit {
     name: string;
     phone: string;
 
+    isMobile: boolean = false;
+
     constructor() { }
 
     ngOnInit(): void {
-
+        if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+            this.isMobile = true;
+        }
     }
 
     isEmailValid(valid: boolean){
