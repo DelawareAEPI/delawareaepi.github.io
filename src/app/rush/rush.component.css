@@ -11,38 +11,8 @@ img {
     max-width: -webkit-fill-available;
   }
 
-
   
- 
-  input {
-      outline: none;
-      border: none;
-  }
-  
-  textarea {
-    outline: none;
-    border: none;
-  }
-  
-  textarea:focus, input:focus {
-    border-color: transparent !important;
-  }
-  
-  
-  
-  button {
-      outline: none !important;
-      border: none;
-      background: transparent;
-  }
-  
-  button:hover {
-      cursor: pointer;
-  }
-  
-
-  
-  .contact2-form-title {
+  .rush-form-title {
     display: block;
     font-family: Raleway;
     font-size: 20px;
@@ -51,142 +21,20 @@ img {
     text-align: left;
     padding-bottom: 30px;
   }
-  
-  
-  .wrap-input2 {
-    position: relative;
-    border-bottom: 2px solid #adadad;
-  }
-  
-  .input2 {
-    display: block;
-    width: 100%;
-    
-    font-family: Raleway;
-    font-size: 15px;
-    color: #555555;
-    line-height: 1.2;
 
-  }
-  
-  .focus-input2 {
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 15;
-    pointer-events: none;
-  }
-  
-  .focus-input2::before {
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-  
-    -webkit-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    -moz-transition: all 0.4s;
-    transition: all 0.4s;
-  
-    background: rgb(25, 152, 236);
-    background: -webkit-linear-gradient(20deg, #FFD700, #5fb5ee);
-    background: -o-linear-gradient(45deg, #FFD700, #5fb5ee);
-    background: -moz-linear-gradient(45deg, #FFD700, #5fb5ee);
-    background: linear-gradient(45deg, #FFD700, #5fb5ee);
+  /* [ Button ]  */
+
+  button {
+    outline: none !important;
+    border: none;
+    background: transparent;
   }
 
-  .focus-input2.no-validate::before {
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-  
-    -webkit-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    -moz-transition: all 0.4s;
-    transition: all 0.4s;
-  
-    background: rgb(236, 25, 25);
-  }
-  
-  
-  .focus-input2::after {
-    content: attr(data-placeholder);
-    display: block;
-    width: 100%;
-    position: absolute;
-    top: 0px;
-    left: 0;
-  
-    font-family: Raleway;
-    font-size: 13px;
-    color: #999999;
-    line-height: 1.2;
-  
-    -webkit-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    -moz-transition: all 0.4s;
-    transition: all 0.4s;
-  }
-  
-  
-  input.input2 {
-    height: 45px;
-  }
-  
-  input.input2 + .focus-input2::after {
-    top: 16px;
-    left: 0;
-  }
-  
-  textarea.input2 {
-    min-height: 115px;
-    padding-top: 13px;
-    padding-bottom: 13px;
-  }
-  
-  textarea.input2 + .focus-input2::after {
-    top: 16px;
-    left: 0;
-  }
-  
-  .input2:focus + .focus-input2::after {
-    top: -13px;
-  }
-  
-  .input2:focus + .focus-input2::before {
-    width: 100%;
-  }
-  
-  .has-val.input2 + .focus-input2::after {
-    top: -13px;
-  }
-  
-  .has-val.input2 + .focus-input2::before {
-    width: 100%;
-  }
-  
-  /*------------------------------------------------------------------
-  [ Button ]*/
-  .container-contact2-form-btn {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  button:hover {
+      cursor: pointer;
   }
 
-  .wrap-contact2-form-btn {
+  .wrap-btn {
     display: block;
     position: relative;
     z-index: 1;
@@ -196,7 +44,7 @@ img {
     margin: 0 auto;
   }
   
-  .contact2-form-bgbtn {
+  .bgbtn {
     position: absolute;
     z-index: -1;
     width: 300%;
@@ -214,7 +62,7 @@ img {
     transition: all .4s;
   }
   
-  .contact2-form-btn {
+  .btn {
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -232,6 +80,6 @@ img {
 
   }
   
-  .wrap-contact2-form-btn:hover .contact2-form-bgbtn {
+  .wrap-btn:hover .bgbtn {
     left: 0;
   }
