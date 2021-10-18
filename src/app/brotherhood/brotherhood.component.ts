@@ -12,6 +12,7 @@ export class BrotherhoodComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }
