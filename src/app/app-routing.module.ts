@@ -8,23 +8,23 @@ import { RushComponent } from './rush/rush.component';
 
 const routes: Routes = [
   {
-    path:'#/home',
+    path:'home',
     component:HomeComponent
   },
   {
-    path:'#/brotherhood',
+    path:'brotherhood',
     component:BrotherhoodComponent
   },
   {
-    path:'#rush',
+    path:'rush',
     component:RushComponent
   },
   {
-    path:'#/contact',
+    path:'contact',
     component:ContactComponent
   },
   {
-    path:'#/academic',
+    path:'academic',
     component:AcademicComponent
   }
 ];
