@@ -7,7 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 //import { AngularFireDatabase } from '@angular/fire/compat/database';
 
 import { FormsModule } from '@angular/forms';
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+//import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -37,7 +37,7 @@ import { ContactComponent } from './contact/contact.component';
     FormsModule
     //AngularFireModule.initializeApp(environment.firebaseConfig),
   ],
-  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
