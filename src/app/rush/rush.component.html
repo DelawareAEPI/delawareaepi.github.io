@@ -68,18 +68,18 @@
     </div>
     <!-- end desktop view -->
 
-    
+
 
     <!-- different layout for mobile -->
-    <div class="row" [style.display]="isMobile == false ? 'none' : 'flex'" style="margin-bottom: 30px; justify-content: center;">
+    <div class="row" [style.display]="isMobile == false ? 'none' : 'flex'" style="justify-content: center;">
             <app-custom-input class="mobile" [(inputModel)]="name" [type]="'name'"></app-custom-input>
     </div>
     
-    <div class="row" [style.display]="isMobile == false ? 'none' : 'flex'" style="margin-bottom: 30px; justify-content: center;">
+    <div class="row" [style.display]="isMobile == false ? 'none' : 'flex'" style="justify-content: center;">
             <app-custom-input class="mobile" [(inputModel)]="email" [type]="'email'"></app-custom-input>
     </div>
 
-    <div class="row" [style.display]="isMobile == false ? 'none' : 'flex'" style="margin-bottom: 30px; justify-content: center;">
+    <div class="row" [style.display]="isMobile == false ? 'none' : 'flex'" style="justify-content: center;">
             <app-custom-input class="mobile" [(inputModel)]="phone" [type]="'phone'"></app-custom-input>
     </div>
 

@@ -1,0 +1,44 @@
+<div style="background-color: #1663be; padding-bottom: 10%;">
+    <div class="container-fluid" style="background-color:#1663be; margin-bottom: 30px; padding: 5% 15% 0; width: 60%;" [style.padding] = "isMobile == true ? '5% 0' : '5% 15%'">
+
+        <h1> Contact Information </h1>
+
+        <div class="row">
+
+            <div *ngFor="let member of contacts" class="col" align="center">
+                <img class="contactImage" src="{{member.image}}">
+                <p class="contactName">{{member.name}}</p>
+                <p class="contactPosition">{{member.position}}</p>   
+                <p class="contactPosition">{{member.phone}}</p>    
+            </div>
+
+        </div>
+        
+    </div>
+    
+    <h3> Email Us: aepirhodeuteron@gmail.com </h3>
+
+    <div class="wrap-contact2" [style.width]="isMobile == true ? '100%' : '790px'">
+        <form class="contact2-form validate-form">
+        
+            <span class="contact2-form-title"> Contact Us </span>
+            
+            <app-custom-input class=""  [type]="'name'"></app-custom-input>
+
+            <app-custom-input class=""  [type]="'email'"> </app-custom-input>
+
+            <div class='wrap-input2'>
+                <textarea class="input2" type="text"></textarea>
+                <span class="focus-input2" data-placeholder="MESSAGE"></span>
+            </div>
+        
+
+            <div class="wrap-btn">
+                <div class="bgbtn"></div>
+                <button class="btn">Submit</button>
+            </div>
+
+        </form>
+    </div>
+
+</div>

@@ -1,0 +1,16 @@
+h1 {
+    width: 100%;
+    color: #1663be;
+    font-size: 36pt;
+    font-family: Oswald;
+    font-weight: 200;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+p {
+    color: black;
+    font-size: 14pt;
+    font-family: Raleway;
+    font-weight: 300;
+}

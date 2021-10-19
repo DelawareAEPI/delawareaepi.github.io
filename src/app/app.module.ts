@@ -14,6 +14,9 @@ import { HomeComponent } from './home/home.component';
 import { BrotherhoodComponent } from './brotherhood/brotherhood.component';
 import { RushComponent } from './rush/rush.component';
 import { CustomInputComponent } from './custom-input/custom-input.component';
+import { AcademicComponent } from './academic/academic.component';
+import { NewsletterComponent } from './newsletter/newsletter.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { CustomInputComponent } from './custom-input/custom-input.component';
     HomeComponent,
     BrotherhoodComponent,
     RushComponent,
-    CustomInputComponent
+    CustomInputComponent,
+    AcademicComponent,
+    NewsletterComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule, 
