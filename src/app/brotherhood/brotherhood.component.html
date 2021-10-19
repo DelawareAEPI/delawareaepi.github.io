@@ -41,70 +41,24 @@
 
 <div class="container-fluid" style="background-color:#1663be; margin-bottom: 50px; padding: 0 15%">
 
-    <div class="row">
-
-        <div class="col-6">
-            <div class="row" align="center">
-
-                <div class="imagecontainer">
-                    <img class="image" src="assets/image.jpg">
-                    <div class="overlay">
-                        <div class="text">Hello World</div>
-                    </div>
-                </div>
-
-                <div class="imagecontainer">
-                    <img class="image" src="assets/image.jpg">
-                    <div class="overlay">
-                        <div class="text">Hello World</div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="row" align="center">
-
-                <div class="imagecontainer">
-                    <img class="image" src="assets/image.jpg">
-                    <div class="overlay">
-                        <div class="text">Hello World</div>
-                    </div>
-                </div>
-
-                <div class="imagecontainer">
-                    <img class="image" src="assets/image.jpg">
-                    <div class="overlay">
-                        <div class="text">Hello World</div>
-                    </div>
-                </div>
-                
-            </div>
-
-            <div class="row" align="center">
-
-                <div class="imagecontainer">
-                    <img class="image" src="assets/image.jpg">
-                    <div class="overlay">
-                        <div class="text">Hello World</div>
-                    </div>
-                </div>
-
-                <div class="imagecontainer">
-                    <img class="image" src="assets/image.jpg">
-                    <div class="overlay">
-                        <div class="text">Hello World</div>
-                    </div>
-                </div>
-                
-            </div>
-            
-        </div>
-
-        <div class="col-6" align="center">
+    <div class="row" style="margin-bottom: 5%;">
+        <div class="col-12" align="center">
             <h1> BROTHERHOOD </h1>
             <p> Our strong brotherhood is the single greatest reason many of our Brothers joined AEPi originally and why they continue to love their time in our chapter. Delaware AEPi’s close brotherhood is a testament to the strong bonds we have with one another and this connection comes in many forms. Together we live, learn, grow, play sports, travel, hang out and so much more. Below are just a few highlights of some of our favorite brotherhood events. </p>
             <div *ngFor="let event of events"> <p class="event">{{event}}</p> </div>
         </div>
+    </div>
+
+    <div class="row" align="center">
+
+        <div *ngFor="let event of eventImages" class="imagecontainer">
+            <img class="image" src="{{event.imageLink}}">
+            <div class="overlay">
+                <div class="text">{{event.eventName}}</div>
+                <div class="innerText">{{event.eventDesc}}</div>
+            </div>
+        </div>
+
     </div>
 
 </div>
