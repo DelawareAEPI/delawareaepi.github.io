@@ -45,4 +45,34 @@
     align-items: center;
   }
 
+  .footer-inner {
+    padding: 64px 32px;
+    background-color: #1f1f1f;
+    color: rgba(255,255,255,.4);
+  }
+
+  .prefooter{
+    background-color: #333;
+    height:100px;
+  }
+
+
+  .circle-link {
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    margin-top: 30px;
+    background-color: white;
+    border: 1px solid #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: 1s ease-out;
+  }
+
+  .circle-link:hover {
+    transform: translateY(-0.25rem);
+  }
   
