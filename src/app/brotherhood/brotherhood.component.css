@@ -65,3 +65,40 @@ p.event{
     transform: translate(-50%, -50%);
     text-align: center;
   }
+
+  .brotherhood {
+    background-color:var(--light-blue); 
+    margin-bottom: 50px;
+    padding: 0 15%
+  }
+
+  /*
+  .header {
+    height: 300px;
+    width: 100%;
+    background: black;
+    overflow: hidden;
+  }
+
+  .color-overlay {
+    position: absolute;
+    background-color: rgba(0,0,0,.3);
+    height: 300px;
+    width: -webkit-fill-available;
+  }
+  */
+  
+  
+.header {
+  height: 300px;
+  width: 100%;
+  background: black;
+  overflow: hidden;
+  background: var(--light-blue); 
+  background: -webkit-linear-gradient(20deg, #000000aa 0%, #ffffffaa 70%), url("../../assets/background.png");
+  background: linear-gradient(20deg, #0000004d 0%, #0000004d 70%), url("../../assets/group_19-20_crop.jpg"); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  animation: feature-bg-anim .6s ease-in-out;
+}

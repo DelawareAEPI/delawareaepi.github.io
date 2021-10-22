@@ -38,8 +38,16 @@
 
 </div> -->
 
+<!--
+<div class="container-fluid header">
+    <div class="color-overlay"></div>
+    <img class="img-fluid" style="min-height: 300px;" src="assets/group_19-20_cropped.jpg">
+</div>
+-->
 
-<div class="container-fluid" style="background-color:#1663be; margin-bottom: 50px; padding: 0 15%">
+<div class="container-fluid header"></div>
+
+<div class="container-fluid brotherhood" style="">
 
     <div class="row" style="margin-bottom: 5%;">
         <div class="col-12" align="center">
@@ -49,8 +57,12 @@
         </div>
     </div>
 
-    <div class="row" align="center">
+</div>
 
+
+<div class="container-fluid">    
+    
+    <div class="row" align="center">
         <div *ngFor="let event of eventImages" class="imagecontainer">
             <img class="image" src="{{event.imageLink}}">
             <div class="overlay">
@@ -58,7 +70,6 @@
                 <div class="innerText">{{event.eventDesc}}</div>
             </div>
         </div>
-
     </div>
 
 </div>

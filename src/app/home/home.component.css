@@ -269,15 +269,31 @@
 }*/
 
 
+
 .header {
-  height: 400px;
+  height: 300px;
   width: 100%;
   background: black;
   overflow: hidden;
   background: var(--light-blue); 
-  background: -webkit-linear-gradient(20deg, #D0A331 0%, #2e4668 70%), url("../../assets/background.png");
-  background: linear-gradient(20deg, #D0A331 0%, #2E4668 70%), url("../../assets/background.png"); 
-}
+  background: -webkit-linear-gradient(20deg, #D0A331 0%, #395898 70%), url("../../assets/background.png");
+  background: linear-gradient(20deg, #D0A331 0%, #395898 70%), url("../../assets/background.png"); 
+} 
+
+/*
+.header {
+  height: 300px;
+  width: 100%;
+  background: black;
+  overflow: hidden;
+  background: var(--light-blue); 
+  background: -webkit-linear-gradient(20deg, #0000004d 0%, #0000004d 70%), url("../../assets/oldschool_cropped.png"); 
+  background: linear-gradient(20deg, #0000004d 0%, #0000004d 70%), url("../../assets/oldschool_cropped.png"); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  animation: feature-bg-anim .6s ease-in-out;
+} */
 
 
 .about{

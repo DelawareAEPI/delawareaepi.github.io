@@ -5,6 +5,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600&display=swap');*/
 
+/*
 :root {
     --light-blue: #5BADDE;
     --dark-blue: #2E4668;
@@ -12,3 +13,12 @@
     --grey: #A6B0BF;
     --light-grey:#f5f5f5f5;
   }
+  */
+
+:root {
+  --light-blue: #395898;
+  --dark-blue: #2E4668;
+  --gold: #D0A331;
+  --grey: #A6B0BF;
+  --light-grey:#f5f5f5f5;
+}
