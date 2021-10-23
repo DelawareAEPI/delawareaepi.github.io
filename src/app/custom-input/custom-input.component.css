@@ -78,11 +78,11 @@ button:hover {
   -moz-transition: all 0.4s;
   transition: all 0.4s;
 
-  background: rgb(25, 152, 236);
-  background: -webkit-linear-gradient(20deg, #FFD700, #5fb5ee);
-  background: -o-linear-gradient(45deg, #FFD700, #5fb5ee);
-  background: -moz-linear-gradient(45deg, #FFD700, #5fb5ee);
-  background: linear-gradient(45deg, #FFD700, #5fb5ee);
+  background: var(--gold);
+  background: -webkit-linear-gradient(20deg, var(--gold), var(--light-blue));
+  background: -o-linear-gradient(45deg, var(--gold), var(--light-blue));
+  background: -moz-linear-gradient(45deg, var(--gold), var(--light-blue));
+  background: linear-gradient(45deg, var(--gold), var(--light-blue));
 }
 
 .focus-input2.no-validate::before {
@@ -189,10 +189,10 @@ button:hover {
   width: 300%;
   height: 100%;
   background: #2a6eff;
-  background: -webkit-linear-gradient(20deg, #FFD700, #5fb5ee);
-  background: -o-linear-gradient(45deg, #FFD700, #5fb5ee);
-  background: -moz-linear-gradient(45deg, #FFD700, #5fb5ee);
-  background: linear-gradient(45deg, #FFD700, #5fb5ee);
+  background: -webkit-linear-gradient(20deg, var(--gold), var(--light-blue));
+  background: -o-linear-gradient(45deg, var(--gold), var(--light-blue));
+  background: -moz-linear-gradient(45deg, var(--gold), var(--light-blue));
+  background: linear-gradient(45deg, var(--gold), var(--light-blue));
   top: 0;
   left: -100%;
   -webkit-transition: all .4s;

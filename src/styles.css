@@ -16,7 +16,7 @@
   */
 
 :root {
-  --light-blue: #395898;
+  --light-blue: #5BADDE;
   --dark-blue: #2E4668;
   --gold: #D0A331;
   --grey: #A6B0BF;
@@ -24,10 +24,16 @@
 }
 
 .header {
-  height: 360px;
+  height: 30vh;
   width: 100%;
   overflow: hidden;
   background-repeat: no-repeat !important;
   background-size: cover !important;
   background-position: center !important;
+}
+
+@media (min-height: 900px) {
+  .header {
+    height: 360px;
+  }
 }

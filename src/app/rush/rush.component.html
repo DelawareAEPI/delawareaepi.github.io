@@ -2,7 +2,7 @@
 <div class="container-fluid header"></div>
 
 
-<div class="container-fluid border" style="background-color:#f5f5f5; padding: 3% 5% 3% 3%; margin: 3% 5%; width: 90%">
+<div class="container-fluid" style="background-color:#f5f5f5; padding: 3% 5% 3% 3%;">
 
     <div class="row">  
         <div *ngIf="!isMobile" class="col-4"></div>
@@ -13,14 +13,11 @@
 
     <div class="row">
         <div *ngIf="!isMobile" class="col-4" align="center" style="align-self: baseline;">
-            <img src='https://static.wixstatic.com/media/0d4090_2753615274bc45c5b2beeb1e0ecaefff~mv2.jpeg/v1/fill/w_310,h_367,al_c,q_80,usm_0.66_1.00_0.01/IMG_5565.webp'>
+            <img [src]='rushCardImage'>
         </div>
 
         <div class="col" align="center">
-            <p> We encourage you to rush and learn more about our chapter. Being in AEPi strengthens character, develops leadership skills necessary to leave college prepared for the next phase of life and offers its Brothers a great college experience. Not only do you leave this fraternity better prepared for the world, you do so with a band of brothers to support you and help you succeed.  Throughout AEPi’s history, we have nurtured leaders in business, education, government and more. A goal of our chapter is to help each Brother become the best version of themselves that they can be.  </p>
-            <p> If you are interested in joining our chapter, reach out to our Rush Chair Max Scheiner, listed below. We are excited to welcome every rushee and look forward to getting to know you!</p>
-            <p> </p>
-            <p> Rush Chair Max Scheiner: (302) - 300 - 6982</p>
+            <p *ngFor="let line of rushBlurb" data-id={{line.id}}> {{line.text}} </p>
             <p>
                 <span>To learn more about Greek Life at UD, visit 
                     <span style="text-decoration:underline">
@@ -42,7 +39,7 @@
 </div>
 
 
-<div class="container" style="margin-bottom: 30px;">
+<div class="container-fluid" style="background-color: var(--dark-blue); padding: 3% 17%;">
     <span class="rush-form-title" [style.margin-top]="isMobile == true ? '30px' : '0'">
         Interested In Rushing Delaware AEPI?
     </span>
@@ -86,7 +83,7 @@
             <app-custom-input class="mobile" [(inputModel)]="phone" [type]="'phone'"></app-custom-input>
     </div>
 
-    <div *ngIf="isMobile" class="row" style="justify-content: center;">
+    <div *ngIf="isMobile" class="row" style="justify-content: center; margin-bottom: 30px;">
         <div class="wrap-btn">
             <div class="bgbtn"></div>
             <button class="btn" (click)="submitRushInterest()">Submit</button>

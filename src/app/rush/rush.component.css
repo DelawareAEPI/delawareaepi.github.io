@@ -5,6 +5,15 @@ app-custom-input.mobile {
   margin: 0 10%;
 }
 
+::ng-deep input.input2 {
+  background: none !important;
+  color: white !important;
+}
+
+::ng-deep span.focus-input2 {
+  color: white !important;
+}
+
 p {
   text-align: left;
   font-family: Raleway;
@@ -23,7 +32,7 @@ img {
   display: block;
   font-family: Raleway;
   font-size: 20px;
-  color: #333333;
+  color: white;
   line-height: 1.2;
   text-align: left;
   padding-bottom: 30px;
