@@ -90,15 +90,7 @@ p.event{
   
   
 .header {
-  height: 300px;
-  width: 100%;
-  background: black;
-  overflow: hidden;
   background: var(--light-blue); 
-  background: -webkit-linear-gradient(20deg, #000000aa 0%, #ffffffaa 70%), url("../../assets/background.png");
-  background: linear-gradient(20deg, #0000004d 0%, #0000004d 70%), url("../../assets/group_19-20_crop.jpg"); 
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  animation: feature-bg-anim .6s ease-in-out;
+  background: -webkit-linear-gradient(20deg, #000000aa 0%, #ffffffaa 70%), url("../../assets/conclave.JPG");
+  background: linear-gradient(20deg, #0000004d 0%, #0000004d 70%), url("../../assets/conclave.JPG"); 
 }

@@ -271,10 +271,6 @@
 
 
 .header {
-  height: 300px;
-  width: 100%;
-  background: black;
-  overflow: hidden;
   background: var(--light-blue); 
   background: -webkit-linear-gradient(20deg, #D0A331 0%, #395898 70%), url("../../assets/background.png");
   background: linear-gradient(20deg, #D0A331 0%, #395898 70%), url("../../assets/background.png"); 
