@@ -8,6 +8,8 @@ import { HttpClientModule } from '@angular/common/http';
 //import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 
 import { FormsModule } from '@angular/forms';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +20,7 @@ import { CustomInputComponent } from './custom-input/custom-input.component';
 import { AcademicComponent } from './academic/academic.component';
 import { NewsletterComponent } from './newsletter/newsletter.component';
 import { ContactComponent } from './contact/contact.component';
+import { BrotherModalComponent } from './brother-modal/brother-modal.component';
 
 @NgModule({
   declarations: [
@@ -28,13 +31,15 @@ import { ContactComponent } from './contact/contact.component';
     CustomInputComponent,
     AcademicComponent,
     NewsletterComponent,
-    ContactComponent
+    ContactComponent,
+    BrotherModalComponent
   ],
   imports: [
     BrowserModule, 
     HttpClientModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgbModule
     //AngularFireModule.initializeApp(environment.firebaseConfig),
   ],
   providers: [],

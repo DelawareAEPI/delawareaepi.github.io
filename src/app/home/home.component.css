@@ -225,28 +225,28 @@
   }
 
 .boardImage {
-    width:fit-content;
-    margin-bottom: 10px;
-    color: white;
+  width:fit-content;
+  margin-bottom: 10px;
+  color: white;
 }
 
 .boardPosition{
-    font-size: 12px;
-    line-height: 1.8em;
-    text-align: center;
-    font-family: Raleway;
-    font-weight: 400;
-    color: white;
+  font-size: 12px;
+  line-height: 1.8em;
+  text-align: center;
+  font-family: Raleway;
+  font-weight: 400;
+  color: white;
 }
 
 .boardName {
-    margin-bottom: 0;
-    text-align: center;
-    font-size: 15px;
-    line-height: 1.6em;
-    font-family: Raleway;
-    font-weight: 400;
-    color: white;
+  margin-bottom: 0;
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.6em;
+  font-family: Raleway;
+  font-weight: 400;
+  color: white;
 }
 
 .eboard h1{

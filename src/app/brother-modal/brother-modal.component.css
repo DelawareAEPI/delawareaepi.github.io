@@ -1,0 +1,9 @@
+p {
+    margin: 3px;
+    font-family: Raleway;
+}
+
+p.name {
+    margin-top: 5px;
+    font-weight: 600;
+}
