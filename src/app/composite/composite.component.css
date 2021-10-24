@@ -1,0 +1,43 @@
+.header {
+    background: var(--light-blue); 
+    background: -webkit-linear-gradient(20deg, #000000aa 0%, #ffffffaa 70%), url("../../assets/conclave.JPG");
+    background: linear-gradient(20deg, #0000004d 0%, #0000004d 70%), url("../../assets/conclave.JPG"); 
+  }
+  
+  .name {
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.6em;
+    font-family: Raleway;
+    font-weight: 400;
+    color: white;
+  }
+  
+  .image {
+    width:fit-content;
+    margin-bottom: 10px;
+    color: white;
+  }
+  
+  h1.title{
+    margin-bottom: 10px;
+    font-family: oldenglish;
+    font-size: 38pt;
+    text-align: center; 
+    color: var(--gold);
+  }
+  
+  p.rhod{
+    font-family: serif;
+    font-size: 16pt;
+    text-align: center;
+    color: var(--gold);
+    font-style: italic;
+    margin: 0px;
+  }
+  
+  p.name {
+    margin-bottom: 20px;
+    font-size: 12px;
+  }

@@ -9,7 +9,8 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { FormsModule } from '@angular/forms';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-
+import { API_KEY, GoogleSheetsDbService } from 'ng-google-sheets-db';
+import { environment } from "src/environments/environment";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +22,7 @@ import { AcademicComponent } from './academic/academic.component';
 import { NewsletterComponent } from './newsletter/newsletter.component';
 import { ContactComponent } from './contact/contact.component';
 import { BrotherModalComponent } from './brother-modal/brother-modal.component';
+import { CompositeComponent } from './composite/composite.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import { BrotherModalComponent } from './brother-modal/brother-modal.component';
     AcademicComponent,
     NewsletterComponent,
     ContactComponent,
-    BrotherModalComponent
+    BrotherModalComponent,
+    CompositeComponent
   ],
   imports: [
     BrowserModule, 
@@ -42,7 +45,11 @@ import { BrotherModalComponent } from './brother-modal/brother-modal.component';
     NgbModule
     //AngularFireModule.initializeApp(environment.firebaseConfig),
   ],
-  providers: [],
+  providers: [{
+    provide: API_KEY,
+    useValue: environment.firebaseConfig.apiKey,
+  },
+  GoogleSheetsDbService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

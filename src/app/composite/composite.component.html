@@ -1,0 +1,66 @@
+<div *ngIf="!loading" class="container-fluid" style="padding-top: 50px; background: #0e2f45;">
+    <!-- Board Row -->
+    <div class="row justify-content-center">
+        <div *ngFor="let number of [0,1,2,3,4,5,6,7]" class="col-1" align="center">
+            <img (click)="open(number)" class="image" src="https://static.wixstatic.com/media/0d4090_e77edcaac70345eb9896b9165132c218~mv2.png/v1/fill/w_92,h_139,al_c,q_85,usm_0.66_1.00_0.01/beigs_heic.webp">
+            <p class="name" style="margin-bottom: 2px;">{{brothers[number].firstname}} {{brothers[number].lastname}}</p>
+            <p class="name">{{brothers[number].board}}</p>
+        </div>
+    </div>
+
+    <!-- Center Information Row 1  (2 each side, aepi, rhod, ud) -->
+    <div class="row justify-content-center align-items-center">
+        <div *ngFor="let number of [8,9]" class="col-1" align="center">
+            <img (click)="open(number)" class="image" src="https://static.wixstatic.com/media/0d4090_e77edcaac70345eb9896b9165132c218~mv2.png/v1/fill/w_92,h_139,al_c,q_85,usm_0.66_1.00_0.01/beigs_heic.webp">
+            <p class="name">{{brothers[number].firstname}} {{brothers[number].lastname}}</p>
+        </div>
+
+        <div class="col-6">
+            <h1 class="title">Alpha Epsilon Pi</h1>
+            <p class="rhod">Rho Deuteron</p>
+            <h3 style="text-align: center; color: var(--gold); margin: 0px;">University of Delaware</h3>
+        </div>
+
+        <div *ngFor="let number of [10,11]" class="col-1" align="center">
+            <img (click)="open(number)" class="image" src="https://static.wixstatic.com/media/0d4090_e77edcaac70345eb9896b9165132c218~mv2.png/v1/fill/w_92,h_139,al_c,q_85,usm_0.66_1.00_0.01/beigs_heic.webp">
+            <p class="name">{{brothers[number].firstname}} {{brothers[number].lastname}}</p>
+        </div>
+    </div>
+
+    <!-- Center Information Row 2  (2 each side, year, cofa, year) -->
+    <div class="row justify-content-center">
+        <div *ngFor="let number of [12,13]" class="col-1" align="center">
+            <img (click)="open(number)" class="image" src="https://static.wixstatic.com/media/0d4090_e77edcaac70345eb9896b9165132c218~mv2.png/v1/fill/w_92,h_139,al_c,q_85,usm_0.66_1.00_0.01/beigs_heic.webp">
+            <p class="name">{{brothers[number].firstname}} {{brothers[number].lastname}}</p>
+        </div>
+
+        <div class="col-6">
+            <div class="row justify-content-center align-items-center">
+                <h2 style="text-align: center; color: var(--gold); margin: 0px;">2020</h2>
+                <img src="assets/cofa.png" style="width: 125px; height: auto;">
+                <h2 style="text-align: center; color: var(--gold); margin: 0px;">2021</h2>
+            </div>
+        </div>
+
+        <div *ngFor="let number of [14,15]" class="col-1" align="center">
+            <img (click)="open(number)" class="image" src="https://static.wixstatic.com/media/0d4090_e77edcaac70345eb9896b9165132c218~mv2.png/v1/fill/w_92,h_139,al_c,q_85,usm_0.66_1.00_0.01/beigs_heic.webp">
+            <p class="name">{{brothers[number].firstname}} {{brothers[number].lastname}}</p>
+        </div>
+    </div>
+
+    <!-- Rows of ten -->
+    <div *ngFor="let in of counter(rows, 0); let i = index " class="row justify-content-center">
+        <div *ngFor="let number of counter(10, 16+i*10);" class="col-1" align="center">
+            <img (click)="open(number)" class="image" src="https://static.wixstatic.com/media/0d4090_e77edcaac70345eb9896b9165132c218~mv2.png/v1/fill/w_92,h_139,al_c,q_85,usm_0.66_1.00_0.01/beigs_heic.webp">
+            <p class="name">{{brothers[number].firstname}} {{brothers[number].lastname}}</p>
+        </div>
+    </div>
+
+    <!-- Remaining Brothers -->
+    <div class="row justify-content-center">
+        <div *ngFor="let number of counter(count-16-10*rows, 16+10*rows)" class="col-1" align="center">
+            <img (click)="open(number)" class="image" src="https://static.wixstatic.com/media/0d4090_e77edcaac70345eb9896b9165132c218~mv2.png/v1/fill/w_92,h_139,al_c,q_85,usm_0.66_1.00_0.01/beigs_heic.webp">
+            <p class="name">{{brothers[number].firstname}} {{brothers[number].lastname}}</p>
+        </div>
+    </div>
+</div>

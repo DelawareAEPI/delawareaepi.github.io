@@ -12,6 +12,7 @@ export class BrotherModalComponent implements OnInit {
   @Input() major: string;
   @Input() year: string;
   @Input() image: string;
+  @Input() board: string;
   
   constructor(public activeModal: NgbActiveModal) { }
 

@@ -1,7 +1,7 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { Component, OnInit } from '@angular/core';
 import { BoardService } from '../services/board.service';
-import { BrotherModalComponent } from '../brother-modal/brother-modal.component';
+
+
 
 @Component({
     selector: 'app-brotherhood',
@@ -16,7 +16,7 @@ export class BrotherhoodComponent implements OnInit {
     blurb: string;
 
 
-    constructor(private boardService: BoardService, private modalService: NgbModal) { }
+    constructor(private boardService: BoardService) { }
 
     ngOnInit(): void {
 
@@ -34,13 +34,5 @@ export class BrotherhoodComponent implements OnInit {
         });
     }
 
-
-    open(number: number) {
-        const modalRef = this.modalService.open(BrotherModalComponent);
-        modalRef.componentInstance.brother_name = 'Ben Raymon';
-        modalRef.componentInstance.major = 'Computer Science';
-        modalRef.componentInstance.year = 'Junior';
-        modalRef.componentInstance.image = 'https://static.wixstatic.com/media/0d4090_e77edcaac70345eb9896b9165132c218~mv2.png/v1/fill/w_92,h_139,al_c,q_85,usm_0.66_1.00_0.01/beigs_heic.webp';
-      }
-
 }
+
