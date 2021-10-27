@@ -16,7 +16,7 @@
 <div class="container-fluid">    
     
     <div class="row" align="center">
-        <div *ngFor="let event of eventImages" class="imagecontainer">
+        <div *ngFor="let event of eventImages" class="col-12 col-md-6 col-xl-4 imagecontainer">
             <img class="eventImage" src="{{event.imageLink}}">
             <div class="overlay">
                 <div class="text">{{event.event}}</div>

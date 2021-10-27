@@ -1,5 +1,5 @@
 h1 {
-    color: yellow;
+    color: var(--gold);
     font-size: 36pt;
     margin-bottom: 5%;
     font-family: Oswald;
@@ -19,10 +19,9 @@ p.event{
 
 
 .imagecontainer {
-    position: relative;
-    width: 30%;
-    margin: 1.5%;
-  }
+  position: relative;
+  margin-bottom: 30px;
+}
   
   .eventImage {
     display: block;
@@ -32,12 +31,13 @@ p.event{
   
   .overlay {
     position: absolute;
+    margin: 0 15px;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     height: 100%;
-    width: 100%;
+    width: calc(100% - 30px);
     opacity: 0;
     transition: .5s ease;
     background-color: #000000bb;
@@ -67,7 +67,7 @@ p.event{
 
   .brotherhood {
     background-color:var(--dark-blue); 
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     padding: 5% 15%
   }
 

@@ -23,6 +23,7 @@ import { NewsletterComponent } from './newsletter/newsletter.component';
 import { ContactComponent } from './contact/contact.component';
 import { BrotherModalComponent } from './brother-modal/brother-modal.component';
 import { CompositeComponent } from './composite/composite.component';
+import { HistoryComponent } from './history/history.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { CompositeComponent } from './composite/composite.component';
     NewsletterComponent,
     ContactComponent,
     BrotherModalComponent,
-    CompositeComponent
+    CompositeComponent,
+    HistoryComponent
   ],
   imports: [
     BrowserModule, 

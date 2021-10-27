@@ -7,3 +7,12 @@ p.name {
     margin-top: 5px;
     font-weight: 600;
 }
+
+.close {
+    margin: 1px;
+    padding: 0.5rem;
+}
+
+.modal-header{
+    justify-content: right;
+}

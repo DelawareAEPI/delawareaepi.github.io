@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
     
     title = 'aepi';
-    pages=['home', 'rush', 'brother', 'academic', 'contact', 'newsletter'];
+    pages=['home', 'rush', 'brother', 'history', 'academic', 'contact', 'newsletter'];
 
     ngOnInit(){  
         var pathname = window.location.pathname;

@@ -5,6 +5,7 @@ import { AcademicComponent } from './academic/academic.component';
 import { BrotherhoodComponent } from './brotherhood/brotherhood.component';
 import { CompositeComponent } from './composite/composite.component';
 import { ContactComponent } from './contact/contact.component';
+import { HistoryComponent } from './history/history.component';
 import { HomeComponent } from './home/home.component';
 import { RushComponent } from './rush/rush.component';
 
@@ -24,6 +25,10 @@ const routes: Routes = [
   {
     path:'brothers',
     component:CompositeComponent
+  },
+  {
+    path:'history',
+    component:HistoryComponent
   },
   {
     path:'rush',
