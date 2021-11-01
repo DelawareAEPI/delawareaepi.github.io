@@ -6,11 +6,15 @@ h1 {
     font-weight: 200;
 }
 
-p {
+.brotherhood p {
     color: white;
     font-size: 14pt;
     font-family: Raleway;
     font-weight: 300;
+}
+
+.card {
+  height: 100%;
 }
 
 p.event{
@@ -130,4 +134,8 @@ p.rhod{
 p.name {
   margin-bottom: 20px;
   font-size: 12px;
+}
+
+.card-img-top {
+  aspect-ratio: 1.5;
 }
