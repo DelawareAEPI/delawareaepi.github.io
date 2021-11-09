@@ -54,21 +54,21 @@
         Interested In Rushing Delaware AEPI?
     </span>
 
-    <!-- rush interest form - desktop -->
-    <div *ngIf="!isMobile" class="row">
-        <div class="col-3">
+
+    <div class="row">
+        <div class="col-lg-3">
             <app-custom-input [(inputModel)]="name" [type]="'name'"></app-custom-input>
         </div>
 
-        <div class="col-3">
+        <div class="col-lg-3">
             <app-custom-input [(inputModel)]="email" [type]="'email'" (validEmail)="isEmailValid($event)"></app-custom-input>
         </div> 
 
-        <div class="col-3">
+        <div class="col-lg-3">
             <app-custom-input [(inputModel)]="phone" [type]="'phone'"></app-custom-input>
         </div> 
 
-        <div class="col-3">
+        <div class="col-lg-3" style="margin-bottom: 30px;">
             <div class="wrap-btn">
                 <div class="bgbtn"></div>
                 <button class="btn1" (click)="submitRushInterest()">Submit</button>
@@ -76,11 +76,10 @@
         </div>
 
     </div>
-    <!-- end desktop view -->
 
 
 
-    <!-- different layout for mobile -->
+    <!-- different layout for mobile 
     <div *ngIf="isMobile" class="row" style="justify-content: center;">
             <app-custom-input class="mobile" [(inputModel)]="name" [type]="'name'"></app-custom-input>
     </div>
@@ -99,7 +98,7 @@
             <button class="btn1" (click)="submitRushInterest()">Submit</button>
         </div>
     </div>
-    <!-- End mobile layout -->
+    -->
 
     
 

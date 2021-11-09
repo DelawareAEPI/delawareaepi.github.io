@@ -5,8 +5,15 @@
     <div class="row" style="margin-bottom: 5%;">
         <div class="col-12" align="center">
             <h1> BROTHERHOOD </h1>
-            <p contentEditable (blur)="onBlur($event.target)">{{blurb}}</p>
-            <button class="btn btn-primary" (click)="onSaveChanges()">Save Changes</button>
+            <div *ngIf="false">
+                <p contentEditable (blur)="onBlur($event.target)">{{blurb}}</p>
+                <button class="btn btn-primary" (click)="onSaveChanges()">Save Changes</button>
+            </div>
+
+            <div *ngIf="true">
+                <p>{{blurb}}</p>
+            </div>
+
             <!--<div *ngFor="let event of events"> <p class="event">{{event}}</p> </div>-->
         </div>
     </div>

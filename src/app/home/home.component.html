@@ -72,7 +72,7 @@
             <img class="rounded-circle aboutImg" src="assets/image.jpg">
         </div>
 
-        <div *ngIf="true" class="col" style="width:75%;">
+        <div *ngIf="false" class="col" style="width:75%;">
             <p contentEditable (blur)="onBlur($event.target)" *ngFor="let paragraph of aboutus | keyvalue;" data-id={{paragraph.key}} class="edit">{{paragraph.value}}</p>
             
             <button class="btn btn-primary" (click)="onAddParagraph()">Add Paragraph</button>
@@ -80,7 +80,7 @@
             <button class="btn btn-primary" (click)="onSaveChanges()">Save Changes</button>
         </div>
 
-        <div *ngIf="false" class="col" style="width:75%;">
+        <div *ngIf="true" class="col" style="width:75%;">
             <p *ngFor="let paragraph of aboutus | keyvalue;" data-id={{paragraph.key}} class="edit">{{paragraph.value}}</p>
         </div>
     </div>
@@ -112,43 +112,43 @@
 
 <div class="container-fluid" align="center" style="margin: 5% 10%; width: 80%;">
 
-    <div *ngIf="!isMobile" class="row">
-        <div class="col-3 box">
+    <div class="row">
+        <div class="col-md-3 col-10 box">
           <h4>Philanthropy</h4>
-          <a href="">Learn More »</a>
+          <a href="">Coming Soon »</a>
         </div>
 
-       <div class="col-3 box">
+       <div class="col-md-3 col-10 box">
           <h4>Alumni Engagement</h4>
-          <a href="">Learn More »</a>
+          <a href="">Coming Soon »</a>
         </div>
 
-        <div class="col-3 box">
+        <div class="col-md-3 col-10 box">
           <h4>Jewish Involvement</h4>
-          <a href="">Learn More »</a>
+          <a href="">Coming Soon »</a>
         </div>
     </div>
 
-    <div *ngIf="isMobile" class="row" style="margin-bottom: 80px;">
+    <!--<div *ngIf="isMobile" class="row" style="margin-bottom: 80px;">
         <div class="col box">
           <h4>Philanthropy</h4>
-          <a href="">Learn More »</a>
+          <a href="">Coming Soon »</a>
         </div>
     </div>
 
     <div *ngIf="isMobile" class="row" style="margin-bottom: 80px;">
        <div class="col box">
           <h4>Alumni Engagement</h4>
-          <a href="">Learn More »</a>
+          <a href="">Coming Soon »</a>
         </div>
     </div>
 
     <div *ngIf="isMobile" class="row" style="margin-bottom: 80px;">
         <div class="col box">
           <h4>Jewish Involvement</h4>
-          <a href="">Learn More »</a>
+          <a href="">Coming Soon »</a>
         </div>
-    </div>
+    </div>-->
 
 </div>
 

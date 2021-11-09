@@ -362,6 +362,9 @@
   margin-right: 10px;
 }
 
+.col-10 {
+  margin-bottom: 80px;
+}
 /*
 p.edit {
   outline-style: auto;

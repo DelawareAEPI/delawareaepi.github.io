@@ -46,7 +46,7 @@ To access the database go to https://console.firebase.google.com/ while signed i
 
 <img src="src/assets/readme/firebaseproject.PNG">
 
-On the right hand side, nagivate to Realtime Database. 
+On the left hand side, nagivate to Realtime Database. 
 
 <img src="src/assets/readme/realtimedatabase.PNG">
 
