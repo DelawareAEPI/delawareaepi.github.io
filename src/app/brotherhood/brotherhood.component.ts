@@ -14,13 +14,13 @@ export class BrotherhoodComponent implements OnInit {
     events: string[] = [];
     eventImages: {event: string, description: string, imageLink: string}[] = [];
 
-    files = ['../../assets/eventImages/apple.JPG', '../../assets/eventImages/apple_picking2.jpg', '../../assets/eventImages/eta_initiation.JPG', 
-    '../../assets/eventImages/guysbeingdudes.jpg', '../../assets/eventImages/philly1.jpeg', '../../assets/eventImages/philly2.jpeg', 
-    '../../assets/eventImages/philly3.JPG', '../../assets/eventImages/skyzone.png', '../../assets/eventImages/IMG_5028.jpg', 
-    '../../assets/eventImages/IMG_5052.JPG', '../../assets/eventImages/IMG_5408.jpg', '../../assets/eventImages/IMG_5415.jpg', 
-    '../../assets/eventImages/IMG_5473.JPG', '../../assets/eventImages/IMG_5796.jpg', '../../assets/eventImages/IMG_5808.jpg', 
-    '../../assets/eventImages/IMG_5817.jpg', '../../assets/eventImages/IMG_5825.jpg', '../../assets/eventImages/IMG_5828.PNG', 
-    '../../assets/eventImages/IMG_5875.JPG', '../../assets/eventImages/IMG_5876.JPG', '../../assets/eventImages/IMG_5883.JPG', '../../assets/eventImages/IMG_5885.JPG']; 
+    files = ['/aepi_website/assets/eventImages/apple.JPG', '/aepi_website/assets/eventImages/apple_picking2.jpg', '/aepi_website/assets/eventImages/eta_initiation.JPG', 
+    '/aepi_website/assets/eventImages/guysbeingdudes.jpg', '/aepi_website/assets/eventImages/philly1.jpeg', '/aepi_website/assets/eventImages/philly2.jpeg', 
+    '/aepi_website/assets/eventImages/philly3.JPG', '/aepi_website/assets/eventImages/skyzone.png', '/aepi_website/assets/eventImages/IMG_5028.jpg', 
+    '/aepi_website/assets/eventImages/IMG_5052.JPG', '/aepi_website/assets/eventImages/IMG_5408.jpg', '/aepi_website/assets/eventImages/IMG_5415.jpg', 
+    '/aepi_website/assets/eventImages/IMG_5473.JPG', '/aepi_website/assets/eventImages/IMG_5796.jpg', '/aepi_website/assets/eventImages/IMG_5808.jpg', 
+    '/aepi_website/assets/eventImages/IMG_5817.jpg', '/aepi_website/assets/eventImages/IMG_5825.jpg', '/aepi_website/assets/eventImages/IMG_5828.PNG', 
+    '/aepi_website/assets/eventImages/IMG_5875.JPG', '/aepi_website/assets/eventImages/IMG_5876.JPG', '/aepi_website/assets/eventImages/IMG_5883.JPG', '/aepi_website/assets/eventImages/IMG_5885.JPG']; 
 
     blurb: string;
 
