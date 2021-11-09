@@ -17,7 +17,7 @@
         </div>
 
         <div class="col" align="center">
-            <div *ngIf = "false">
+            <div *ngIf="false">
             <p contentEditable (blur)="onBlur($event.target)" *ngFor="let line of rushBlurb | keyvalue" data-id={{line.key}}> {{line.value}} </p>
             <button class="btn btn-primary" style="background: #007bff; margin: 5px;" (click)="onAddParagraph()">Add Paragraph</button>
             <button class="btn btn-primary" style="background: #007bff; margin: 5px;" (click)="onRemoveParagraph()">Remove Last Paragraph</button>
