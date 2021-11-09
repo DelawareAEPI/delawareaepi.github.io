@@ -17,8 +17,18 @@
         </div>
 
         <div class="col" align="center">
-            <p *ngFor="let line of rushBlurb" data-id={{line.id}}> {{line.text}} </p>
-            <p>
+            <div *ngIf = "false">
+            <p contentEditable (blur)="onBlur($event.target)" *ngFor="let line of rushBlurb | keyvalue" data-id={{line.key}}> {{line.value}} </p>
+            <button class="btn btn-primary" style="background: #007bff; margin: 5px;" (click)="onAddParagraph()">Add Paragraph</button>
+            <button class="btn btn-primary" style="background: #007bff; margin: 5px;" (click)="onRemoveParagraph()">Remove Last Paragraph</button>
+            <button class="btn btn-primary" style="background: #007bff; margin: 5px;" (click)="onSaveChanges()">Save Changes</button>
+            </div>
+
+            <div *ngIf="true">
+                <p *ngFor="let line of rushBlurb | keyvalue" data-id={{line.key}}> {{line.value}} </p>
+            </div>
+
+            <p style="margin-top: 1rem;">
                 <span>To learn more about Greek Life at UD, visit 
                     <span style="text-decoration:underline">
                         <a href="https://sites.udel.edu/fsll/" target="_blank" rel="noopener">this link</a>
@@ -61,7 +71,7 @@
         <div class="col-3">
             <div class="wrap-btn">
                 <div class="bgbtn"></div>
-                <button class="btn" (click)="submitRushInterest()">Submit</button>
+                <button class="btn1" (click)="submitRushInterest()">Submit</button>
             </div>
         </div>
 
@@ -86,7 +96,7 @@
     <div *ngIf="isMobile" class="row" style="justify-content: center; margin-bottom: 30px;">
         <div class="wrap-btn">
             <div class="bgbtn"></div>
-            <button class="btn" (click)="submitRushInterest()">Submit</button>
+            <button class="btn1" (click)="submitRushInterest()">Submit</button>
         </div>
     </div>
     <!-- End mobile layout -->

@@ -29,6 +29,9 @@ export class CompositeComponent implements OnInit {
             data.sort(this.compare)
 
             for(let brother of data){
+                if(!(<Brother>brother).image)
+                    (<Brother>brother).image = "../../assets/no_image.png";
+
                 if((<Brother>brother).board)
                     this.brothers.unshift(brother);
                 else
@@ -67,7 +70,7 @@ export class CompositeComponent implements OnInit {
         modalRef.componentInstance.major = this.brothers[number].major;
         modalRef.componentInstance.year = this.brothers[number].year;
         modalRef.componentInstance.board = this.brothers[number].board;
-        modalRef.componentInstance.image = 'https://static.wixstatic.com/media/0d4090_e77edcaac70345eb9896b9165132c218~mv2.png/v1/fill/w_92,h_139,al_c,q_85,usm_0.66_1.00_0.01/beigs_heic.webp';
+        modalRef.componentInstance.image = this.brothers[number].image;
       }
 
 }

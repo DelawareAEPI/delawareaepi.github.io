@@ -44,5 +44,13 @@ export class BrotherhoodComponent implements OnInit {
         });
     }
 
+    onBlur(element){
+        this.blurb = element.textContent;
+    }
+
+    onSaveChanges(){
+        this.boardService.setBrotherhoodBlurb(this.blurb);
+    }
+
 }
 

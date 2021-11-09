@@ -3,3 +3,21 @@
     background: -webkit-linear-gradient(20deg, #0000004d 0%, #0000004d 70%), url("../../assets/720_cropped2.jpg"); 
     background: linear-gradient(20deg, #0000004d 0%, #0000004d 70%), url("../../assets/alumn_all.JPG"); 
   }
+
+  .banner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    margin: 0 10px;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0);
+    transform: skew(190deg);
+    left: 410px;
+}

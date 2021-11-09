@@ -15,7 +15,7 @@ export class RushComponent implements OnInit {
     name: string;
     phone: string;
 
-    rushBlurb: {text: string, id: string}[] = [];
+    rushBlurb = new Map();
     rushCardImage: string;
 
     isMobile: boolean = false;
@@ -33,7 +33,7 @@ export class RushComponent implements OnInit {
             this.rushCardImage = data.rushcard; 
 
             Object.keys(data.blurb).map(id=>{
-                this.rushBlurb.push({'text': data.blurb[id].text, 'id': id});    
+                this.rushBlurb.set(id, data.blurb[id]);    
             });
         });
     }
@@ -48,6 +48,23 @@ export class RushComponent implements OnInit {
         } else {
             alert("Please enter a valid email");
         }
+    }
+
+
+    onBlur(element){
+        this.rushBlurb.set(element.id, element.textContent);
+    }
+
+    onSaveChanges(){
+        this.boardService.setRushBlurb(Object.fromEntries(this.rushBlurb));
+    }
+
+    onAddParagraph(){
+        this.rushBlurb.set((this.rushBlurb.size + 1).toString(), "new paragraph - edit me");
+    }
+
+    onRemoveParagraph(){
+        this.rushBlurb.delete(this.rushBlurb.size.toString());
     }
 
 }

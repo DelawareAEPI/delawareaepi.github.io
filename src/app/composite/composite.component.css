@@ -15,7 +15,7 @@
   }
   
   .image {
-    width:fit-content;
+    width:inherit;
     margin-bottom: 10px;
     color: white;
   }

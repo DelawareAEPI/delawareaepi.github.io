@@ -357,3 +357,13 @@
   text-transform: uppercase;
   transform: translate(-50%, 50%);
 }
+
+.btn {
+  margin-right: 10px;
+}
+
+/*
+p.edit {
+  outline-style: auto;
+}
+*/

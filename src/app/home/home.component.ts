@@ -11,7 +11,7 @@ import { BoardService } from '../services/board.service';
 export class HomeComponent implements OnInit {
 
     board: { name: string, position: string, image:string }[] = [];
-    aboutus: {text: string, id: string}[] = [];
+    aboutus = new Map();
     udanceLink: string;
 
     isMobile: boolean;
@@ -40,10 +40,28 @@ export class HomeComponent implements OnInit {
             this.udanceLink = data.udance.link;
 
             Object.keys(data.aboutus.blurb).map(id=>{
-                this.aboutus.push({'text': data.aboutus.blurb[id].text, 'id': id});    
+                this.aboutus.set(id, data.aboutus.blurb[id]);    
             });
         });
 
+    }
+
+    onBlur(element){
+        this.aboutus.set(element.id, element.textContent);
+        console.log(this.aboutus);
+        //this.boardService.setAboutUs(Object.fromEntries(this.aboutus));
+    }
+
+    onSaveChanges(){
+        this.boardService.setAboutUs(Object.fromEntries(this.aboutus));
+    }
+
+    onAddParagraph(){
+        this.aboutus.set((this.aboutus.size + 1).toString(), "new paragraph - edit me");
+    }
+
+    onRemoveParagraph(){
+        this.aboutus.delete(this.aboutus.size.toString());
     }
 
 }

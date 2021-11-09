@@ -6,7 +6,8 @@ export const attributesMapping = {
     udemail: "UD Email Address",
     year: "Year",
     major:"Major",
-    board: "Board Position"
+    board: "Board Position",
+    image: "Image"
   };
   
   export interface Brother {
@@ -17,5 +18,6 @@ export const attributesMapping = {
     udemail: string,
     year: string,
     major:string,
-    board: string
+    board: string,
+    image: string
   }

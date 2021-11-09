@@ -72,8 +72,16 @@
             <img class="rounded-circle aboutImg" src="assets/image.jpg">
         </div>
 
-        <div class="col" style="width:75%;">
-            <p *ngFor="let paragraph of aboutus" data-id={{paragraph.id}}>{{paragraph.text}}</p>
+        <div *ngIf="false" class="col" style="width:75%;">
+            <p contentEditable (blur)="onBlur($event.target)" *ngFor="let paragraph of aboutus | keyvalue;" data-id={{paragraph.key}} class="edit">{{paragraph.value}}</p>
+            
+            <button class="btn btn-primary" (click)="onAddParagraph()">Add Paragraph</button>
+            <button class="btn btn-primary" (click)="onRemoveParagraph()">Remove Last Paragraph</button>
+            <button class="btn btn-primary" (click)="onSaveChanges()">Save Changes</button>
+        </div>
+
+        <div *ngIf="true" class="col" style="width:75%;">
+            <p *ngFor="let paragraph of aboutus | keyvalue;" data-id={{paragraph.key}} class="edit">{{paragraph.value}}</p>
         </div>
     </div>
 

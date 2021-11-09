@@ -16,3 +16,8 @@ p.name {
 .modal-header{
     justify-content: right;
 }
+
+img {
+    height: 150px;
+    width: 100px;
+}
