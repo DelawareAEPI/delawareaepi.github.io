@@ -14,13 +14,13 @@ export class BrotherhoodComponent implements OnInit {
     events: string[] = [];
     eventImages: {event: string, description: string, imageLink: string}[] = [];
 
-    files = ['/assets/eventImages/apple.JPG', '/assets/eventImages/apple_picking2.jpg', '/assets/eventImages/eta_initiation.JPG', 
-    '/assets/eventImages/guysbeingdudes.jpg', '/assets/eventImages/philly1.jpeg', '/assets/eventImages/philly2.jpeg', 
-    '/assets/eventImages/philly3.JPG', '/assets/eventImages/skyzone.png', '/assets/eventImages/IMG_5028.jpg', 
-    '/assets/eventImages/IMG_5052.JPG', '/assets/eventImages/IMG_5408.jpg', '/assets/eventImages/IMG_5415.jpg', 
-    '/assets/eventImages/IMG_5473.JPG', '/assets/eventImages/IMG_5796.jpg', '/assets/eventImages/IMG_5808.jpg', 
-    '/assets/eventImages/IMG_5817.jpg', '/assets/eventImages/IMG_5825.jpg', '/assets/eventImages/IMG_5828.PNG', 
-    '/assets/eventImages/IMG_5875.JPG', '/assets/eventImages/IMG_5876.JPG', '/assets/eventImages/IMG_5883.JPG', '/assets/eventImages/IMG_5885.JPG']; 
+    files = ['../../assets/eventImages/apple.JPG', '../../assets/eventImages/apple_picking2.jpg', '../../assets/eventImages/eta_initiation.JPG', 
+    '../../assets/eventImages/guysbeingdudes.jpg', '../../assets/eventImages/philly1.jpeg', '../../assets/eventImages/philly2.jpeg', 
+    '../../assets/eventImages/philly3.JPG', '../../assets/eventImages/skyzone.png', '../../assets/eventImages/IMG_5028.jpg', 
+    '../../assets/eventImages/IMG_5052.JPG', '../../assets/eventImages/IMG_5408.jpg', '../../assets/eventImages/IMG_5415.jpg', 
+    '../../assets/eventImages/IMG_5473.JPG', '../../assets/eventImages/IMG_5796.jpg', '../../assets/eventImages/IMG_5808.jpg', 
+    '../../assets/eventImages/IMG_5817.jpg', '../../assets/eventImages/IMG_5825.jpg', '../../assets/eventImages/IMG_5828.PNG', 
+    '../../assets/eventImages/IMG_5875.JPG', '../../assets/eventImages/IMG_5876.JPG', '../../assets/eventImages/IMG_5883.JPG', '../../assets/eventImages/IMG_5885.JPG']; 
 
     blurb: string;
 
