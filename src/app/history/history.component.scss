@@ -188,47 +188,10 @@ a {
 }
 
 /*----------------------------------------------
-        MOD: TIMELINE SPLIT
-    ----------------------------------------------*/
-
-.timeline-split {
-    @media (min-width: 768px) {
-        .timeline {
-            display: table;
-        }
-        .timeline-item {
-            display: table-row;
-            padding: 0;
-        }
-        .timeline-info,
-        .timeline-marker,
-        .timeline-content,
-        .period .timeline-info {
-            display: table-cell;
-            vertical-align: top;
-        }
-        .timeline-marker {
-            position: relative;
-        }
-        .timeline-content {
-            padding-left: 30px;
-        }
-        .timeline-info {
-            padding-right: 30px;
-        }
-        .period .timeline-title {
-            position: relative;
-            left: -45px;
-        }
-    }
-}
-
-/*----------------------------------------------
         MOD: TIMELINE CENTERED
     ----------------------------------------------*/
 
 .timeline-centered {
-    @extend .timeline-split;
     @media (min-width: 992px) {
         &,
         .timeline-item,
@@ -289,21 +252,5 @@ a {
         .period .timeline-title {
             left: auto;
         }
-    }
-}
-
-/*----------------------------------------------
-        MOD: MARKER OUTLINE
-    ----------------------------------------------*/
-
-.marker-outline {
-    .timeline-marker {
-        &:before {
-            background: transparent;
-            border-color: $primary-color;
-        }
-    }
-    .timeline-item:hover .timeline-marker:before {
-        background: $primary-color;
     }
 }
