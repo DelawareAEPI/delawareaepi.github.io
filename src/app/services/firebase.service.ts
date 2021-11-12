@@ -4,18 +4,39 @@ import { getDatabase, ref, get, push, set, DataSnapshot } from "firebase/databas
 import { initializeApp }  from 'firebase/app';
 import { environment } from "src/environments/environment";
 
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
+
+const httpOptions = {
+    headers: new HttpHeaders({ 'responseType': 'text',
+    "x-iq-image-response-type":"url",
+    "Accept":"*/*",
+    'Access-Control-Allow-Origin': '*',
+    "Access-Control-Allow-Methods": "POST,GET,PUT,DELETE",
+    'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token' })
+};
+
 @Injectable({
     providedIn: 'root'
 })
 
-export class BoardService {
+export class FirebaseService {
 
     db: any;
     theBoard: Object[] = [];
 
-    constructor() { 
+    constructor(private http:HttpClient) { 
         initializeApp(environment.firebaseConfig),
         this.db = getDatabase();
+    }
+
+    test() {
+        //test = new RegExp('data-fund-current="\\d+\\.\\d+')
+
+        //return this.http.get('/api/bpos_teampage.aspx?eventtag=ud2022&teamid=3717')
+        //      .pipe(map((response: any) => response));
+
+        return this.http.get('/api/', {responseType: 'text'});
     }
 
     getBoard(): Promise<DataSnapshot>{
@@ -52,10 +73,6 @@ export class BoardService {
     setBrotherhoodBlurb(data){
         let brotherhoood = ref(this.db, "/brotherhood/blurb");
         set(brotherhoood, data);
-    }
-
-    testMethod2(){
-
     }
 
 

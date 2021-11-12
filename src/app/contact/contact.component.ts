@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BoardService } from '../services/board.service';
+import { FirebaseService } from '../services/firebase.service';
 
 @Component({
     selector: 'app-contact',
@@ -11,7 +11,7 @@ export class ContactComponent implements OnInit {
 
     isMobile: boolean = false;
 
-    constructor(private boardService: BoardService) { }
+    constructor(private firebaseService: FirebaseService) { }
 
     contacts: {name: string, position: string, phone: string, image:string }[]= [ ];
 
@@ -21,7 +21,7 @@ export class ContactComponent implements OnInit {
             this.isMobile = true;
         }
 
-        this.boardService.getBoard().then((snapshot: any)=>{
+        this.firebaseService.getBoard().then((snapshot: any)=>{
             let data = snapshot.val();
 
             Object.keys(data).map(id=>{

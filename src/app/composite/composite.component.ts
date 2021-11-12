@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { GoogleSheetsDbService } from 'ng-google-sheets-db';
 import { BrotherModalComponent } from '../brother-modal/brother-modal.component';
-import { attributesMapping, Brother } from '../brotherhood/brother.model';
+import { attributesMapping, Brother } from './brother.model';
 
 @Component({
   selector: 'app-composite',

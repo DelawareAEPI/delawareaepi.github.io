@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { BoardService } from '../services/board.service';
+import { FirebaseService } from '../services/firebase.service';
 
 
 
@@ -25,12 +25,12 @@ export class BrotherhoodComponent implements OnInit {
     blurb: string;
 
 
-    constructor(private boardService: BoardService, private http: HttpClient) { }
+    constructor(private firebaseService: FirebaseService, private http: HttpClient) { }
 
     ngOnInit(): void {
         
 
-        this.boardService.getBrotherhood().then((snapshot: any)=>{
+        this.firebaseService.getBrotherhood().then((snapshot: any)=>{
             let data = snapshot.val();
 
             this.blurb = data.blurb;
@@ -49,7 +49,7 @@ export class BrotherhoodComponent implements OnInit {
     }
 
     onSaveChanges(){
-        this.boardService.setBrotherhoodBlurb(this.blurb);
+        this.firebaseService.setBrotherhoodBlurb(this.blurb);
     }
 
 }

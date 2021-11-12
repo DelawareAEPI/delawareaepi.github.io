@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { BoardService } from '../services/board.service';
+import { FirebaseService } from '../services/firebase.service';
 
 @Component({
     selector: 'app-home',
@@ -16,17 +16,22 @@ export class HomeComponent implements OnInit {
 
     isMobile: boolean;
     
-    constructor(private boardService: BoardService) { }
+    constructor(private firebaseService: FirebaseService) { }
 
     ngOnInit(): void {
 
-        //this.boardService.testMethod2();
+        //let test = new RegExp('data-fund-current="\\d+\\.\\d+');
+        //partid=\d+
+
+        //this.firebaseService.test().subscribe(
+        //          data => {console.log(data);},
+        //    );
 
         if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
             this.isMobile = true;
         }
 
-        this.boardService.getBoard().then((snapshot: any)=>{
+        this.firebaseService.getBoard().then((snapshot: any)=>{
             let data = snapshot.val();
 
             Object.keys(data).map(id=>{
@@ -34,7 +39,7 @@ export class HomeComponent implements OnInit {
             });
         });
 
-        this.boardService.getHome().then((snapshot: any)=>{
+        this.firebaseService.getHome().then((snapshot: any)=>{
             let data = snapshot.val();
 
             this.udanceLink = data.udance.link;
@@ -49,11 +54,11 @@ export class HomeComponent implements OnInit {
     onBlur(element){
         this.aboutus.set(element.id, element.textContent);
         console.log(this.aboutus);
-        //this.boardService.setAboutUs(Object.fromEntries(this.aboutus));
+        //this.firebaseService.setAboutUs(Object.fromEntries(this.aboutus));
     }
 
     onSaveChanges(){
-        this.boardService.setAboutUs(Object.fromEntries(this.aboutus));
+        this.firebaseService.setAboutUs(Object.fromEntries(this.aboutus));
     }
 
     onAddParagraph(){

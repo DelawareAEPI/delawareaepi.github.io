@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CustomInputComponent } from '../custom-input/custom-input.component';
-import { BoardService } from '../services/board.service';
+import { FirebaseService } from '../services/firebase.service';
 
 @Component({
     selector: 'app-rush',
@@ -20,14 +20,14 @@ export class RushComponent implements OnInit {
 
     isMobile: boolean = false;
 
-    constructor(private boardService: BoardService) { }
+    constructor(private firebaseService: FirebaseService) { }
 
     ngOnInit(): void {
         if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
             this.isMobile = true;
         }
 
-        this.boardService.getRush().then((snapshot: any)=>{
+        this.firebaseService.getRush().then((snapshot: any)=>{
             let data = snapshot.val();
 
             this.rushCardImage = data.rushcard; 
@@ -56,7 +56,7 @@ export class RushComponent implements OnInit {
     }
 
     onSaveChanges(){
-        this.boardService.setRushBlurb(Object.fromEntries(this.rushBlurb));
+        this.firebaseService.setRushBlurb(Object.fromEntries(this.rushBlurb));
     }
 
     onAddParagraph(){
