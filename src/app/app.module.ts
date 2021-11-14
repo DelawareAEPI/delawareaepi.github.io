@@ -14,16 +14,17 @@ import { environment } from "src/environments/environment";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { BrotherhoodComponent } from './brotherhood/brotherhood.component';
-import { RushComponent } from './rush/rush.component';
-import { CustomInputComponent } from './custom-input/custom-input.component';
-import { AcademicComponent } from './academic/academic.component';
-import { NewsletterComponent } from './newsletter/newsletter.component';
-import { ContactComponent } from './contact/contact.component';
-import { BrotherModalComponent } from './brother-modal/brother-modal.component';
-import { CompositeComponent } from './composite/composite.component';
-import { HistoryComponent } from './history/history.component';
+import { HomeComponent } from './pages/home/home.component';
+import { BrotherhoodComponent } from './pages/brotherhood/brotherhood.component';
+import { RushComponent } from './pages/rush/rush.component';
+import { CustomInputComponent } from './components/custom-input/custom-input.component';
+import { AcademicComponent } from './pages/academic/academic.component';
+import { NewsletterComponent } from './pages/newsletter/newsletter.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { BrotherModalComponent } from './components/brother-modal/brother-modal.component';
+import { CompositeComponent } from './pages/composite/composite.component';
+import { HistoryComponent } from './pages/history/history.component';
+import { HistoryModalComponent } from './components/history-modal/history-modal.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { HistoryComponent } from './history/history.component';
     ContactComponent,
     BrotherModalComponent,
     CompositeComponent,
-    HistoryComponent
+    HistoryComponent,
+    HistoryModalComponent
   ],
   imports: [
     BrowserModule, 

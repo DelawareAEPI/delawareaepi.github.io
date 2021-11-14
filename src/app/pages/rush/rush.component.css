@@ -1,4 +1,4 @@
-@import '../custom-input/custom-input.component.css';
+@import '../../components/custom-input/custom-input.component.css';
 
 app-custom-input.mobile {
   width: 100%; 
@@ -40,6 +40,6 @@ img {
 
 .header {
   background: var(--light-blue); 
-  background: -webkit-linear-gradient(20deg, #0000004d 0%, #0000004d 70%), url("../../assets/720_cropped2.jpg"); 
-  background: linear-gradient(20deg, #0000004d 0%, #0000004d 70%), url("../../assets/alumn_active_c.JPG"); 
+  background: -webkit-linear-gradient(20deg, #0000004d 0%, #0000004d 70%), url("../../../assets/alumn_active_c.JPG"); 
+  background: linear-gradient(20deg, #0000004d 0%, #0000004d 70%), url("../../../assets/alumn_active_c.JPG"); 
 }

@@ -1,0 +1,53 @@
+
+
+<div class="modal-header" style="padding: 0.5rem">
+    <h5 class="modal-title">New Historical Event</h5>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
+<div class="modal-body">
+    <form>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" [checked]='isSectionHeader' (click)="onRadioSwitch($event)">
+            <label class="form-check-label" for="flexRadioDefault1">
+                Section Header
+            </label>
+        </div>
+        <div class="form-check" style="margin-bottom: 15px;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" [checked]='!isSectionHeader' (click)="onRadioSwitch($event)">
+            <label class="form-check-label" for="flexRadioDefault2">
+                New Subsection Event
+            </label>
+        </div>
+
+
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Title" aria-label="Title" aria-describedby="basic-addon1" autocomplete="off"
+            name="title" [(ngModel)]="title">
+        </div>
+
+        <div class="input-group mb-3">
+            <input [disabled]="isSectionHeader" type="text" class="form-control" placeholder="Year" aria-label="Year" aria-describedby="basic-addon1" autocomplete="off"
+            name="year" [(ngModel)]="year" (blur)="yearValidation($event)">
+            <div class="invalid-feedback">
+                Enter a valid year between [last event] and [this year].
+            </div>
+        </div>
+
+        <div class="input-group">
+            <span class="input-group-text">Content</span>
+            <textarea [disabled]="isSectionHeader" class="form-control" aria-label="With textarea" autocomplete="off"
+            name="content" [(ngModel)]="content"></textarea>
+        </div>
+        
+
+    </form>
+</div>
+
+<div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="activeModal.dismiss('Cross click')">Close</button>
+    <button type="button" class="btn btn-primary">Add Event</button>
+</div>
+  

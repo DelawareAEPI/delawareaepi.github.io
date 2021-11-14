@@ -1,4 +1,4 @@
-@import '../custom-input/custom-input.component.css';
+@import '../../components/custom-input/custom-input.component.css';
 
 h1 {
     color: var(--gold);

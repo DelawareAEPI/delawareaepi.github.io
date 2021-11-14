@@ -94,8 +94,8 @@ p.event{
   
 .header {
   background: var(--light-blue); 
-  background: -webkit-linear-gradient(20deg, #000000aa 0%, #ffffffaa 70%), url("../../assets/conclave.JPG");
-  background: linear-gradient(20deg, #0000004d 0%, #0000004d 70%), url("../../assets/conclave.JPG"); 
+  background: -webkit-linear-gradient(20deg, #000000aa 0%, #ffffffaa 70%), url("../../../assets/conclave.JPG");
+  background: linear-gradient(20deg, #0000004d 0%, #0000004d 70%), url("../../../assets/conclave.JPG"); 
 }
 
 .name {

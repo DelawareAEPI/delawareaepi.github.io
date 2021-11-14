@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { FirebaseService } from '../services/firebase.service';
+import { FirebaseService } from '../../services/firebase.service';
 
 @Component({
     selector: 'app-home',
@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
         //partid=\d+
 
         //this.firebaseService.test().subscribe(
-        //          data => {console.log(data);},
+        //          data => {console.log(data.match(test));},
         //    );
 
         if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){

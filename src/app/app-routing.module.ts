@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { AcademicComponent } from './academic/academic.component';
-import { BrotherhoodComponent } from './brotherhood/brotherhood.component';
-import { CompositeComponent } from './composite/composite.component';
-import { ContactComponent } from './contact/contact.component';
-import { HistoryComponent } from './history/history.component';
-import { HomeComponent } from './home/home.component';
-import { RushComponent } from './rush/rush.component';
+import { AcademicComponent } from './pages/academic/academic.component';
+import { BrotherhoodComponent } from './pages/brotherhood/brotherhood.component';
+import { CompositeComponent } from './pages/composite/composite.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { HistoryComponent } from './pages/history/history.component';
+import { HomeComponent } from './pages/home/home.component';
+import { RushComponent } from './pages/rush/rush.component';
 
 const routes: Routes = [
   {

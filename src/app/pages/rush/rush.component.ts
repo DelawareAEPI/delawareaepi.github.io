@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CustomInputComponent } from '../custom-input/custom-input.component';
-import { FirebaseService } from '../services/firebase.service';
+import { CustomInputComponent } from '../../components/custom-input/custom-input.component';
+import { FirebaseService } from '../../services/firebase.service';
 
 @Component({
     selector: 'app-rush',

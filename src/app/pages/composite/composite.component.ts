@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { GoogleSheetsDbService } from 'ng-google-sheets-db';
-import { BrotherModalComponent } from '../brother-modal/brother-modal.component';
+import { BrotherModalComponent } from '../../components/brother-modal/brother-modal.component';
 import { attributesMapping, Brother } from './brother.model';
 
 @Component({
@@ -30,7 +30,7 @@ export class CompositeComponent implements OnInit {
 
             for(let brother of data){
                 if(!(<Brother>brother).image)
-                    (<Brother>brother).image = "../../assets/no_image.png";
+                    (<Brother>brother).image = "../../../assets/no_image.png";
                 else
                     (<Brother>brother).image = "https://drive.google.com/uc?export=view&id=" + (<Brother>brother).image;
 
