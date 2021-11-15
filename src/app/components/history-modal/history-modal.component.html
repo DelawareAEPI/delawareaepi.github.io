@@ -32,7 +32,7 @@
             <input [disabled]="isSectionHeader" type="text" class="form-control" placeholder="Year" aria-label="Year" aria-describedby="basic-addon1" autocomplete="off"
             name="year" [(ngModel)]="year" (blur)="yearValidation($event)">
             <div class="invalid-feedback">
-                Enter a valid year between [last event] and [this year].
+                Enter a valid year between the last event ({{lastYear}}) and this year ({{thisYear}}).
             </div>
         </div>
 
@@ -48,6 +48,6 @@
 
 <div class="modal-footer">
     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="activeModal.dismiss('Cross click')">Close</button>
-    <button type="button" class="btn btn-primary">Add Event</button>
+    <button type="button" class="btn btn-primary" (click)="onSubmit()">Add Event</button>
 </div>
   

@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import { FirebaseService } from 'src/app/services/firebase.service';
 
 @Component({
     selector: 'app-history-modal',
@@ -9,12 +10,15 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 export class HistoryModalComponent implements OnInit {
 
     isSectionHeader: boolean = true;
-    title: string;
-    content: string;
-    year: string;
+    title: string = "";
+    content: string = "";
+    year: string = "";
+
+    @Input() lastYear: number;
+    thisYear: number = new Date().getFullYear();
     
 
-    constructor(public activeModal: NgbActiveModal) { }
+    constructor(public activeModal: NgbActiveModal, private firebaseService: FirebaseService) { }
 
     ngOnInit(): void {
     }
@@ -30,7 +34,7 @@ export class HistoryModalComponent implements OnInit {
 
     yearValidation(event: any){
 
-        if(this.year && this.year.length != 4 || parseInt(this.year).toString() != this.year || parseInt(this.year) > new Date().getFullYear()){
+        if(this.year && this.year.length != 4 || parseInt(this.year).toString() != this.year || parseInt(this.year) > this.thisYear ||  parseInt(this.year) < this.lastYear){
             event.srcElement.classList.add("is-invalid");
         } else {
             event.srcElement.classList.remove("is-invalid");
@@ -41,7 +45,18 @@ export class HistoryModalComponent implements OnInit {
 
     onSubmit(){
         //call history service add event
-        let data = {period: this.isSectionHeader, content: this.content, year: this.year, title: this.title};
+        if(!this.title){
+            alert("Please enter a title");
+        } else {
+            if(!this.isSectionHeader && !this.content){
+                alert("Please do not leave content blank.");
+            } else {
+                let data = {period: this.isSectionHeader, content: this.content, year: this.year, title: this.title};
+                this.firebaseService.addHistoryEvent(data);
+                this.activeModal.dismiss('Submit Event');
+            }
+            
+        }
     }
 
 }

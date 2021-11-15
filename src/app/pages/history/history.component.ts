@@ -24,10 +24,12 @@ export class HistoryComponent implements OnInit {
                 this.historyData.push(data[id]);    
             });
         });
+        
     }
 
     newEvent(){
         const modalRef = this.modalService.open(HistoryModalComponent);
+        modalRef.componentInstance.lastYear = parseInt(this.historyData[this.historyData.length - 1].year);
     }
 
 }
