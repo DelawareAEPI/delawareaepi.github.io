@@ -25,6 +25,7 @@ import { BrotherModalComponent } from './components/brother-modal/brother-modal.
 import { CompositeComponent } from './pages/composite/composite.component';
 import { HistoryComponent } from './pages/history/history.component';
 import { HistoryModalComponent } from './components/history-modal/history-modal.component';
+import { PhilanthropyComponent } from './pages/philanthropy/philanthropy.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { HistoryModalComponent } from './components/history-modal/history-modal.
     BrotherModalComponent,
     CompositeComponent,
     HistoryComponent,
-    HistoryModalComponent
+    HistoryModalComponent,
+    PhilanthropyComponent
   ],
   imports: [
     BrowserModule, 

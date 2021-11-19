@@ -7,6 +7,7 @@ import { CompositeComponent } from './pages/composite/composite.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { HistoryComponent } from './pages/history/history.component';
 import { HomeComponent } from './pages/home/home.component';
+import { PhilanthropyComponent } from './pages/philanthropy/philanthropy.component';
 import { RushComponent } from './pages/rush/rush.component';
 
 const routes: Routes = [
@@ -17,6 +18,11 @@ const routes: Routes = [
   {
     path:'',
     component:HomeComponent
+  },
+  {
+    path: "philanthropy",
+    component: PhilanthropyComponent
+
   },
   {
     path:'brotherhood',

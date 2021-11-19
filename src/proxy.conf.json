@@ -1,9 +1,0 @@
-{
-    "/api/*": {
-        "target": "https://www.udancede.org/bpos_teampage.aspx?eventtag=ud2022&teamid=3717",
-        "secure": true,
-        "logLevel": "debug",
-        "changeOrigin":true,
-        "pathRewrite": { "^/api/": "" }
-    }
-}
