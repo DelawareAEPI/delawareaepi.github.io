@@ -65,6 +65,11 @@ export class CompositeComponent implements OnInit {
         return new Array(i).fill(0).map((x,y)=>y+buffer);
     }
 
+    getYear(){
+        let d = new Date();
+        return d.getMonth() > 9 ? d.getFullYear() : d.getFullYear() - 1;
+    }
+
 
     open(number: number) {
         const modalRef = this.modalService.open(BrotherModalComponent);

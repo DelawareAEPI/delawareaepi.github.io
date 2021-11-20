@@ -12,11 +12,14 @@ export class PhilanthropyComponent implements OnInit {
 
     udanceTeam: any[]= [];
     udanceTotal: number;
-
     udanceTeamID: number = 3717;
     udanceEventTag: string = "ud2022"; 
-    percentGoal: number;
     udanceGoal: number = 55000.00;
+
+    percentGoal: number;
+    showTeam: boolean = true;
+
+    loading: boolean = true;
 
     constructor(private firebaseService: FirebaseService) { }
 
@@ -28,6 +31,9 @@ export class PhilanthropyComponent implements OnInit {
         const reader = new FileReader();
         
         reader.onload = (e: any) => {
+            this.loading = true;
+
+            this.udanceTeam = [];
             let csvToRowArray = e.target.result.split("\n");
             for (let index = 1; index < csvToRowArray.length - 1; index++) {
                 let row = csvToRowArray[index].split('","');
@@ -54,8 +60,9 @@ export class PhilanthropyComponent implements OnInit {
                 this.udanceTeam.sort((a, b) => (a.raised > b.raised) ? -1 : 1);
             }
             this.updateFirebase();
-
+            this.loading = false;
         };
+        
         reader.readAsText(event.target.files[0]);
     }
 
@@ -69,6 +76,8 @@ export class PhilanthropyComponent implements OnInit {
             });
 
             this.percentGoal = Math.round(this.udanceTotal/this.udanceGoal * 100);
+
+            this.loading = false;
         });
     }
 
@@ -91,6 +100,10 @@ export class PhilanthropyComponent implements OnInit {
         } else {
             return 0;
         }
+    }
+
+    addCommas(input){
+        return input.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
     
 

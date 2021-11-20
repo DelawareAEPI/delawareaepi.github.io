@@ -6,7 +6,7 @@
 <div *ngIf="!loading" class="container-fluid" style="padding-top: 50px; background: #0e2f45;">
     <!-- Board Row -->
     <div class="row justify-content-center">
-        <div *ngFor="let number of [0,1,2,3,4,5,6,7]" class="col-1" align="center">
+        <div *ngFor="let number of [0,1,2,3,4,5,6,7]" class="col-3 col-lg-1" align="center">
             <img (click)="open(number)" class="image rounded" src={{brothers[number].image}}>
             <p class="name" style="margin-bottom: 2px;">{{brothers[number].firstname}} {{brothers[number].lastname}}</p>
             <p class="name">{{brothers[number].board}}</p>
@@ -15,18 +15,18 @@
 
     <!-- Center Information Row 1  (2 each side, aepi, rhod, ud) -->
     <div class="row justify-content-center align-items-center">
-        <div *ngFor="let number of [8,9]" class="col-1" align="center">
+        <div *ngFor="let number of [8,9]" class="col-2 col-lg-1" align="center">
             <img (click)="open(number)" class="image rounded" src={{brothers[number].image}}>
             <p class="name">{{brothers[number].firstname}} {{brothers[number].lastname}}</p>
         </div>
 
-        <div class="col-6">
+        <div class="col-4 col-lg-6">
             <h1 class="title">Alpha Epsilon Pi</h1>
             <p class="rhod">Rho Deuteron</p>
             <h2 style="text-align: center; color: var(--gold); margin: 5px 0px ; font-family: oldenglish;">University of Delaware</h2>
         </div>
 
-        <div *ngFor="let number of [10,11]" class="col-1" align="center">
+        <div *ngFor="let number of [10,11]" class="col-2 col-lg-1" align="center">
             <img (click)="open(number)" class="image rounded" src={{brothers[number].image}}>
             <p class="name">{{brothers[number].firstname}} {{brothers[number].lastname}}</p>
         </div>
@@ -34,20 +34,20 @@
 
     <!-- Center Information Row 2  (2 each side, year, cofa, year) -->
     <div class="row justify-content-center">
-        <div *ngFor="let number of [12,13]" class="col-1" align="center">
+        <div *ngFor="let number of [12,13]" class="col-2 col-lg-1" align="center">
             <img (click)="open(number)" class="image rounded" src={{brothers[number].image}}>
             <p class="name">{{brothers[number].firstname}} {{brothers[number].lastname}}</p>
         </div>
 
-        <div class="col-6">
+        <div class="col-4 col-lg-6">
             <div class="row justify-content-center align-items-center">
-                <h2 style="text-align: center; color: var(--gold); margin: 0px; font-family: oldenglish;">2020</h2>
-                <img src="assets/cofa.png" style="width: 125px; height: auto;">
-                <h2 style="text-align: center; color: var(--gold); margin: 0px; font-family: oldenglish;">2021</h2>
+                <h2 style="text-align: center; color: var(--gold); margin: 0px; font-family: oldenglish;">{{getYear()}}</h2>
+                <img src="assets/cofa.png" style="width: 8vw; height: auto;">
+                <h2 style="text-align: center; color: var(--gold); margin: 0px; font-family: oldenglish;">{{getYear() + 1}}</h2>
             </div>
         </div>
 
-        <div *ngFor="let number of [14,15]" class="col-1" align="center">
+        <div *ngFor="let number of [14,15]" class="col-2 col-lg-1" align="center">
             <img (click)="open(number)" class="image rounded" src={{brothers[number].image}}>
             <p class="name">{{brothers[number].firstname}} {{brothers[number].lastname}}</p>
         </div>
@@ -55,15 +55,15 @@
 
     <!-- Rows of ten -->
     <div *ngFor="let in of counter(rows, 0); let i = index " class="row justify-content-center">
-        <div *ngFor="let number of counter(10, 16+i*10);" class="col-1" align="center">
+        <div *ngFor="let number of counter(10, 16+i*10);" class="col-5ths col-lg-1" align="center">
             <img (click)="open(number)" class="image rounded" src={{brothers[number].image}}>
             <p class="name">{{brothers[number].firstname}} {{brothers[number].lastname}}</p>
         </div>
     </div>
-
+ 
     <!-- Remaining Brothers -->
     <div class="row justify-content-center">
-        <div *ngFor="let number of counter(count-16-10*rows, 16+10*rows)" class="col-1" align="center">
+        <div *ngFor="let number of counter(count-16-10*rows, 16+10*rows)" class="col-5ths col-lg-1" align="center">
             <img (click)="open(number)" class="image rounded" src={{brothers[number].image}}>
             <p class="name">{{brothers[number].firstname}} {{brothers[number].lastname}}</p>
         </div>

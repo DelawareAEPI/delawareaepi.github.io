@@ -1,4 +1,22 @@
+.header {
+    background: var(--light-blue); 
+    background: -webkit-linear-gradient(20deg, #0000004d 0%, #0000004d 70%), url("../../../assets/ftk.jpg"); 
+    background: linear-gradient(20deg, #0000004d 0%, #0000004d 70%), url("../../../assets/ftk.jpg"); 
+  }
 
+  h1 {
+    color: var(--gold);
+    margin-bottom: 2%;
+    font-family: Oswald;
+    font-weight: 200;
+  }
+
+ p {
+    color: white;
+    font-size: 14pt;
+    font-family: Raleway;
+    font-weight: 300;
+}
 
 .teammember {
     color: #918F8F;

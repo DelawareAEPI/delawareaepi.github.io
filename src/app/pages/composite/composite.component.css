@@ -4,18 +4,9 @@
     background: linear-gradient(20deg, #0000004d 0%, #0000004d 70%), url("../../../assets/conclave.JPG"); 
   }
   
-  .name {
-    margin-bottom: 0;
-    text-align: center;
-    font-size: 15px;
-    line-height: 1.6em;
-    font-family: Raleway;
-    font-weight: 400;
-    color: white;
-  }
   
   .image {
-    width:inherit;
+    width:-webkit-fill-available;
     margin-bottom: 10px;
     color: white;
   }
@@ -23,14 +14,18 @@
   h1.title{
     margin-bottom: 10px;
     font-family: oldenglish;
-    font-size: 38pt;
+    font-size: 3.2vw;
     text-align: center; 
     color: var(--gold);
+  }
+
+  h2 {
+    font-size: 2.2vw;
   }
   
   p.rhod{
     font-family: oldenglish;
-    font-size: 20pt;
+    font-size: 1.8vw;
     text-align: center;
     color: var(--gold);
     font-style: italic;
@@ -40,4 +35,15 @@
   p.name {
     margin-bottom: 20px;
     font-size: 12px;
+    text-align: center;
+    line-height: 1.6em;
+    font-family: Raleway;
+    font-weight: 400;
+    color: white;
   }
+
+  @media (max-width: 992px) {
+    .col-5ths {
+        width: 20%;
+    }
+}

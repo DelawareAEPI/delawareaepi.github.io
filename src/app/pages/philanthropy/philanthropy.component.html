@@ -1,17 +1,20 @@
+<div class="container-fluid header"></div>
+
+
 <div class="container-fluid">
 
-    <form>
+    <!--<form>
         <div class="input-group mb-3">
             <label for="formFile" class="form-label">Default file input example</label>
             <input class="form-control" type="file" id="formFile" (change)="previewFile($event)">
         </div>
-    </form>
+    </form>-->
 
-    <div class="row">
+    <div class="row justify-content-center" style="background: var(--dark-blue); padding-top: 50px;">
 
-        <div class="col-xl-3 col-lg-6 mb-4">
+        <div class="col-xl-4 col-lg-6" style="margin-bottom: 50px;">
             <div class="bg-white rounded-lg p-5 shadow">
-                <h2 class="h6 font-weight-bold text-center mb-4">Overall progress</h2>
+                <h2 class="h6 font-weight-bold text-center mb-4">AEPi's UDance Progress</h2>
 
                 <div class="progress mx-auto">
                     <span class="progress-left">
@@ -25,30 +28,44 @@
                     </div>
                 </div>
 
-                <!-- Demo info -->
                 <div class="row text-center mt-4">
                     <div class="col-6 border-right">
-                        <div class="h4 font-weight-bold mb-0">${{udanceTotal}}</div><span class="small text-gray">Raised</span>
+                        <div class="h4 font-weight-bold mb-0">${{addCommas(udanceTotal)}}</div><span class="small text-gray">Raised</span>
                     </div>
                     <div class="col-6">
-                        <div class="h4 font-weight-bold mb-0">${{udanceGoal}}</div><span class="small text-gray">Goal</span>
+                        <div class="h4 font-weight-bold mb-0">${{addCommas(udanceGoal)}}</div><span class="small text-gray">Team Goal</span>
                     </div>
                 </div>
-                <!-- END -->
                 
             </div>
         </div>
 
+        <div class="col-xl-6 col-lg-4" style="margin-bottom: 50px;">
+            <h1>What is UDance? </h1>
+            <p>UDance is a student-run philanthropic organization at the University of Delaware. Founded in 2007, UDance has been dedicated to fighting childhood cancer ever since. We raise awareness in our community through social media and on and off campus events, while providing immediate and direct financial aid to families affected by childhood cancer.</p>
+        </div>
+
     </div>
 
-    <div class="row justify-content-center" style="margin: 20px 0;">
-        <div *ngFor="let member of udanceTeam" class='col-md-4 col-lg-3' style="margin: 0px;" align="center">
-            <h3>
-                <a class="teammember" target="_blank" href="https://www.udancede.org/bpos_partpage.aspx?eventtag=ud2022&teamid={{udanceTeamID}}&partid={{member.pageid}}">{{member.name}} - ${{member.raised}}</a>
-            </h3>
-            <!--<div class="progress" style="width: 50%;">
-                <div class="progress-bar" role="progressbar" [style.width.%]="member.raised/member.goal * 100" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>-->
+    <div class="row justify-content-center" style="padding: 20px 7%;">        
+        <h1 style="color: var(--light-blue);"> Team Members </h1>
+        
+        <a href="javascript:void(0)" (click)="showTeam = !showTeam" style="margin: 10px; float: left; width: 100%;">{{showTeam ? "Hide Team" : "Show Team"}}</a>
+
+        <div *ngIf="loading" align="center" style="height: 500px; width: 100%;">
+            <div class="spinner-border" role="status" style="margin-top: 245px;"></div>
+        </div>
+        
+        <div *ngIf="showTeam" class="row justify-content-center" style="margin: 20px 0;">
+
+            <div *ngFor="let member of udanceTeam" class='col-md-4 col-lg-3' style="margin: 0px;" align="center">
+                <h3>
+                    <a class="teammember" target="_blank" href="https://www.udancede.org/bpos_partpage.aspx?eventtag=ud2022&teamid={{udanceTeamID}}&partid={{member.pageid}}">{{member.name}} - ${{addCommas(member.raised)}}</a>
+                </h3>
+                <!--<div class="progress" style="width: 50%;">
+                    <div class="progress-bar" role="progressbar" [style.width.%]="member.raised/member.goal * 100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>-->
+            </div>
         </div>
     </div>
 </div>
