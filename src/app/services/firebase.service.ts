@@ -85,14 +85,19 @@ export class FirebaseService {
         push(history, data);
     }
 
-    getUdance(): Promise<DataSnapshot>{
-        let udance = ref(this.db, "/udance");
+    getPhilanthropy(): Promise<DataSnapshot>{
+        let udance = ref(this.db, "/philanthropy");
         return get(udance);
     }
 
+    setPhilanthropy(data){
+        let philanthropy = ref(this.db, "/philanthropy");
+        set(philanthropy, data);
+    }
+
     setUdance(data){
-        let udance = ref(this.db, "/udance");
-        set(udance, data)
+        let udance = ref(this.db, "/philanthropy/udance");
+        set(udance, data);
     }
 
 }

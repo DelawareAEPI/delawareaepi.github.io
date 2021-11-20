@@ -27,6 +27,25 @@
     margin: 0;
 }
 
+.fundevents {
+  background-color: var(--gold);
+}
+
+.fundevents h1 {
+  color: var(--dark-blue);
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+.fundevents p {
+  color: black;
+}
+
+h4 {
+  font-family: Raleway;
+  text-align: center;
+}
 
 /* Round Progress Bar */
   body {
