@@ -76,7 +76,7 @@
 
         <div *ngFor="let imageName of ['pieapi', 'pumpkinsmash', 'frenchtoast']" class="col-md-3 mb-5" style="margin: 0 4.1%;">
             <div class="card">
-                <img class="card-img-top" src="assets/philanthropyImages/{{imageName}}.jpg" alt="Card image cap">
+                <img class="card-img-top" src="/aepi_website/assets/philanthropyImages/{{imageName}}.jpg" alt="Card image cap">
             </div>
         </div>
 
@@ -86,7 +86,7 @@
                 <ngb-carousel>
                     <ng-template ngbSlide *ngFor="let image of allEvents[i].images">
                         <div class="wrapper">
-                            <img src={{image}} alt="Random first slide" style="width: 100%;">
+                            <img src="/aepi_website/{{image}}" style="width: 100%;">
                         </div>
                     </ng-template>
                 </ngb-carousel>
