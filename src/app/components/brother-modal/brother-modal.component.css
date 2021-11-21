@@ -1,11 +1,13 @@
 p {
     margin: 3px;
     font-family: Raleway;
+    text-align:center;
 }
 
 p.name {
     margin-top: 5px;
     font-weight: 600;
+    text-align: center;
 }
 
 .close {
@@ -18,6 +20,5 @@ p.name {
 }
 
 img {
-    height: 150px;
     width: 100px;
 }
