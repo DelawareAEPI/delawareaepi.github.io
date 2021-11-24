@@ -25,6 +25,15 @@
     font-weight: 400;
     font-style: italic;
     margin: 0;
+    text-decoration: none;
+}
+
+.link{
+  float: left;
+  color: var(--gold);
+  font-size: 1.2rem;
+  font-family: Raleway;
+  text-decoration: none;
 }
 
 .fundevents {
@@ -33,7 +42,7 @@
 
 .fundevents h1 {
   color: var(--dark-blue);
-  font-size: 4rem;
+  font-size: 3.5rem;
   text-align: center;
   margin-bottom: 0px;
 }

@@ -3,12 +3,12 @@
 
 <div class="container-fluid">
 
-    <!--<form>
+    <form *ngIf="false">
         <div class="input-group mb-3">
             <label for="formFile" class="form-label">Default file input example</label>
             <input class="form-control" type="file" id="formFile" (change)="loadUdanceReport($event)">
         </div>
-    </form> -->
+    </form>
 
     <div class="row justify-content-center" style="background: var(--dark-blue); padding-top: 50px;">
 
@@ -43,14 +43,77 @@
         <div class="col-xl-6 col-lg-4" style="margin-bottom: 50px;">
             <h1>What is UDance? </h1>
             <p>UDance is a student-run philanthropic organization at the University of Delaware. Founded in 2007, UDance has been dedicated to fighting childhood cancer ever since. We raise awareness in our community through social media and on and off campus events, while providing immediate and direct financial aid to families affected by childhood cancer.</p>
+            <a href="https://www.udancede.org/bpos_donate.aspx?eventtag={{udanceEventTag}}&teamid={{udanceTeamID}}" class="link">Click Me to Donate!</a>
         </div>
 
     </div>
 
+    <div class="row" style="margin: 2% 0;">
+        
+        <h1 style="text-align: center; font-size: 3rem;">Our B+ Hero! </h1>
+
+        <div class='col-4'>
+            <iframe src="https://drive.google.com/file/d/1LnBXksMwaEfuTI4Iqep1KVR8ytROcnku/preview" width="100%" height="100%"></iframe>
+        </div>
+
+        <div class='col-4'>
+            <h2>Meet Caleb</h2>
+            <p style="color:black;">The Brothers of the Rho Deuteron Chapter of the Alpha Epsilon Pi Fraternity, have been given the opportunity to be paired with Caleb, a six-year-old boy with Acute Lymphoblastic Leukemia (ALL) and a B+ Hero through The Andrew McDonough B+ Foundation and UDance. We were so happy to be able to meet him and his entire family and are extremely excited to spend more time with them all! To learn about Caleb and his journey, please watch the video.</p>
+        </div>
+
+        <div class='col-4'>
+            <ngb-carousel>
+                <ng-template ngbSlide *ngFor="let image of hero">
+                    <div class="wrapper">
+                        <img src="/aepi_website/assets/philanthropyImages/{{image}}" style="width: 100%;">
+                    </div>
+                </ng-template>
+            </ngb-carousel>
+        </div>
+    </div>
+    
+
+    <div class="row fundevents justify-content-center">
+        <div class="col-12 mt-5">
+            <h1> Fundraiser Events </h1>
+        </div>
+
+        <div class="col-12 mt-4 mb-4">
+            <h4> All of the profits from our fundraiser events are donated to the B+ Foundation towards our UDance goal! </h4>
+        </div>
+
+        <div *ngFor="let imageName of ['pieapi', 'pumpkinsmash', 'frenchtoast']" class="col-md-3 mb-5" style="margin: 0 4.1%;">
+            <div class="card">
+                <img class="card-img-top" src="/aepi_website/assets/philanthropyImages/{{imageName}}.jpg" alt="Card image cap">
+            </div>
+        </div>
+
+        <div *ngFor="let i of [0,1,2]" class="col-md-4 mb-5">
+            <div class="card">
+                <ngb-carousel>
+                    <ng-template ngbSlide *ngFor="let image of allEvents[i].images">
+                        <div class="wrapper">
+                            <img src="/aepi_website/{{image}}" style="width: 100%;">
+                        </div>
+                    </ng-template>
+                </ngb-carousel>
+
+                <div class="card-body">
+                    <h5 class="card-title">{{allEvents[i].name}}</h5>
+                    <p class="card-text">{{allEvents[i].desc}}</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+
     <div class="row justify-content-center" style="padding: 20px 7%;">        
         <h1 style="color: var(--light-blue); text-align:center;"> Team Members </h1>
         
-        <a href="javascript:void(0)" (click)="showTeam = !showTeam" style="margin: 10px; float: left; width: 100%;">{{showTeam ? "Hide Team" : "Show Team"}}</a>
+        <a href="https://www.udancede.org/bpos_partreg.aspx?eventtag={{udanceEventTag}}&teamid={{udanceTeamID}}" class="link" style="font-size: 1rem; color: var(--light-blue); font-weight: 600;">Click Me to Join The Team!</a>
+        
+        <a href="javascript:void(0)" (click)="showTeam = !showTeam" class="teammember" style="margin: 10px; float: left; width: 100%; font-size: 1rem;">Click Me to {{showTeam ? "Hide Team" : "Show Team"}}</a>
 
         <div *ngIf="loading" align="center" style="height: 500px; width: 100%;">
             <div class="spinner-border" role="status" style="margin-top: 245px;"></div>
@@ -67,39 +130,6 @@
                 </div>-->
             </div>
         </div>
-    </div>
-
-    <div class="row fundevents justify-content-center">
-        <div class="col-12 mt-5 mb-5">
-            <h1> Fundraiser Events </h1>
-        </div>
-
-        <div *ngFor="let imageName of ['pieapi', 'pumpkinsmash', 'frenchtoast']" class="col-md-3 mb-5" style="margin: 0 4.1%;">
-            <div class="card">
-                <img class="card-img-top" src="/aepi_website/assets/philanthropyImages/{{imageName}}.jpg" alt="Card image cap">
-            </div>
-        </div>
-
-        <div *ngFor="let i of [0,1,2]" class="col-md-4 mb-5">
-            <!--<h4> Pie-A-Pi </h4>-->
-            <div class="card">
-                <ngb-carousel>
-                    <ng-template ngbSlide *ngFor="let image of allEvents[i].images">
-                        <div class="wrapper">
-                            <img src="/aepi_website/{{image}}" style="width: 100%;">
-                        </div>
-                    </ng-template>
-                </ngb-carousel>
-
-                <div class="card-body">
-                    <h5 class="card-title">{{allEvents[i].name}}</h5>
-                    <p class="card-text">{{allEvents[i].desc}}</p>
-                </div>
-            </div>
-            
-        </div>
-
-        
     </div>
 
 </div>

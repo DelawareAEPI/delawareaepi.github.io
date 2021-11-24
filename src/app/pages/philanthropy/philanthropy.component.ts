@@ -25,6 +25,8 @@ export class PhilanthropyComponent implements OnInit {
 
     loading: boolean = true;
 
+    hero: string[] = ['IMG_7660.jpg', 'DSC_0584.JPG', 'IMG_6128.JPEG', 'DSC_0590.JPG', 'IMG_9866.JPG', 'IMG_6175.JPEG', 'IMG_9867.JPG'];
+
 
     constructor(private firebaseService: FirebaseService, config: NgbCarouselConfig) { 
         config.interval = 4000;
@@ -40,7 +42,7 @@ export class PhilanthropyComponent implements OnInit {
         this.firebaseService.getPhilanthropy().then((snapshot: any)=>{
             let data = snapshot.val();
 
-            this.udanceTotal = data.udance.total;
+            this.udanceTotal = Math.round(data.udance.total);
             Object.keys(data.udance.team).map(id=>{
                 this.udanceTeam.push(data.udance.team[id]);    
             });
@@ -115,7 +117,7 @@ export class PhilanthropyComponent implements OnInit {
                     if(!row[2])
                         this.udanceTotal = parseFloat(row[21]);
                     else
-                        this.udanceTeam.push({'name': row[1] + " " + row[2], 'raised': parseFloat(row[21]), 'goal': parseFloat(row[14]),'pageid':row[22]});
+                        this.udanceTeam.push({'name': row[1] + " " + row[2], 'raised': Math.round(parseFloat(row[21])), 'goal': parseFloat(row[14]),'pageid':row[22]});
                 }
                 
                 this.udanceTeam.sort((a, b) => (a.raised > b.raised) ? -1 : 1);
