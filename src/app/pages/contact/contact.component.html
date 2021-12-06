@@ -23,19 +23,19 @@
         
             <span class="contact2-form-title"> Email Us </span>
             
-            <app-custom-input class=""  [type]="'name'"></app-custom-input>
+            <app-custom-input class=""  [type]="'name'" [(inputModel)]="name"></app-custom-input>
 
-            <app-custom-input class=""  [type]="'email'"> </app-custom-input>
+            <app-custom-input class=""  [type]="'email'" [(inputModel)]="email" (validEmail)="isEmailValid($event)"> </app-custom-input>
 
             <div class='wrap-input2'>
-                <textarea class="input2" type="text"></textarea>
+                <textarea class="input2" type="text" name="message" [(ngModel)]="message" (blur)="updateMessage($event)"></textarea>
                 <span class="focus-input2" data-placeholder="MESSAGE"></span>
             </div>
         
 
             <div class="wrap-btn">
                 <div class="bgbtn"></div>
-                <button class="btn1">Submit</button>
+                <button class="btn1" (click)="submitContactForm()">Submit</button>
             </div>
 
         </form>

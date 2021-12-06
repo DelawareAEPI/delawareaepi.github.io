@@ -64,6 +64,16 @@ export class FirebaseService {
         set(rush, data);
     }
 
+    submitRushInterest(data){
+        let contact = ref(this.db, "/contact/rush/");
+        push(contact, data);
+    }
+
+    submitContactMessage(data){
+        let contact = ref(this.db, "/contact/emailus/");
+        push(contact, data);
+    }
+
 
     getBrotherhood(): Promise<DataSnapshot>{
         let brotherhood = ref(this.db, "/brotherhood/");

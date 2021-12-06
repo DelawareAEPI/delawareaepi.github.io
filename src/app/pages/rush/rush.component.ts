@@ -44,10 +44,24 @@ export class RushComponent implements OnInit {
 
     submitRushInterest(){
         if(this.validEmail){
-            //send an email to RhoD
+            if(!this.name)
+                this.name = "";
+            if(!this.phone)
+                this.phone = "";
+
+            this.firebaseService.submitRushInterest({name:this.name, email:this.email, phone:this.phone});
+            alert("Submitted! Thank you for your interest in rush.");
+            this.clearText();
         } else {
             alert("Please enter a valid email");
         }
+    }
+
+    
+    clearText(){
+        this.email = "";
+        this.name = "";
+        this.phone = "";
     }
 
 

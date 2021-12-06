@@ -11,6 +11,13 @@ export class ContactComponent implements OnInit {
 
     isMobile: boolean = false;
 
+    name: string;
+    email: string;
+    message: string;
+
+    validEmail: boolean = false;
+
+
     constructor(private firebaseService: FirebaseService) { }
 
     contacts: {name: string, position: string, phone: string, image:string }[]= [ ];
@@ -31,6 +38,40 @@ export class ContactComponent implements OnInit {
                 }  
             });
         });
+    }
+    
+    updateMessage(event){
+        if(event.target.value){
+            event.target.classList.add('has-val');
+        } else {
+            event.target.classList.remove('has-val');
+        }
+
+        console.log(event.target.value);
+    }
+
+    isEmailValid(valid: boolean){
+        this.validEmail = valid;
+    }
+
+    submitContactForm(){
+        if(this.validEmail){
+            if(!this.name)
+                this.name = "";
+            
+            this.firebaseService.submitContactMessage({name:this.name, email:this.email, message:this.message});
+            alert("Message Sumbitted!");
+            this.clearText();
+        } else {
+            alert("Please enter a valid email");
+        }
+    }
+
+
+    clearText(){
+        this.email = "";
+        this.name = "";
+        this.message = "";
     }
 
 }
