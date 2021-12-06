@@ -257,6 +257,19 @@
   font-weight: 300;
   color: white;
 }
+
+.udance h1{
+  font-size:20pt;
+  font-family: Raleway;
+  font-weight: 300;
+}
+
+.udance a{
+  font-size:20pt;
+  font-family: Raleway;
+  font-weight: 300;
+}
+ 
  
 /*
 .header {

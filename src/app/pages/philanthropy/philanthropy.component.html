@@ -52,16 +52,16 @@
         
         <h1 style="text-align: center; font-size: 3rem;">Our B+ Hero! </h1>
 
-        <div class='col-4'>
+        <div class='col-md-4 col-12'>
             <iframe src="https://drive.google.com/file/d/1LnBXksMwaEfuTI4Iqep1KVR8ytROcnku/preview" width="100%" height="100%"></iframe>
         </div>
 
-        <div class='col-4'>
+        <div class='col-md-4 col-12'>
             <h2>Meet Caleb</h2>
             <p style="color:black;">The Brothers of the Rho Deuteron Chapter of the Alpha Epsilon Pi Fraternity, have been given the opportunity to be paired with Caleb, a six-year-old boy with Acute Lymphoblastic Leukemia (ALL) and a B+ Hero through The Andrew McDonough B+ Foundation and UDance. We were so happy to be able to meet him and his entire family and are extremely excited to spend more time with them all! To learn about Caleb and his journey, please watch the video.</p>
         </div>
 
-        <div class='col-4'>
+        <div class='col-md-4 col-12'>
             <ngb-carousel>
                 <ng-template ngbSlide *ngFor="let image of hero">
                     <div class="wrapper">
@@ -110,7 +110,7 @@
 
     <div class="row justify-content-center" style="padding: 20px 7%;">        
         <h1 style="color: var(--light-blue); text-align:center;"> Team Members </h1>
-        
+
         <a href="https://www.udancede.org/bpos_partreg.aspx?eventtag={{udanceEventTag}}&teamid={{udanceTeamID}}" class="link" style="font-size: 1rem; color: var(--light-blue); font-weight: 600;">Click Me to Join The Team!</a>
         
         <a href="javascript:void(0)" (click)="showTeam = !showTeam" class="teammember" style="margin: 10px; float: left; width: 100%; font-size: 1rem;">Click Me to {{showTeam ? "Hide Team" : "Show Team"}}</a>

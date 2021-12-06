@@ -25,7 +25,7 @@ export class PhilanthropyComponent implements OnInit {
 
     loading: boolean = true;
 
-    hero: string[] = ['IMG_7660.jpg', 'DSC_0584.JPG', 'IMG_6128.JPEG', 'DSC_0590.JPG', 'IMG_9866.JPG', 'IMG_6175.JPEG', 'IMG_9867.JPG'];
+    hero: string[] = ['IMG_7660.jpg', 'IMG_7975.jpg', 'DSC_0584.JPG', 'IMG_6128.JPEG', 'DSC_0590.JPG', 'IMG_9866.JPG', 'IMG_6175.JPEG', 'IMG_9867.JPG'];
 
 
     constructor(private firebaseService: FirebaseService, config: NgbCarouselConfig) { 
