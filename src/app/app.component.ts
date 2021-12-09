@@ -36,8 +36,11 @@ export class AppComponent {
 
     userSignIn(){
         if(this.signIn == "Sign In"){
-            this.authService.signUserIn();
-            this.signIn="Sign Out";
+            this.authService.signUserIn()?.then((result) => {
+                const user = result.user;
+                this.authService.createUser(user);
+                this.signIn = "Sign Out: " + user.email?.substring(0, user.email?.indexOf("@"));
+            }).catch((error) => {console.log(error)});
         } else {
             this.signIn="Sign In";
             this.authService.signUserOut();

@@ -39,11 +39,8 @@ export class AuthenticationService {
         const auth = getAuth();
 
         if(auth.currentUser == null){
-            signInWithPopup(auth, this.provider).then((result) => {
-                const user = result.user;
-                this.createUser(user);
-            }).catch((error) => {console.log(error)});;
-        }
+            return signInWithPopup(auth, this.provider);
+        } else return null;
     }
 
     createUser(user){
