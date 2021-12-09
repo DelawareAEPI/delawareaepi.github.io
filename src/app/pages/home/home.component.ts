@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthenticationService } from 'src/app/services/authentication.service';
 
 import { FirebaseService } from '../../services/firebase.service';
 
@@ -15,17 +16,11 @@ export class HomeComponent implements OnInit {
     udanceLink: string;
 
     isMobile: boolean;
+    isAdmin: boolean;
     
-    constructor(private firebaseService: FirebaseService) { }
+    constructor(private firebaseService: FirebaseService, private authService: AuthenticationService) { }
 
     ngOnInit(): void {
-
-        //let test = new RegExp('data-fund-current="\\d+\\.\\d+');
-        //partid=\d+
-
-        //this.firebaseService.test().subscribe(
-        //          data => {console.log(data.match(test));},
-        //    );
 
         if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
             this.isMobile = true;
@@ -47,6 +42,24 @@ export class HomeComponent implements OnInit {
             Object.keys(data.aboutus.blurb).map(id=>{
                 this.aboutus.set(id, data.aboutus.blurb[id]);    
             });
+
+            //check user but has to be in this async because it doesn't work right away
+            //this check is for navigating back to this page while being signed in
+            if(this.authService.getUser()){
+                this.authService.isAdmin().then(ss=>{ 
+                    //if the user does not exist, make a new user
+                    if(ss.val() != null){
+                        this.isAdmin = ss.val().admin;
+                        console.log(this.isAdmin);
+                    }
+                });
+            }
+
+        });
+
+        //this check is to update the admin status whenever the user signs in or signs out
+        this.authService.getCurrentAdminStatus().subscribe(data => {
+            this.isAdmin = data;
         });
 
     }

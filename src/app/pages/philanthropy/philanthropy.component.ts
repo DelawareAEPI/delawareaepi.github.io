@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FirebaseService } from 'src/app/services/firebase.service';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
+import { AuthenticationService } from 'src/app/services/authentication.service';
 
 @Component({
     selector: 'app-philanthropy',
@@ -24,11 +25,12 @@ export class PhilanthropyComponent implements OnInit {
     allEvents: {'images': string[], 'name':string, 'desc':string}[] = [];
 
     loading: boolean = true;
+    isAdmin: boolean = false;
 
     hero: string[] = ['IMG_7660.jpg', 'IMG_7975.jpg', 'DSC_0584.JPG', 'IMG_6128.JPEG', 'DSC_0590.JPG', 'IMG_9866.JPG', 'IMG_6175.JPEG', 'IMG_9867.JPG'];
 
 
-    constructor(private firebaseService: FirebaseService, config: NgbCarouselConfig) { 
+    constructor(private firebaseService: FirebaseService, config: NgbCarouselConfig, private authService: AuthenticationService) { 
         config.interval = 4000;
         config.keyboard = true;
         config.pauseOnHover = true;
@@ -36,6 +38,11 @@ export class PhilanthropyComponent implements OnInit {
 
     ngOnInit(): void {
         this.loadPhilanthropyData();
+
+        //this check is to update the admin status whenever the user signs in or signs out
+        this.authService.getCurrentAdminStatus().subscribe(data => {
+            this.isAdmin = data;
+        });
     }
 
     loadPhilanthropyData(){
@@ -54,6 +61,18 @@ export class PhilanthropyComponent implements OnInit {
             });
 
             this.loading = false;
+
+            //check user but has to be in this async because it doesn't work right away
+            //this check is for navigating back to this page while being signed in
+            if(this.authService.getUser()){
+                this.authService.isAdmin().then(ss=>{ 
+                    //if the user does not exist, make a new user
+                    if(ss.val() != null){
+                        this.isAdmin = ss.val().admin;
+                        console.log(this.isAdmin);
+                    }
+                });
+            }
         });
     }
 

@@ -3,10 +3,10 @@
 
 <div class="container-fluid">
 
-    <form *ngIf="false">
-        <div class="input-group mb-3">
-            <label for="formFile" class="form-label">Default file input example</label>
-            <input class="form-control" type="file" id="formFile" (change)="loadUdanceReport($event)">
+    <form *ngIf="isAdmin">
+        <div class="row mb-3 mt-3">
+            <h1 for="formFile" class="form-label" style="margin: 10px;">Update UDance Data - Upload new UDance Report</h1>
+            <input class="form-control" type="file" id="formFile" (change)="loadUdanceReport($event)" style="margin: 10px;">
         </div>
     </form>
 

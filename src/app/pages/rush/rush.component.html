@@ -17,14 +17,14 @@
         </div>
 
         <div class="col" align="center">
-            <div *ngIf="false">
+            <div *ngIf="isAdmin">
             <p contentEditable (blur)="onBlur($event.target)" *ngFor="let line of rushBlurb | keyvalue" data-id={{line.key}}> {{line.value}} </p>
             <button class="btn btn-primary" style="background: #007bff; margin: 5px;" (click)="onAddParagraph()">Add Paragraph</button>
             <button class="btn btn-primary" style="background: #007bff; margin: 5px;" (click)="onRemoveParagraph()">Remove Last Paragraph</button>
             <button class="btn btn-primary" style="background: #007bff; margin: 5px;" (click)="onSaveChanges()">Save Changes</button>
             </div>
 
-            <div *ngIf="true">
+            <div *ngIf="!isAdmin">
                 <p *ngFor="let line of rushBlurb | keyvalue" data-id={{line.key}}> {{line.value}} </p>
             </div>
 

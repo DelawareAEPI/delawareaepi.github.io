@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { AuthenticationService } from 'src/app/services/authentication.service';
 import { FirebaseService } from '../../services/firebase.service';
 
 
@@ -24,8 +25,10 @@ export class BrotherhoodComponent implements OnInit {
 
     blurb: string;
 
+    isAdmin: boolean = false;
 
-    constructor(private firebaseService: FirebaseService, private http: HttpClient) { }
+
+    constructor(private firebaseService: FirebaseService, private authService: AuthenticationService) { }
 
     ngOnInit(): void {
         
@@ -41,7 +44,26 @@ export class BrotherhoodComponent implements OnInit {
                 } 
                 this.events.push(data.events[id].event);
             });
+        
+            //check user but has to be in this async because it doesn't work right away
+            //this check is for navigating back to this page while being signed in
+            if(this.authService.getUser()){
+                this.authService.isAdmin().then(ss=>{ 
+                    //if the user does not exist, make a new user
+                    if(ss.val() != null){
+                        this.isAdmin = ss.val().admin;
+                        console.log(this.isAdmin);
+                    }
+                });
+            }
         });
+
+        //this check is to update the admin status whenever the user signs in or signs out
+        this.authService.getCurrentAdminStatus().subscribe(data => {
+            this.isAdmin = data;
+        });
+
+
     }
 
     onBlur(element){

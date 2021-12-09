@@ -6,7 +6,6 @@ import { environment } from "src/environments/environment";
 
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-
 const httpOptions = {
     headers: new HttpHeaders({ 'responseType': 'text',
     "x-iq-image-response-type":"url",
@@ -28,15 +27,6 @@ export class FirebaseService {
     constructor(private http:HttpClient) { 
         initializeApp(environment.firebaseConfig),
         this.db = getDatabase();
-    }
-
-    test() {
-        //test = new RegExp('data-fund-current="\\d+\\.\\d+')
-
-        //return this.http.get('/api/bpos_teampage.aspx?eventtag=ud2022&teamid=3717')
-        //      .pipe(map((response: any) => response));
-
-        return this.http.get('/api/', {responseType: 'text'});
     }
 
     getBoard(): Promise<DataSnapshot>{

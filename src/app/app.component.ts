@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthenticationService } from './services/authentication.service';
 
 @Component({
     selector: 'app-root',
@@ -10,6 +11,9 @@ export class AppComponent {
     
     title = 'aepi';
     pages=['home', 'rush', 'brother', 'history', 'contact', 'newsletter'];
+    signIn: string = "Sign In";
+
+    constructor(private authService: AuthenticationService){}
 
     ngOnInit(){  
         var pathname = window.location.pathname;
@@ -21,4 +25,22 @@ export class AppComponent {
         });
     }
 
+    navigate(page: string){
+        document.querySelectorAll('.nav-item').forEach((item, index)=>{
+            if(page.includes(this.pages[index])) 
+                item.children[0].classList.add('active');
+            else
+                item.children[0].classList.remove('active');
+        });
+    }
+
+    userSignIn(){
+        if(this.signIn == "Sign In"){
+            this.authService.signUserIn();
+            this.signIn="Sign Out";
+        } else {
+            this.signIn="Sign In";
+            this.authService.signUserOut();
+        }
+    }
 }

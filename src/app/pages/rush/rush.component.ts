@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthenticationService } from 'src/app/services/authentication.service';
 import { CustomInputComponent } from '../../components/custom-input/custom-input.component';
 import { FirebaseService } from '../../services/firebase.service';
 
@@ -19,8 +20,9 @@ export class RushComponent implements OnInit {
     rushCardImage: string;
 
     isMobile: boolean = false;
+    isAdmin: boolean = false;
 
-    constructor(private firebaseService: FirebaseService) { }
+    constructor(private firebaseService: FirebaseService, private authService: AuthenticationService) { }
 
     ngOnInit(): void {
         if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
@@ -35,7 +37,26 @@ export class RushComponent implements OnInit {
             Object.keys(data.blurb).map(id=>{
                 this.rushBlurb.set(id, data.blurb[id]);    
             });
+
+            //check user but has to be in this async because it doesn't work right away
+            //this check is for navigating back to this page while being signed in
+            if(this.authService.getUser()){
+                this.authService.isAdmin().then(ss=>{ 
+                    //if the user does not exist, make a new user
+                    if(ss.val() != null){
+                        this.isAdmin = ss.val().admin;
+                        console.log(this.isAdmin);
+                    }
+                });
+            }
         });
+
+        //this check is to update the admin status whenever the user signs in or signs out
+        this.authService.getCurrentAdminStatus().subscribe(data => {
+            this.isAdmin = data;
+        });
+        
+
     }
 
     isEmailValid(valid: boolean){
