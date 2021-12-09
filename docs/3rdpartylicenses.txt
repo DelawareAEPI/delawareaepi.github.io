@@ -45,6 +45,9 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 @firebase/app
 Apache-2.0
 
+@firebase/auth
+Apache-2.0
+
 @firebase/component
 Apache-2.0
 
@@ -83,6 +86,8 @@ THE SOFTWARE.
 
 
 firebase/app
+
+firebase/auth
 
 firebase/database
 
