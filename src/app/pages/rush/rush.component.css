@@ -40,6 +40,6 @@ img {
 
 .header {
   background: var(--light-blue); 
-  background: -webkit-linear-gradient(20deg, #0000004d 0%, #0000004d 70%), url("../../../assets/alumn_active_c.JPG"); 
-  background: linear-gradient(20deg, #0000004d 0%, #0000004d 70%), url("../../../assets/alumn_active_c.JPG"); 
+  background: -webkit-linear-gradient(20deg, #0000004d 0%, #0000004d 70%), url("../../../assets/banners/alumn_active_c.JPG"); 
+  background: linear-gradient(20deg, #0000004d 0%, #0000004d 70%), url("../../../assets/banners/alumn_active_c.JPG"); 
 }
