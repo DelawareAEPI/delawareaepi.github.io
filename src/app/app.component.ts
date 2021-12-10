@@ -36,6 +36,8 @@ export class AppComponent {
 
     userSignIn(){
         if(this.signIn == "Sign In"){
+            this.authService.signUserOut();//make sure no user is signed in first
+            
             this.authService.signUserIn()?.then((result) => {
                 const user = result.user;
                 this.authService.createUser(user);
