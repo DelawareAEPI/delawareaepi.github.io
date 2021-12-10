@@ -20,26 +20,21 @@ import { Observable, Subject } from 'rxjs';
 export class AuthenticationService {
 
     db: any;
-
     user: any;
     admin = new Subject();
-
-    provider;
 
     constructor(private googleSheetsDbService: GoogleSheetsDbService) { 
         initializeApp(environment.firebaseConfig),
         this.db = getDatabase();
-        this.provider = new GoogleAuthProvider();
     }
 
     signUserIn() {
-
-        console.log(this.getUser());
         
+        let provider = new GoogleAuthProvider();
         const auth = getAuth();
 
         if(auth.currentUser == null){
-            return signInWithPopup(auth, this.provider);
+            return signInWithPopup(auth, provider);
         } else return null;
     }
 
@@ -79,15 +74,10 @@ export class AuthenticationService {
         console.log(auth.currentUser);
 
         signOut(auth).then(() => {
-            // Sign-out successful.
             console.log("sign out");
-
             this.updateAdmin(false);
-
-        }).catch((error) => {
-            // An error happened.
-            console.log(error);
-        });
+        }).catch((error) => { console.log(error); });
+    
     }
 
     updateAdmin(status: any) {
@@ -98,7 +88,7 @@ export class AuthenticationService {
         return this.admin.asObservable();
     }
 
-    isAdmin(){
+    getUserDbEntry(){
         let userRef = ref(this.db, "/users/" + getAuth().currentUser?.uid);
         return get(userRef);
     }

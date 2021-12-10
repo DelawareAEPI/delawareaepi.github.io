@@ -29,6 +29,14 @@ export class FirebaseService {
         this.db = getDatabase();
     }
 
+    getBrotherhoodImages(){
+        return this.http.get("https://www.googleapis.com/drive/v3/files?q='1cI9j97iuwIEmW4TeFBCxgGE2FO1euVHl'+in+parents&key=AIzaSyDNQMGh-LP8ktyYMRZIVXtW2kkusFnFNm0");
+    }
+
+    getPhilanthropyImages(){
+        return this.http.get("https://www.googleapis.com/drive/v3/files?q='1C_9SQMYwOzswI9El6TN6Moblv1zS_LZh'+in+parents&key=AIzaSyDNQMGh-LP8ktyYMRZIVXtW2kkusFnFNm0");
+    }
+
     getBoard(): Promise<DataSnapshot>{
         let boardMembers = ref(this.db, "/boardMembers/");
         return get(boardMembers);

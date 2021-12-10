@@ -5,8 +5,8 @@
 
     <form *ngIf="isAdmin">
         <div class="row mb-3 mt-3">
-            <h1 for="formFile" class="form-label" style="margin: 10px;">Update UDance Data - Upload new UDance Report</h1>
-            <input class="form-control" type="file" id="formFile" (change)="loadUdanceReport($event)" style="margin: 10px;">
+            <h1 for="formFile" class="form-label" style="margin: 10px; width:90%;">Update UDance Data - Upload new UDance Report</h1>
+            <input class="form-control" type="file" id="formFile" (change)="loadUdanceReport($event)" style="margin: 10px; width:90%;">
         </div>
     </form>
 
@@ -65,7 +65,7 @@
             <ngb-carousel>
                 <ng-template ngbSlide *ngFor="let image of hero">
                     <div class="wrapper">
-                        <img src="/aepi_website/assets/philanthropyImages/{{image}}" style="width: 100%;">
+                        <img src="https://drive.google.com/uc?export=view&id={{image}}" style="width: 100%;">
                     </div>
                 </ng-template>
             </ngb-carousel>
@@ -82,18 +82,18 @@
             <h4> All of the profits from our fundraiser events are donated to the B+ Foundation towards our UDance goal! </h4>
         </div>
 
-        <div *ngFor="let imageName of ['pieapi', 'pumpkinsmash', 'frenchtoast']" class="col-md-3 mb-5" style="margin: 0 4.1%;">
+        <div *ngFor="let imageName of ['1bNSsyVTKglXadTpBIow6q8hxqpFWylWC', '1qxSCZIjNI0cmzzYErhwMivJc4DsGZhVT', '1SfUna7pVrcP5j6tq0ZZHci3Bwr6-x52C']" class="col-md-3 mb-5" style="margin: 0 4.1%;">
             <div class="card">
-                <img class="card-img-top" src="/aepi_website/assets/philanthropyImages/{{imageName}}.jpg" alt="Card image cap">
+                <img class="card-img-top" src="https://drive.google.com/uc?export=view&id={{imageName}}" alt="Card image cap">
             </div>
         </div>
 
         <div *ngFor="let i of [0,1,2]" class="col-md-4 mb-5">
             <div class="card">
                 <ngb-carousel>
-                    <ng-template ngbSlide *ngFor="let image of allEvents[i].images">
+                    <ng-template ngbSlide *ngFor="let image of allEvents[i].images;">
                         <div class="wrapper">
-                            <img src="/aepi_website/{{image}}" style="width: 100%;">
+                            <img src="{{image}}" style="width: 100%;">
                         </div>
                     </ng-template>
                 </ngb-carousel>
