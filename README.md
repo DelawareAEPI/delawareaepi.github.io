@@ -2,7 +2,7 @@
 
 This website is for the University of Delaware's Rho Deuteron chapter of the Alpha Epsilon Pi Fraternity.  
 
-The website is based on the Angular framework, driven by typescript, html, and css. Most of the backend is on a Firebase Realtime Database. However, a Google Sheet is used for non-technical brothers to conveniently update the roster.
+The website is based on the Angular framework, driven by typescript, html, and css. Most of the backend is on a Firebase Realtime Database. However, a Google Sheet is used for non-technical brothers to conveniently update the roster. Additionally, most of the images displayed on the site are located in the chapter's Google Drive so new pictures can easily be added. 
 
 Created by Ben Raymon 2021
 
@@ -10,11 +10,11 @@ Created by Ben Raymon 2021
 All of the content can be updated through the firebase database (instructions further down). Additionally, some parts can be updated directly from within the website as long as the user is signed in with admin access.
 
 
-For further development, first clone this repository. The application was originally developed with Angular v12.2.9, Node v14.15.1, and npm v6.14.8. From the base directory, run `npm install` to install the necessary packages. To website can be deployed locally to localhost:4200 with the `ng serve` command. 
+For further development, first clone this repository. The application was originally developed with Angular v12.2.9, Node v14.15.1, and npm v6.14.8. From the base directory, run `npm install` to install the necessary packages. The website can be deployed locally to localhost:4200 with the `ng serve` command. For the application to run properly, you must create a file called `config.js` under the `src` directory. In the file `src/config.js` paste this line: `export var DRIVE_API_KEY = "X";` and replace `X` with the Browser Key that can be found in the [Google Cloud Platform credentials page](https://console.cloud.google.com/apis/credentials) for the website project. 
 
-The website is currently deployed to GitHub Pages. To build for deployment run `ng build --output-path docs --base-href /aepi_website/`. You must create a file `404.html` under the docs folder and paste in the contents of `index.html` (required for routing to work with GitHub Pages). 
+The website is currently deployed to GitHub Pages. Run `ng build --output-path docs --base-href /aepi_website/` to build the application for deployment under the `docs` folder. Before committing the updated build output, you must make a copy of `docs/index.html` and rename the file to `docs/404.html` (required for Angular routing to work with GitHub Pages).
 
-# Updating The Content
+# **Updating The Content**
 ## Text Blurbs
 If an admin is signed in, certain areas of text become editable. 
 
@@ -49,7 +49,7 @@ https://drive.google.com/file/d/IMAGE-ID/view?usp=sharing
 <img src="src/assets/readme/imageid.PNG">
 <img src="src/assets/readme/rosterimage.PNG">
 
-If no image is provided, a template blank profile image will be used.
+If no image is provided, a blank profile template image will be used.
 
 ## Adding Historical Events
 
@@ -61,6 +61,10 @@ If you want to create a new section header/divider, leave "Section Header" check
 
 When your information is ready to be added, click "Add Event". The new event/section will be shown once the page is reloaded. 
 
+## Brotherhood Events Gallery
+
+The images that are displayed in the gallery portion of the Brotherhood Events page are stored in the Rho Deuteron Google Drive under Website -> Brotherhood Images. Any picture that is added to the Brotherhood Images folder will automatically be displayed in the gallery on the website. 
+
 ## UDance
 
 The fundraising data and team donations on our Philanthropy page need to be updated manually. An admin will have access to this portion of the Philanthropy page which allows the user to upload a UDance report file. 
@@ -70,7 +74,7 @@ The fundraising data and team donations on our Philanthropy page need to be upda
 The UDance report can be downloaded by our UDance chair from the official website. The report should be a CSV file titled "UDance 20XX Team Report - yyyy-mm-dd.csv". Please make sure only to upload the correct file to the website. Once uploaded, the total raised and team member dontations will be added to the database and the changes will be visible when the webpage is refreshed. 
 
 
-# Database
+# **Database**
 
 To access the database go to https://console.firebase.google.com/ while signed in under the Rho Deuteron gmail account (aepirhodeuteron@gmail.com). Then click "website" under Your Firebase projects. 
 
@@ -82,8 +86,15 @@ On the left hand side, nagivate to Realtime Database.
 
 The realtime database holds most of the information that is displayed on the website, including the Eboard, udance link, and the blurbs of information on each page. 
 
+## Admin Access
+Users can sign in to the website using the google account associated with their UD email. As long as the email matches their UD email in the roster, a user will be created in the database. By default, any user on the eboard will have admin privileges. 
+
+To give specific users admin access (for example the UDance chair), set admin to true under the desired user in the database. Similarly, a user can be revoked of admin privileges if admin is set to false. 
+
+<img src="src/assets/readme/admin.PNG">
+
 ## EBoard
-The EBoard information is stored under a boardMembers object in the database. Each boardMember has a name, position, and image. Master and RushChair also have phone numbers that are displayed in the contact page. 
+The EBoard information that is displayed on the home page is stored under a boardMembers object in the database. Each boardMember has a name, position, and image. Master and RushChair also have phone numbers that are displayed in the contact page. 
 
 <img src="src/assets/readme/firebaseeboard.PNG">
 
@@ -94,7 +105,7 @@ When it is time to update the eboard, you can edit the information by hovering o
 Similar to the composite images, enter the IMAGE-ID of the share link to the image you would like to use. This image-id can be the same one that is used in the roster. Edit the name, image, and phone number (if applicable) of each member on the board. When this information is changed, the website will update to reflect the new board members. 
 
 
-## Text Blurbs (via database)
+## Text Blurbs
 
 In addition to the edit functionality that is available within the website, you can also edit the text content from the database. 
 
