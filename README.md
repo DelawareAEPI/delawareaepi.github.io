@@ -61,6 +61,15 @@ If you want to create a new section header/divider, leave "Section Header" check
 
 When your information is ready to be added, click "Add Event". The new event/section will be shown once the page is reloaded. 
 
+## UDance
+
+The fundraising data and team donations on our Philanthropy page need to be updated manually. An admin will have access to this portion of the Philanthropy page which allows the user to upload a UDance report file. 
+
+<img src="src/assets/readme/udanceupload.PNG">
+
+The UDance report can be downloaded by our UDance chair from the official website. The report should be a CSV file titled "UDance 20XX Team Report - yyyy-mm-dd.csv". Please make sure only to upload the correct file to the website. Once uploaded, the total raised and team member dontations will be added to the database and the changes will be visible when the webpage is refreshed. 
+
+
 # Database
 
 To access the database go to https://console.firebase.google.com/ while signed in under the Rho Deuteron gmail account (aepirhodeuteron@gmail.com). Then click "website" under Your Firebase projects. 

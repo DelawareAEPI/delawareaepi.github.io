@@ -6,6 +6,8 @@ import { environment } from "src/environments/environment";
 
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
+import { DRIVE_API_KEY } from 'src/config.js';
+
 const httpOptions = {
     headers: new HttpHeaders({ 'responseType': 'text',
     "x-iq-image-response-type":"url",
@@ -30,11 +32,11 @@ export class FirebaseService {
     }
 
     getBrotherhoodImages(){
-        return this.http.get("https://www.googleapis.com/drive/v3/files?q='1cI9j97iuwIEmW4TeFBCxgGE2FO1euVHl'+in+parents&key=AIzaSyDNQMGh-LP8ktyYMRZIVXtW2kkusFnFNm0");
+        return this.http.get("https://www.googleapis.com/drive/v3/files?q='1cI9j97iuwIEmW4TeFBCxgGE2FO1euVHl'+in+parents&key=" + DRIVE_API_KEY);
     }
 
     getPhilanthropyImages(){
-        return this.http.get("https://www.googleapis.com/drive/v3/files?q='1C_9SQMYwOzswI9El6TN6Moblv1zS_LZh'+in+parents&key=AIzaSyDNQMGh-LP8ktyYMRZIVXtW2kkusFnFNm0");
+        return this.http.get("https://www.googleapis.com/drive/v3/files?q='1C_9SQMYwOzswI9El6TN6Moblv1zS_LZh'+in+parents&key=" + DRIVE_API_KEY);
     }
 
     getBoard(): Promise<DataSnapshot>{
