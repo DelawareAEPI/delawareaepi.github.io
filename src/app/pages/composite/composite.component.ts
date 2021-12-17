@@ -30,7 +30,7 @@ export class CompositeComponent implements OnInit {
 
             for(let brother of data){
                 if(!(<Brother>brother).image)
-                    (<Brother>brother).image = "/aepi_website/assets/no_image.png";
+                    (<Brother>brother).image = "/assets/no_image.png";
                 else
                     (<Brother>brother).image = "https://drive.google.com/uc?export=view&id=" + (<Brother>brother).image;
 
