@@ -30,7 +30,7 @@ export class CompositeComponent implements OnInit {
 
             for(let brother of data){
                 if(!(<Brother>brother).image)
-                    (<Brother>brother).image = "/assets/no_image.png";
+                    (<Brother>brother).image = "https://drive.google.com/uc?export=view&id=1D-TTGqtB1zXYWxePaHU_mwdN5m29Puis";
                 else
                     (<Brother>brother).image = "https://drive.google.com/uc?export=view&id=" + (<Brother>brother).image;
 
@@ -61,7 +61,6 @@ export class CompositeComponent implements OnInit {
     }
 
     counter(i: number, buffer: number) {
-        console.log(i, buffer);
         return new Array(i).fill(0).map((x,y)=>y+buffer);
     }
 
