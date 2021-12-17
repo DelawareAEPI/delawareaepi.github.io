@@ -84,7 +84,7 @@ On the left hand side, nagivate to Realtime Database.
 
 <img src="src/assets/readme/realtimedatabase.PNG">
 
-The realtime database holds most of the information that is displayed on the website, including the Eboard, udance link, and the blurbs of information on each page. 
+The realtime database holds most of the information that is displayed on the website, including the Eboard, UDance donation data, and the blurbs of information on each page. The database also contains all of the responses from the Rush Interest Form or the Contact Page as well as a list of the users that have previously signed in to the website. 
 
 ## Admin Access
 Users can sign in to the website using the google account associated with their UD email. As long as the email matches their UD email in the roster, a user will be created in the database. By default, any user on the eboard will have admin privileges. 
