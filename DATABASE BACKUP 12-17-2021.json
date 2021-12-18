@@ -1,0 +1,604 @@
+{
+  "boardMembers" : {
+    "1_Master" : {
+      "image" : "1HtW2FS2BVVsiiieKc8JWmQOyO_rl1R4z",
+      "name" : "Matthew Bloom",
+      "phone" : "443-224-3597",
+      "position" : "Master"
+    },
+    "2_LtMaster" : {
+      "image" : "1QpLtoAO9S_KIzmIpIENxKlYsAt3ho7AT",
+      "name" : "Ben Donohue",
+      "position" : "Lieutenant Master"
+    },
+    "3_Scribe" : {
+      "image" : "1vO5M9vZ2SRsL_NLMiFpsRXnQSqV11F40",
+      "name" : "Chase Pollack",
+      "position" : "Scribe"
+    },
+    "4_Exchequer" : {
+      "image" : "1EEEn2BMRfgYL-VnX-s-79tnF5d1LKX2L",
+      "name" : "Lance Lenchner",
+      "position" : "Exchequer"
+    },
+    "5_BrotherAtLarge" : {
+      "image" : "1RtWyeLCrpRJn7CuE2U23vO0hiu6Gxmoc",
+      "name" : "Drew Riesenbach",
+      "position" : "Brother At Large"
+    },
+    "6_PledgeMaster" : {
+      "image" : "194wEpO3XAYkoiJ75EOljsDgxi6ML8vfL",
+      "name" : "Justin Harad",
+      "position" : "New Member Educator"
+    },
+    "7_RushChair" : {
+      "image" : "1ADFp7DNm7J-SLM76wJLbRDkybXm0dJtv",
+      "name" : "Cory Ladov",
+      "phone" : "215-429-3763",
+      "position" : "Rush Chair"
+    },
+    "8_Sentinel" : {
+      "image" : "13kFVVe4zhRaJ6ZFRvvZiGTN6Aci2vkWF",
+      "name" : "Ethan Friedman",
+      "position" : "Sentinel"
+    }
+  },
+  "brotherhood" : {
+    "blurb" : "Our strong brotherhood is the single greatest reason many of our Brothers joined AEPi originally and why they continue to love their time in our chapter. Delaware AEPi’s close brotherhood is a testament to the strong bonds we have with one another and this connection comes in many forms. Together we live, learn, grow, play sports, travel, hang out and so much more. Below are just a few highlights of some of our favorite brotherhood events.",
+    "events" : {
+      "-MmiRoG20M863y6gLKLj" : {
+        "description" : "Barbecues are a great way for us to get outside and come together for a great meal. On Family Weekend we host all our parents and siblings and on Homecoming Weekend we get to welcome back our amazing alumni. No matter the occasion, a BBQ with the boys is a crowd-pleaser.",
+        "event" : "Barbecues",
+        "imageLink" : "https://static.wixstatic.com/media/0d4090_0e4f4e492b47492597ea7ebcb61c9501~mv2.jpg/v1/fill/w_947,h_710,al_c,q_85,usm_0.66_1.00_0.01/0d4090_0e4f4e492b47492597ea7ebcb61c9501~mv2.webp"
+      },
+      "-MmiRoG7nIGrjYs2oDrN" : {
+        "description" : "At the end of every Spring semester, we spend an entire weekend on the beach in Ocean City, Maryland. From sports in the sand, swimming in the ocean and a huge party, Formal Weekend is one of our favorite times of the year.",
+        "event" : "Formal",
+        "imageLink" : "https://static.wixstatic.com/media/0d4090_6e3b3a6d5e204331bf9d8cb60c830ef1~mv2.jpeg/v1/fill/w_947,h_710,al_c,q_85,usm_0.66_1.00_0.01/0d4090_6e3b3a6d5e204331bf9d8cb60c830ef1~mv2.webp"
+      },
+      "-MmiRoG86_qMC_BFAtXK" : {
+        "description" : "Each semester we go for a day of paintball at a local range. It’s a great way to spend a Saturday and to take a break from everything going on to just blow off some steam and get active.",
+        "event" : "Paintball",
+        "imageLink" : "https://static.wixstatic.com/media/0d4090_97bfb4b5b61c487eb71c1808ea6b0010~mv2.png/v1/fill/w_944,h_710,al_c,q_90,usm_0.66_1.00_0.01/0d4090_97bfb4b5b61c487eb71c1808ea6b0010~mv2.webp"
+      },
+      "-MmiRoG95X35s0mmOR9b" : {
+        "description" : "We love participating in intramural sports. From soccer to wiffleball, we love to get active, to play together… and win too. Fantasy sports, watching football games, video game tournaments and intramurals are just some of the ways we use sports to get closer and to have a great time together.",
+        "event" : "Intramural Sports",
+        "imageLink" : "https://static.wixstatic.com/media/0d4090_cd8ea362a318461290abc50f6808f73f~mv2.jpg/v1/fill/w_947,h_710,al_c,q_85,usm_0.66_1.00_0.01/0d4090_cd8ea362a318461290abc50f6808f73f~mv2.webp"
+      },
+      "-MmiRoGAw9FR4ap6u3Yz" : {
+        "description" : "Sometimes it’s nice to end a busy day hanging out around a bonfire with your closest friends. These casual bonfires are a great chance to destress, spend time with a smaller group of brothers and relax around the fire for as long as you want.",
+        "event" : "Bonfires",
+        "imageLink" : "https://static.wixstatic.com/media/0d4090_0921dbad2329433e866f2bd8f90332c1~mv2.jpg/v1/fill/w_724,h_543,al_c,q_85/0d4090_0921dbad2329433e866f2bd8f90332c1~mv2.webp"
+      },
+      "-MmiRoGBoYIEneqcXlIJ" : {
+        "description" : "A new tradition in our chapter, this past Fall, the brothers traveled to Washington DC. We got to explore the museums and monuments throughout the day and topped it off at night with an amazing experience at the world famous nightclub, Echostage.",
+        "event" : "Echostage",
+        "imageLink" : "https://static.wixstatic.com/media/0d4090_fc938f542f64448cb0fcae1a8987c8d6~mv2.jpg/v1/fill/w_230,h_210,al_c,q_80,usm_0.66_1.00_0.01/0d4090_fc938f542f64448cb0fcae1a8987c8d6~mv2.webp"
+      },
+      "-MmiRoGCm1XrwvcMnyAP" : {
+        "description" : "",
+        "event" : "DC Trip",
+        "imageLink" : ""
+      },
+      "-MmiRoGCm1XrwvcMnyAQ" : {
+        "description" : "",
+        "event" : "Philly Trip",
+        "imageLink" : ""
+      },
+      "-MmiRoGDtXvoM6CsmWh2" : {
+        "description" : "",
+        "event" : "Movie Trips",
+        "imageLink" : ""
+      },
+      "-MmiRoGE9KYKK2skD4GP" : {
+        "description" : "",
+        "event" : "Bowling",
+        "imageLink" : ""
+      },
+      "-MmiRoGJ4dy9RNVLMsUj" : {
+        "description" : "",
+        "event" : "Much More!",
+        "imageLink" : ""
+      }
+    }
+  },
+  "contact" : {
+    "emailus" : [ null, {
+      "email" : "johndoe@email.com",
+      "message" : "this is my message",
+      "name" : "John Doe"
+    } ],
+    "rush" : [ null, {
+      "email" : "johndoe@email.com",
+      "name" : "John Doe",
+      "phone" : 1234567890
+    } ]
+  },
+  "history" : {
+    "events" : {
+      "-MoZkH5LTt48xvwncQkn" : {
+        "content" : "",
+        "period" : true,
+        "title" : "The Birth of Rho Deuteron",
+        "year" : ""
+      },
+      "-MoZkH5OjVO56lyETBLg" : {
+        "content" : "The Rho Deuteron Chapter of Alpha Epsilon Pi was founded in April, 1947 with 42 Brothers. They had a house at 151 West Main St. Many Brothers took leadership roles around campus within the IFC, Student Government, Hillel and the UD Review or were student athletes. ",
+        "period" : false,
+        "title" : "The Beginning",
+        "year" : "1947"
+      },
+      "-MoZkH5PaBZ5_Q4KuMcn" : {
+        "content" : "In 1962, they moved to a newly constructed house at 48 West Park Pl. ",
+        "period" : false,
+        "title" : "Expansion",
+        "year" : "1962"
+      },
+      "-MoZkH5Q738BLHTcldNS" : {
+        "content" : "The chapter disbanded in 1969 during a trend of Greek life struggling at UD. These first 22 years of our chapter were highly successful creating a culture of leadership and dedication to high academic performance.",
+        "period" : false,
+        "title" : "The Fall of Rho D",
+        "year" : "1969"
+      },
+      "-MoZkH5Q738BLHTcldNT" : {
+        "content" : "",
+        "period" : true,
+        "title" : "Golden Age",
+        "year" : ""
+      },
+      "-MoZkH5REFLnYSQY96jT" : {
+        "content" : "In 1978, a group of 10 Jewish students refounded the Rho Deuteron chapter and began a golden age that lasted many years.",
+        "period" : false,
+        "title" : "Refoundation",
+        "year" : "1978"
+      },
+      "-MoZkH5REFLnYSQY96jU" : {
+        "content" : "In 1982, AEPi moved into a house at 30 E Main St and grew into a big chapter with a close brotherhood and lots of campus involvement.",
+        "period" : false,
+        "title" : "A Growing Chapter",
+        "year" : "1982"
+      },
+      "-MoZkH5SIiuSJNbNBk7G" : {
+        "content" : "In 1986, they built a new house at 314 Wyoming St. The 1980s saw a resurgence of Greek Life and our chapter thrived. They maintained a great connection to the Jewish community, had the highest GPA on campus for years and grew to be one of the largest chapters at the University of Delaware.",
+        "period" : false,
+        "title" : "The Eighties",
+        "year" : "1986"
+      },
+      "-MoZkH5SIiuSJNbNBk7H" : {
+        "content" : "Heading into the 90s, the Brothers continued their dedication to philanthropy and a thriving social life. By the end of the 90s, after a few incidents, the chapter was disbanded but they left a legacy of brotherhood and building a strong Jewish identity that lasts to this day.",
+        "period" : false,
+        "title" : "The Nineties",
+        "year" : "1990"
+      },
+      "-MoZkH5T588_JkUQFD-r" : {
+        "content" : "",
+        "period" : true,
+        "title" : "A Third Iteration",
+        "year" : ""
+      },
+      "-MoZkH5T588_JkUQFD-s" : {
+        "content" : "A new group of students decided a few years later to restart the Rho Deuteron chapter in 2005. Initially clinging to their Jewish roots, the Brothers formed a strong brotherhood and performed well in philanthropic causes and in the social scene. The chapter quickly grew to be one of the largest and most well-liked fraternities at UD.",
+        "period" : false,
+        "title" : "AEPi Returns",
+        "year" : "2005"
+      },
+      "-MoZkH5T588_JkUQFD-t" : {
+        "content" : "However, it was short-lived after a 2014 allegation caused the chapter to lose recognition.",
+        "period" : false,
+        "title" : "Unfortunate Events",
+        "year" : "2014"
+      },
+      "-MoZkH5UJHMHfQAxwVla" : {
+        "content" : "",
+        "period" : true,
+        "title" : "The Current Chapter",
+        "year" : ""
+      },
+      "-MoZkH5UJHMHfQAxwVlb" : {
+        "content" : "2015 saw the start of the current iteration of our chapter. 29 founding fathers restarted the chapter hoping to learn from the lessons of the past to create a model chapter valuing leadership, connection to the Jewish community, philanthropy and brotherhood.",
+        "period" : false,
+        "title" : "AEPi Returns... Again",
+        "year" : "2015"
+      },
+      "-MoZkH5UJHMHfQAxwVlc" : {
+        "content" : "The chapter was welcomed back on campus in October 2018 and since then our chapter has thrived and grown. Though we faced many challenges as we restarted the chapter, our brothers worked hard to overcome them all.",
+        "period" : false,
+        "title" : "Back On Campus",
+        "year" : "2018"
+      },
+      "-MoZkH5UJHMHfQAxwVld" : {
+        "content" : "COVID-19 was another hard challenge but the chapter’s culture of perseverance helped us get through it successfully. In the 2020-2021 school year, the chapter won the Rising Star Award from UDance, the Chapter of the Year Award from AEPi Headquarters and the Fraternity of the Year Award from the University of Delaware. This is just the start of a long and successful chapter staying true to our founding values and delivering a high quality fraternity experience to all our members. ",
+        "period" : false,
+        "title" : "COVID",
+        "year" : "2020"
+      },
+      "-MoZkH5V6NL9boM5Wqu5" : {
+        "content" : "In the 2020-2021 school year, the chapter won the Rising Star Award from UDance, the Chapter of the Year Award from AEPi Headquarters and the Fraternity of the Year Award from the University of Delaware. This is just the start of a long and successful chapter staying true to our founding values and delivering a high quality fraternity experience to all our members.",
+        "period" : false,
+        "title" : "Outstanding Recognition",
+        "year" : "2021"
+      }
+    }
+  },
+  "home" : {
+    "aboutus" : {
+      "blurb" : [ null, "\"The Rho Deuteron chapter of Alpha Epsilon Pi is a quickly growing and award winning fraternity where we emphasize academic success, philanthropy opportunities, campus engagement, incredible social experiences and more for all our Brothers. Originally founded in 1947 and re-chartered in 2017, we’ve initiated over 1000 Brothers over the years and we’ll continue to provide a great brotherhood experience to many more in the years to come.", "AEPi stresses all aspects of fraternity life from academics to philanthropy and Jewish student life to socials and athletics. We consider academic excellence to be central to college life and continue to expand on a legacy of success in and out of college. Furthermore, nearly all of our Brothers partake in additional student organizations including Jewish student groups, intramurals, major-specific organizations, pre-professional student groups, political advocacy groups and more. Our men continue to prove themselves as community leaders and strive to be the best at whatever they do.", "Our chapter hosts amazing programming as well. Each year, our Brothers go on trips to local cities like Philadelphia and Washington DC with our biggest trip of the year being our Formal Weekend in Ocean City, Maryland every May. Our intramural teams include football, basketball, soccer and even wiffle ball, in which we won the championship! Our Brothers can enjoy a calendar packed with brotherhood events, social events, philanthropy opportunities, Jewish programs and so much more.", "The Brothers of the Rho Deuteron Chapter of AEPi benefit from a well-rounded fraternity experience to give them an impactful four years as well as a lifelong connection to a strong brotherhood growing each and every semester.”" ]
+    },
+    "udance" : {
+      "link" : "https://www.udancede.org/bpos_teampage.aspx?eventtag=ud2022&teamid=3717"
+    }
+  },
+  "philanthropy" : {
+    "events" : [ {
+      "desc" : "",
+      "images" : [ "https://drive.google.com/uc?export=view&id=1wI64Jjw1lVVFhZysPgfeorvPYmla7RAC", "https://drive.google.com/uc?export=view&id=1utjIIl4E_63N4-2T45-LJXyUyNJYmQJ6", "https://drive.google.com/uc?export=view&id=1L1zHFwTiTcMAw5cHzOfS74EsCngt4duy" ],
+      "name" : "Pie-A-Pi"
+    }, {
+      "desc" : "",
+      "images" : [ "https://drive.google.com/uc?export=view&id=1gUEypKlpl_8LzmZk6WBDSt1tsGCeCnIB", "https://drive.google.com/uc?export=view&id=1hsvlUI1gSRSSg0eRo4IbmwmU-n3Vs-hm", "https://drive.google.com/uc?export=view&id=1c0MIj4c1K2C00RpuGPhP_f22b7ih9Xy2", "https://drive.google.com/uc?export=view&id=12-MjWw7zt4b10zBT8eWNoadyxi40D8o9" ],
+      "name" : "Pumpkin Smash"
+    }, {
+      "desc" : "",
+      "images" : [ "https://drive.google.com/uc?export=view&id=1YTC_G9ohcq3J_8DMjgMiIZAgr9w-pCDa", "https://drive.google.com/uc?export=view&id=1NFaKkj0N4Ysp_vd-pMGSA4BXl05xfSnX" ],
+      "name" : "French Toast"
+    } ],
+    "udance" : {
+      "team" : [ {
+        "goal" : 1500,
+        "name" : "Zack Rubin",
+        "pageid" : "98927",
+        "raised" : 1100
+      }, {
+        "goal" : 500,
+        "name" : "Jeremy Reissman",
+        "pageid" : "100313",
+        "raised" : 865
+      }, {
+        "goal" : 1000,
+        "name" : "Samuel Diamond",
+        "pageid" : "98923",
+        "raised" : 720
+      }, {
+        "goal" : 500,
+        "name" : "Jared Rothberg",
+        "pageid" : "99898",
+        "raised" : 610
+      }, {
+        "goal" : 500,
+        "name" : "Mason Friedman",
+        "pageid" : "99079",
+        "raised" : 365
+      }, {
+        "goal" : 500,
+        "name" : "Ben Bach",
+        "pageid" : "100259",
+        "raised" : 337
+      }, {
+        "goal" : 333,
+        "name" : "Luke Goldberg",
+        "pageid" : "107436",
+        "raised" : 304
+      }, {
+        "goal" : 275,
+        "name" : "Zachary Trichon",
+        "pageid" : "108033",
+        "raised" : 294
+      }, {
+        "goal" : 500,
+        "name" : "Kevin Orlan",
+        "pageid" : "98990",
+        "raised" : 282
+      }, {
+        "goal" : 500,
+        "name" : "Drew Riesenbach",
+        "pageid" : "99683",
+        "raised" : 253
+      }, {
+        "goal" : 500,
+        "name" : "Alex Beigelman",
+        "pageid" : "98932",
+        "raised" : 240
+      }, {
+        "goal" : 1000,
+        "name" : "Joseph Eisenberg",
+        "pageid" : "100056",
+        "raised" : 224
+      }, {
+        "goal" : 500,
+        "name" : "Spencer Kufeld",
+        "pageid" : "108688",
+        "raised" : 189
+      }, {
+        "goal" : 25,
+        "name" : "Justin Harad",
+        "pageid" : "98928",
+        "raised" : 180
+      }, {
+        "goal" : 500,
+        "name" : "Ryan Taub",
+        "pageid" : "101864",
+        "raised" : 170
+      }, {
+        "goal" : 275,
+        "name" : "David Metcalf",
+        "pageid" : "107416",
+        "raised" : 170
+      }, {
+        "goal" : 500,
+        "name" : "Brendan Cohen",
+        "pageid" : "101690",
+        "raised" : 167
+      }, {
+        "goal" : 500,
+        "name" : "Brendan Kane",
+        "pageid" : "99793",
+        "raised" : 151
+      }, {
+        "goal" : 275,
+        "name" : "Ethan Friedman",
+        "pageid" : "99963",
+        "raised" : 145
+      }, {
+        "goal" : 275,
+        "name" : "Dillon Belser",
+        "pageid" : "99706",
+        "raised" : 135
+      }, {
+        "goal" : 1000,
+        "name" : "Maximilian Ferry",
+        "pageid" : "99900",
+        "raised" : 125
+      }, {
+        "goal" : 500,
+        "name" : "Lance Lenchner",
+        "pageid" : "99624",
+        "raised" : 120
+      }, {
+        "goal" : 500,
+        "name" : "Samuel Rultenberg",
+        "pageid" : "100903",
+        "raised" : 120
+      }, {
+        "goal" : 500,
+        "name" : "Jared Schlanger",
+        "pageid" : "102130",
+        "raised" : 117
+      }, {
+        "goal" : 500,
+        "name" : "Josh Shein",
+        "pageid" : "107446",
+        "raised" : 108
+      }, {
+        "goal" : 500,
+        "name" : "Justin Marks",
+        "pageid" : "98942",
+        "raised" : 105
+      }, {
+        "goal" : 500,
+        "name" : "Ryan Linn",
+        "pageid" : "98929",
+        "raised" : 100
+      }, {
+        "goal" : 275,
+        "name" : "Alex Fleischner",
+        "pageid" : "107554",
+        "raised" : 95
+      }, {
+        "goal" : 275,
+        "name" : "Cory Ladov",
+        "pageid" : "99886",
+        "raised" : 92
+      }, {
+        "goal" : 500,
+        "name" : "Adam Hetzelson",
+        "pageid" : "99788",
+        "raised" : 80
+      }, {
+        "goal" : 275,
+        "name" : "dylan rultenberg",
+        "pageid" : "107901",
+        "raised" : 71
+      }, {
+        "goal" : 275,
+        "name" : "Matthew Spector",
+        "pageid" : "102129",
+        "raised" : 69
+      }, {
+        "goal" : 100,
+        "name" : "Robert Senseny",
+        "pageid" : "107474",
+        "raised" : 61
+      }, {
+        "goal" : 500,
+        "name" : "Michael Hundertpfund",
+        "pageid" : "99790",
+        "raised" : 50
+      }, {
+        "goal" : 400,
+        "name" : "Mateo Suter-Shannon",
+        "pageid" : "107467",
+        "raised" : 46
+      }, {
+        "goal" : 275,
+        "name" : "Ian Leduc",
+        "pageid" : "107682",
+        "raised" : 44
+      }, {
+        "goal" : 100,
+        "name" : "Bastian Perry",
+        "pageid" : "107555",
+        "raised" : 41
+      }, {
+        "goal" : 500,
+        "name" : "Nadav Golan",
+        "pageid" : "107469",
+        "raised" : 34
+      }, {
+        "goal" : 275,
+        "name" : "Josh Ivler",
+        "pageid" : "107462",
+        "raised" : 31
+      }, {
+        "goal" : 275,
+        "name" : "Seth Ganz",
+        "pageid" : "107423",
+        "raised" : 30
+      }, {
+        "goal" : 275,
+        "name" : "Ryan Hartlein",
+        "pageid" : "107545",
+        "raised" : 30
+      }, {
+        "goal" : 200,
+        "name" : "Ryan Thomas",
+        "pageid" : "102131",
+        "raised" : 27
+      }, {
+        "goal" : 500,
+        "name" : "Myles Kaplan",
+        "pageid" : "99703",
+        "raised" : 25
+      }, {
+        "goal" : 275,
+        "name" : "Jacob Sussman",
+        "pageid" : "101052",
+        "raised" : 25
+      }, {
+        "goal" : 100,
+        "name" : "Zach Nemeth",
+        "pageid" : "99899",
+        "raised" : 22
+      }, {
+        "goal" : 1000,
+        "name" : "Nate Lerner",
+        "pageid" : "102128",
+        "raised" : 22
+      }, {
+        "goal" : 500,
+        "name" : "Matthew Arstark",
+        "pageid" : "107653",
+        "raised" : 21
+      }, {
+        "goal" : 500,
+        "name" : "Josh Fisher",
+        "pageid" : "98933",
+        "raised" : 20
+      }, {
+        "goal" : 250,
+        "name" : "Matthew Bloom",
+        "pageid" : "99400",
+        "raised" : 20
+      }, {
+        "goal" : 500,
+        "name" : "Kyle Gelber",
+        "pageid" : "99905",
+        "raised" : 20
+      }, {
+        "goal" : 275,
+        "name" : "Ethan Korenkov",
+        "pageid" : "103315",
+        "raised" : 20
+      }, {
+        "goal" : 500,
+        "name" : "John Ledwith",
+        "pageid" : "103317",
+        "raised" : 20
+      }, {
+        "goal" : 300,
+        "name" : "Michael LaStella",
+        "pageid" : "101331",
+        "raised" : 18
+      }, {
+        "goal" : 500,
+        "name" : "Sam Herring",
+        "pageid" : "100266",
+        "raised" : 16
+      }, {
+        "goal" : 100,
+        "name" : "Luke Greene",
+        "pageid" : "107442",
+        "raised" : 16
+      }, {
+        "goal" : 500,
+        "name" : "Chase Pollack",
+        "pageid" : "98961",
+        "raised" : 13
+      }, {
+        "goal" : 200,
+        "name" : "Ben Donohue",
+        "pageid" : "99795",
+        "raised" : 13
+      }, {
+        "goal" : 50,
+        "name" : "Cooper Bell",
+        "pageid" : "100608",
+        "raised" : 11
+      }, {
+        "goal" : 500,
+        "name" : "Philip Galletta",
+        "pageid" : "100099",
+        "raised" : 10
+      }, {
+        "goal" : 500,
+        "name" : "Alexander Romero",
+        "pageid" : "107406",
+        "raised" : 10
+      }, {
+        "goal" : 25,
+        "name" : "Harrison Geisenberger",
+        "pageid" : "108788",
+        "raised" : 7
+      }, {
+        "goal" : 250,
+        "name" : "Max Scheiner",
+        "pageid" : "99864",
+        "raised" : 5
+      }, {
+        "goal" : 500,
+        "name" : "Alex Goodman",
+        "pageid" : "100083",
+        "raised" : 5
+      }, {
+        "goal" : 100,
+        "name" : "Ben Raymon",
+        "pageid" : "102127",
+        "raised" : 5
+      }, {
+        "goal" : 50,
+        "name" : "Max Mineo",
+        "pageid" : "106448",
+        "raised" : 5
+      } ],
+      "total" : 11483.52
+    }
+  },
+  "rush" : {
+    "blurb" : [ null, "We encourage you to rush and learn more about our chapter. Being in AEPi strengthens character, develops leadership skills necessary to leave college prepared for the next phase of life and offers its Brothers a great college experience. Not only do you leave this fraternity better prepared for the world, you do so with a band of brothers to support you and help you succeed.  Throughout AEPi’s history, we have nurtured leaders in business, education, government and more. A goal of our chapter is to help each Brother become the best version of themselves that they can be.", "If you are interested in joining our chapter, reach out to our Rush Chair Cory Ladov, listed below. We are excited to welcome every rushee and look forward to getting to know you!", " Rush Chair Cory Ladov: (215) - 429 - 3763 " ],
+    "rushcard" : "https://static.wixstatic.com/media/0d4090_2753615274bc45c5b2beeb1e0ecaefff~mv2.jpeg/v1/fill/w_310,h_367,al_c,q_80,usm_0.66_1.00_0.01/IMG_5565.webp"
+  },
+  "users" : {
+    "1J3wHdo9AocWNjQx4oQVBT2Qnr53" : {
+      "admin" : true,
+      "email" : "braymon@udel.edu",
+      "name" : "Benjamin Raymon",
+      "uid" : "1J3wHdo9AocWNjQx4oQVBT2Qnr53"
+    },
+    "YRzjSZaWnjhXnZxQKSufeM5xMDD3" : {
+      "admin" : true,
+      "email" : "mlbloom@udel.edu",
+      "name" : "Matthew Bloom",
+      "uid" : "YRzjSZaWnjhXnZxQKSufeM5xMDD3"
+    },
+    "aPb4MR9HzHP28w7wWCsOHE9iN0u2" : {
+      "admin" : true,
+      "email" : "diamonds@udel.edu",
+      "name" : "Sam Diamond",
+      "uid" : "aPb4MR9HzHP28w7wWCsOHE9iN0u2"
+    }
+  },
+  "visits" : {
+    "-Mr93KhGfvpcXDGjnCy_" : "2021-12-17 15:24:35",
+    "-Mr93ffw9nxAaguzTvkc" : "2021-12-17 15:26:5"
+  }
+}

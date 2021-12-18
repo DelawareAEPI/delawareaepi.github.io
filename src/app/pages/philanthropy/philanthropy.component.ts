@@ -5,6 +5,8 @@ import { AuthenticationService } from 'src/app/services/authentication.service';
 import { Observable } from 'rxjs';
 import { merge } from 'jquery';
 
+import {environment} from "src/environments/environment"
+
 @Component({
     selector: 'app-philanthropy',
     templateUrl: './philanthropy.component.html',
@@ -47,7 +49,7 @@ export class PhilanthropyComponent implements OnInit {
             this.isAdmin = data;
         });
 
-        this.firebaseService.getPhilanthropyImages().subscribe((data:any)=>{
+        this.firebaseService.getDriveImages(environment.philanthropyDriveID).subscribe((data:any)=>{
             data.files.forEach(element => {
                 if(element.mimeType != "application/vnd.google-apps.folder"){
                     this.hero.push(element.id);

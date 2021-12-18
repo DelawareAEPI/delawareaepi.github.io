@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from 'src/app/services/authentication.service';
 import { FirebaseService } from '../../services/firebase.service';
 
+import {environment} from "src/environments/environment"
 
 
 @Component({
@@ -34,7 +35,7 @@ export class BrotherhoodComponent implements OnInit {
 
     ngOnInit(): void {
 
-        this.firebaseService.getBrotherhoodImages().subscribe((data: any) => {
+        this.firebaseService.getDriveImages(environment.brotherhoodDriveID).subscribe((data: any) => {
             data.files.forEach(element => {
                 this.files.push("https://drive.google.com/uc?export=view&id=" + element.id);
             });
