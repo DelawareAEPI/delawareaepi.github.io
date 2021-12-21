@@ -61,10 +61,6 @@ If you want to create a new section header/divider, leave "Section Header" check
 
 When your information is ready to be added, click "Add Event". The new event/section will be shown once the page is reloaded. 
 
-## Brotherhood Events Gallery
-
-The images that are displayed in the gallery portion of the Brotherhood Events page are stored in the Rho Deuteron Google Drive under Website -> Brotherhood Images. Any picture that is added to the Brotherhood Images folder will automatically be displayed in the gallery on the website. 
-
 ## UDance
 
 The fundraising data and team donations on our Philanthropy page need to be updated manually. An admin will have access to this portion of the Philanthropy page which allows the user to upload a UDance report file. 
@@ -72,6 +68,14 @@ The fundraising data and team donations on our Philanthropy page need to be upda
 <img src="src/assets/readme/udanceupload.PNG">
 
 The UDance report can be downloaded by our UDance chair from the official website. The report should be a CSV file titled "UDance 20XX Team Report - yyyy-mm-dd.csv". Please make sure only to upload the correct file to the website. Once uploaded, the total raised and team member dontations will be added to the database and the changes will be visible when the webpage is refreshed. 
+
+## Brotherhood Events Gallery
+
+The images that are displayed in the gallery portion of the Brotherhood Events page are stored in the Rho Deuteron Google Drive under Website -> Brotherhood Images. Any picture that is added to the Brotherhood Images folder will automatically be displayed in the gallery on the website. 
+
+## History Class Composite Images
+
+The images that are displayed in the class composites portion of the History page are also stored in the Rho Deuteron Google Drive. The folder can be found under AEPi Minor Board Drive -> Historian -> Chapter Composites -> Composite Edits. There is also a shortcut to this folder under Website -> Composite Edits. Any picture that is added to Composite Edits will be displayed in the class composite gallery. Please ensure the images maintain the following naming convention: IMG_1234_YEAR.jpg
 
 
 # **Database**
