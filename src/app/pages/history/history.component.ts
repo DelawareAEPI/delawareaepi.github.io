@@ -18,7 +18,7 @@ export class HistoryComponent implements OnInit {
     historyData: {"period": boolean, "year":string, "title":string, "content":string}[] = [];
 
     isAdmin: boolean = false;
-    files: string[] = [];
+    files: {image:string, year:string}[] = [];
 
     constructor(private firebaseService: FirebaseService, private modalService: NgbModal, private authService: AuthenticationService) { }
 
@@ -29,7 +29,7 @@ export class HistoryComponent implements OnInit {
 
             data.files.forEach(element => {
                 console.log(element.name);
-                this.files.push("https://drive.google.com/uc?export=view&id=" + element.id);
+                this.files.push({image: "https://drive.google.com/uc?export=view&id=" + element.id, year: element.name.substring(9,13)});
             });
         });
         

@@ -22,6 +22,10 @@
     left: 410px;
 }
 
+.card-img-top {
+    aspect-ratio: 7/5;
+}
+
 
 $primary-color: #5BADDE;
 $primary-color-hover: scale-color($primary-color, $lightness: 32%);
