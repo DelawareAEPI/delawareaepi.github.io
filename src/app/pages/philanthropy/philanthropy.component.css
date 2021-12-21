@@ -28,6 +28,10 @@
     text-decoration: none;
 }
 
+.teammember:hover {
+  text-decoration: underline;
+}
+
 .link{
   float: left;
   color: var(--gold);
