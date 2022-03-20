@@ -16,7 +16,7 @@ export const environment = {
 
   philanthropyDriveID: "1C_9SQMYwOzswI9El6TN6Moblv1zS_LZh",
   brotherhoodDriveID: "1cI9j97iuwIEmW4TeFBCxgGE2FO1euVHl",
-  historyCompositesDriveID: "13PWrX5jnaHbZjFdXN3PKGytI11AuKhiZ"
+  historyCompositesDriveID: "1SjEqwMrayxEcF5EG6naYyve8htVxeoYT"
 };
 
 /*
