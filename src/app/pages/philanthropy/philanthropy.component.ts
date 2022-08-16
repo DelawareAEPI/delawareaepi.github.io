@@ -19,8 +19,8 @@ export class PhilanthropyComponent implements OnInit {
 
     udanceTeam: any[]= [];
     udanceTotal: number;
-    udanceTeamID: number = 3717;
-    udanceEventTag: string = "ud2022"; 
+    udanceEventTag: string; 
+    udanceTeamID: number = 4333;
     udanceGoal: number = 55000.00;
 
     percentGoal: number;
@@ -43,6 +43,9 @@ export class PhilanthropyComponent implements OnInit {
 
     ngOnInit(): void {
         this.loadPhilanthropyData();
+
+        this.udanceEventTag = "ud" + this.getYear();
+        console.log(this.udanceEventTag);
 
         //this check is to update the admin status whenever the user signs in or signs out
         this.authService.getCurrentAdminStatus().subscribe(data => {
@@ -160,6 +163,11 @@ export class PhilanthropyComponent implements OnInit {
         };
         
         reader.readAsText(event.target.files[0]);
+    }
+
+    getYear(){
+        let d = new Date();
+        return d.getMonth() >= 9 ? d.getFullYear(): d.getFullYear() + 1;
     }
     
 

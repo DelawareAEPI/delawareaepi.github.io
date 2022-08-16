@@ -59,7 +59,7 @@ export class ContactComponent implements OnInit {
             if(!this.name)
                 this.name = "";
             
-            this.firebaseService.submitContactMessage({name:this.name, email:this.email, message:this.message});
+            this.firebaseService.submitContactMessage({name:this.name, email:this.email, message:this.message, date: (new Date()).toString()});
             alert("Message Sumbitted!");
             this.clearText();
         } else {
