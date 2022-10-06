@@ -167,7 +167,7 @@ export class PhilanthropyComponent implements OnInit {
 
     getYear(){
         let d = new Date();
-        return d.getMonth() >= 9 ? d.getFullYear(): d.getFullYear() + 1;
+        return d.getMonth() >= 8 ? d.getFullYear(): d.getFullYear() + 1;
     }
     
 
