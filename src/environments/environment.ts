@@ -1,11 +1,12 @@
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
+import { DRIVE_API_KEY } from 'src/config.js';
 
 export const environment = {
   production: false,
   firebaseConfig: {
-    apiKey: "AIzaSyDNQMGh-LP8ktyYMRZIVXtW2kkusFnFNm0",
+    apiKey: DRIVE_API_KEY,
     authDomain: "website-72efa.firebaseapp.com",
     projectId: "website-72efa",
     storageBucket: "website-72efa.appspot.com",

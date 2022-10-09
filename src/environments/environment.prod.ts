@@ -1,7 +1,9 @@
+import { DRIVE_API_KEY } from 'src/config.js';
+
 export const environment = {
   production: true,
   firebaseConfig: {
-    apiKey: "AIzaSyDNQMGh-LP8ktyYMRZIVXtW2kkusFnFNm0",
+    apiKey: DRIVE_API_KEY,
     authDomain: "website-72efa.firebaseapp.com",
     projectId: "website-72efa",
     storageBucket: "website-72efa.appspot.com",
