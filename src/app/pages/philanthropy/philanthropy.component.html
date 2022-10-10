@@ -123,7 +123,7 @@
 
             <div *ngFor="let member of udanceTeam" class='col-md-4 col-lg-3' style="margin: 0px;" align="center">
                 <h3>
-                    <a class="teammember" target="_blank" href="https://www.udancede.org/bpos_partpage.aspx?eventtag=ud2022&teamid={{udanceTeamID}}&partid={{member.pageid}}">{{member.name}} - ${{member.raised}}</a>
+                    <a class="teammember" target="_blank" href="https://www.udancede.org/bpos_partpage.aspx?eventtag={{udanceEventTag}}&teamid={{udanceTeamID}}&partid={{member.pageid}}">{{member.name}} - ${{member.raised}}</a>
                 </h3>
                 <!--<div class="progress" style="width: 50%;">
                     <div class="progress-bar" role="progressbar" [style.width.%]="member.raised/member.goal * 100" aria-valuemin="0" aria-valuemax="100"></div>
