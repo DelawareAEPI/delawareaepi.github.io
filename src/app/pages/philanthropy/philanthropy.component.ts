@@ -65,6 +65,8 @@ export class PhilanthropyComponent implements OnInit {
         this.firebaseService.getPhilanthropy().then((snapshot: any)=>{
             let data = snapshot.val();
 
+            this.udanceTeamID = data.udance.teamID;
+
             this.udanceTotal = Math.round(data.udance.total);
             Object.keys(data.udance.team).map(id=>{
                 this.udanceTeam.push(data.udance.team[id]);    
@@ -167,7 +169,7 @@ export class PhilanthropyComponent implements OnInit {
 
     getYear(){
         let d = new Date();
-        return d.getMonth() >= 8 ? d.getFullYear(): d.getFullYear() + 1;
+        return d.getMonth() <= 8 ? d.getFullYear(): d.getFullYear() + 1;
     }
     
 
