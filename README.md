@@ -12,7 +12,7 @@ All of the content can be updated through the firebase database (instructions fu
 
 For further development, first clone this repository. The application was originally developed with Angular v12.2.9, Node v14.15.1, and npm v6.14.8. From the base directory, run `npm install` to install the necessary packages. The website can be deployed locally to localhost:4200 with the `ng serve` command. For the application to run properly, you must create a file called `config.js` under the `src` directory. In the file `src/config.js` paste this line: `export var DRIVE_API_KEY = "X";` and replace `X` with the Browser Key that can be found in the [Google Cloud Platform credentials page](https://console.cloud.google.com/apis/credentials) for the website project. 
 
-The website is currently deployed to GitHub Pages. Run `ng build` to build the application for deployment under the `docs` folder. Before committing the updated build output, you must make a copy of `docs/index.html` and rename the file to `docs/404.html` (required for Angular routing to work with GitHub Pages).
+The website is currently deployed to GitHub Pages. Run `ng build` to build the application for deployment under the `docs` folder. Before committing the updated build output, you must make a copy of `docs/index.html` and rename the file to `docs/404.html` (required for Angular routing to work with GitHub Pages). Running `ng build` will also delete the CNAME file. You must also run `git restore docs/CNAME` to ensure the file does not get removed from the remote repository before committing the build. 
 
 # **Updating The Content**
 ## Text Blurbs
