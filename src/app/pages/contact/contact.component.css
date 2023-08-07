@@ -27,6 +27,7 @@ p {
 .contactImage {
     width:fit-content;
     margin-bottom: 10px;
+    max-width: min(100%, 200px);
 }
 
 .contactPosition{
