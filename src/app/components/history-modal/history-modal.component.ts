@@ -24,7 +24,7 @@ export class HistoryModalComponent implements OnInit {
     }
 
     onRadioSwitch(test:any){
-        this.isSectionHeader = test.path[0].id == "flexRadioDefault1" ? true : false;  
+        this.isSectionHeader = test.currentTarget.id == "flexRadioDefault1" ? true : false;  
         console.log(this.isSectionHeader);
         if(this.isSectionHeader){
             this.year = "";
