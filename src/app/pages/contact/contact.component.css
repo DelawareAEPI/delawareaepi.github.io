@@ -4,7 +4,7 @@ h1 {
     color: var(--gold);
     font-size: 36pt;
     margin-bottom: 50px;
-    font-family: Raleway;
+    font-family: var(--primary-font);
     font-weight: 200;
     text-align: center;
 }
@@ -12,7 +12,7 @@ h1 {
 h3 {
     text-align: center;
     margin: 20px 0px 50px;
-    font-family: Raleway;
+    font-family: var(--primary-font);
     color: var(--gold);
     font-weight: 200;
 }
@@ -20,7 +20,7 @@ h3 {
 p {
     color: white;
     font-size: 16pt;
-    font-family: Raleway;
+    font-family: var(--primary-font);
     font-weight: 300;
 }
 
@@ -34,7 +34,7 @@ p {
    font-size: 14px;
    line-height: 1.8em;
    text-align: center;
-   font-family: Raleway;
+   font-family: var(--primary-font);
    font-weight: 500;
    margin-bottom: 0;
 }
@@ -44,7 +44,7 @@ p {
     text-align: center;
     font-size: 14px;
     line-height: 1.6em;
-    font-family: Raleway;
+    font-family: var(--primary-font);
     font-weight: 500;
 }
 
@@ -61,7 +61,7 @@ p {
 
 .contact2-form-title {
     display: block;
-    font-family: Raleway;
+    font-family: var(--primary-font);
     font-size: 39px;
     color: #333;
     line-height: 1.2;

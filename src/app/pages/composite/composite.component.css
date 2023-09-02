@@ -40,7 +40,7 @@
     font-size: 12px;
     text-align: center;
     line-height: 1.6em;
-    font-family: Raleway;
+    font-family: var(--primary-font);
     font-weight: 400;
     color: white;
   }

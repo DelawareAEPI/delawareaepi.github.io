@@ -1,6 +1,6 @@
 p {
     margin: 3px;
-    font-family: Raleway;
+    font-family: var(--primary-font);
     text-align:center;
 }
 

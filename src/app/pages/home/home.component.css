@@ -236,7 +236,7 @@
   font-size: 12px;
   line-height: 1.8em;
   text-align: center;
-  font-family: Raleway;
+  font-family: var(--primary-font);
   font-weight: 400;
   color: white;
 }
@@ -246,7 +246,7 @@
   text-align: center;
   font-size: 15px;
   line-height: 1.6em;
-  font-family: Raleway;
+  font-family: var(--primary-font);
   font-weight: 400;
   color: white;
 }
@@ -254,20 +254,20 @@
 .eboard h1{
   font-size:30pt;
   margin: 30px 15px 40px;
-  font-family: Raleway;
+  font-family: var(--primary-font);
   font-weight: 300;
   color: white;
 }
 
 .udance h1{
   font-size:20pt;
-  font-family: Raleway;
+  font-family: var(--primary-font);
   font-weight: 300;
 }
 
 .udance a{
   font-size:20pt;
-  font-family: Raleway;
+  font-family: var(--primary-font);
   font-weight: 300;
 }
  
@@ -350,7 +350,7 @@
 
 .box h4 {
   color: white;
-  font-family: Raleway;
+  font-family: var(--primary-font);
   font-weight: 300;
 }
 

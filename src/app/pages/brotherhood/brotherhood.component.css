@@ -9,7 +9,7 @@ h1 {
 .brotherhood p {
     color: white;
     font-size: 14pt;
-    font-family: Raleway;
+    font-family: var(--primary-font);
     font-weight: 300;
 }
 
@@ -103,7 +103,7 @@ p.event{
   text-align: center;
   font-size: 15px;
   line-height: 1.6em;
-  font-family: Raleway;
+  font-family: var(--primary-font);
   font-weight: 400;
   color: white;
 }
