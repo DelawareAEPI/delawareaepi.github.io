@@ -1,44 +1,56 @@
 .header {
-    background: var(--light-blue); 
-    background: -webkit-linear-gradient(20deg, #0000004d 0%, #0000004d 70%), url("../../../assets/banners/ftk.jpg"); 
-    background: linear-gradient(20deg, #0000004d 0%, #0000004d 70%), url("../../../assets/banners/caleb_ftk.jpg"); 
-  }
-
-  h1 {
-    color: var(--gold);
-    margin-bottom: 2%;
-    font-family: Oswald;
-    font-weight: 200;
-  }
-
- p {
-    color: white;
-    font-size: 14pt;
-    font-family: var(--primary-font);
-    font-weight: 300;
+  background: var(--light-blue);
+  background: -webkit-linear-gradient(20deg, #0000004d 0%, #0000004d 70%), url("../../../assets/banners/ftk.jpg");
+  background: linear-gradient(20deg, #0000004d 0%, #0000004d 70%), url("../../../assets/banners/caleb_ftk.jpg");
 }
 
-.teammember {
-    color: #918F8F;
-    font-family: 'Oswald','Sanchez',serif;
-    font-size: 1.25rem;
-    font-weight: 400;
-    font-style: italic;
-    margin: 0;
-    text-decoration: none;
+h1 {
+  color: var(--gold);
+  margin-bottom: 2%;
+  font-family: Oswald;
+  font-weight: 200;
 }
 
-.teammember:hover {
-  text-decoration: underline;
+p {
+  color: white;
+  font-size: 14pt;
+  font-family: var(--primary-font);
+  font-weight: 300;
 }
 
-.link{
+.wrapper img {
+  width: 100%;
+}
+
+/* Udance Info Section */
+.udance-info {
+  background: var(--dark-blue);
+  padding-top: 50px;
+}
+
+.udance-info .udance-content {
+  margin-bottom: 50px;
+}
+
+.donate-link {
   float: left;
   color: var(--gold);
   font-size: 1.2rem;
   font-family: var(--primary-font);
   text-decoration: none;
 }
+
+/* B+ Section */
+.bplus h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.bplus p {
+  color: black;
+}
+
+/* Fundraiser Events */
 
 .fundevents {
   background-color: var(--gold);
@@ -51,97 +63,163 @@
   margin-bottom: 0px;
 }
 
-.fundevents p {
-  color: black;
-}
-
-h4 {
+.fundevents h4 {
   font-family: var(--primary-font);
   text-align: center;
 }
 
-/* Round Progress Bar */
-  body {
-    background: #ff7e5f;
-    background: -webkit-linear-gradient(to right, #ff7e5f, #feb47b);
-    background: linear-gradient(to right, #ff7e5f, #feb47b);
-    min-height: 100vh;
-  }
-  
-  .rounded-lg {
-    border-radius: 1rem;
-  }
-  
-  .border-primary {
-    border-color: #007bff!important;
-  }
+.fundevents p {
+  color: black;
+}
+
+.event-card {
+  margin: 0 4.1%;
+}
 
 
-  .progress {
-    width: 150px;
-    height: 150px;
-    background: none;
-    position: relative;
-  }
-  
-  .progress::after {
-    content: "";
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    border: 6px solid #eee;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  
-  .progress>span {
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    z-index: 1;
-  }
-  
-  .progress .progress-left {
-    left: 0;
-  }
-  
-  .progress .progress-bar {
-    width: 100%;
-    height: 100%;
-    background: none;
-    border-width: 6px;
-    border-style: solid;
-    position: absolute;
-    top: 0;
-  }
-  
-  .progress .progress-left .progress-bar {
-    left: 100%;
-    border-top-right-radius: 80px;
-    border-bottom-right-radius: 80px;
-    border-left: 0;
-    -webkit-transform-origin: center left;
-    transform-origin: center left;
-  }
-  
-  .progress .progress-right {
-    right: 0;
-  }
-  
-  .progress .progress-right .progress-bar {
-    left: -100%;
-    border-top-left-radius: 80px;
-    border-bottom-left-radius: 80px;
-    border-right: 0;
-    -webkit-transform-origin: center right;
-    transform-origin: center right;
-  }
-  
-  .progress .progress-value {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
+/* Udance Team */
+.team {
+  padding: 20px 7%;
+}
+
+.team h1 {
+  color: var(--light-blue);
+  text-align: center;
+}
+
+.teammember {
+  color: #918F8F;
+  font-family: 'Oswald', 'Sanchez', serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  font-style: italic;
+  margin: 0;
+  text-decoration: none;
+}
+
+.teammember:hover {
+  text-decoration: underline;
+}
+
+.teammember.showteam {
+  margin: 10px;
+  float: left;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.join-link {
+  font-size: 1rem;
+  color: var(--light-blue);
+  font-weight: 600;
+  float: left;
+  font-family: var(--primary-font);
+  text-decoration: none;
+}
+
+.spinner {
+  height: 500px;
+  width: 100%;
+}
+
+.spinner .spinner-border {
+  margin-top: 245px;
+}
+
+.teammembers-container{
+  margin: 20px 0;
+}
+
+/* Gift of Life */
+.gift-of-life {
+  background: var(--dark-blue); padding-top: 50px;
+}
+
+.gift-of-life .col {
+  margin-bottom: 50px; margin-left: 10%; margin-right: 10%;
+}
+
+/* Round Progress Bar - UDance info section */
+body {
+  background: #ff7e5f;
+  background: -webkit-linear-gradient(to right, #ff7e5f, #feb47b);
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  min-height: 100vh;
+}
+
+.rounded-lg {
+  border-radius: 1rem;
+}
+
+.border-primary {
+  border-color: #007bff !important;
+}
+
+.progress {
+  width: 150px;
+  height: 150px;
+  background: none;
+  position: relative;
+}
+
+.progress::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 6px solid #eee;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.progress>span {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+.progress .progress-left {
+  left: 0;
+}
+
+.progress .progress-bar {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border-width: 6px;
+  border-style: solid;
+  position: absolute;
+  top: 0;
+}
+
+.progress .progress-left .progress-bar {
+  left: 100%;
+  border-top-right-radius: 80px;
+  border-bottom-right-radius: 80px;
+  border-left: 0;
+  -webkit-transform-origin: center left;
+  transform-origin: center left;
+}
+
+.progress .progress-right {
+  right: 0;
+}
+
+.progress .progress-right .progress-bar {
+  left: -100%;
+  border-top-left-radius: 80px;
+  border-bottom-left-radius: 80px;
+  border-right: 0;
+  -webkit-transform-origin: center right;
+  transform-origin: center right;
+}
+
+.progress .progress-value {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

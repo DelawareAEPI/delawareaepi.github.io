@@ -10,9 +10,9 @@
         </div>
     </form>
 
-    <div class="row justify-content-center" style="background: var(--dark-blue); padding-top: 50px;">
+    <div class="row justify-content-center udance-info" >
 
-        <div class="col-xl-4 col-lg-6" style="margin-bottom: 50px;">
+        <div class="col-xl-4 col-lg-6 udance-content">
             <div class="bg-white rounded-lg p-5 shadow">
                 <h2 class="h6 font-weight-bold text-center mb-4">AEPi's UDance Progress</h2>
 
@@ -40,17 +40,17 @@
             </div>
         </div>
 
-        <div class="col-xl-6 col-lg-4" style="margin-bottom: 50px;">
+        <div class="col-xl-6 col-lg-4 udance-content">
             <h1>What is UDance? </h1>
             <p>UDance is a student-run philanthropic organization at the University of Delaware. Founded in 2007, UDance has been dedicated to fighting childhood cancer ever since. We raise awareness in our community through social media and on and off campus events, while providing immediate and direct financial aid to families affected by childhood cancer.</p>
-            <a href="https://www.udancede.org/bpos_donate.aspx?eventtag={{udanceEventTag}}&teamid={{udanceTeamID}}" class="link">Click Me to Donate!</a>
+            <a href="https://www.udancede.org/bpos_donate.aspx?eventtag={{udanceEventTag}}&teamid={{udanceTeamID}}" class="donate-link">Click Me to Donate!</a>
         </div>
 
     </div>
 
-    <div class="row" style="margin: 2% 0;">
+    <div class="row bplus my-3">
         
-        <h1 style="text-align: center; font-size: 3rem;">Our B+ Hero! </h1>
+        <h1>Our B+ Hero! </h1>
 
         <div class='col-md-4 col-12'>
             <iframe src="https://drive.google.com/file/d/1LnBXksMwaEfuTI4Iqep1KVR8ytROcnku/preview" width="100%" height="100%"></iframe>
@@ -58,14 +58,14 @@
 
         <div class='col-md-4 col-12'>
             <h2>Meet Caleb</h2>
-            <p style="color:black;">The Brothers of the Rho Deuteron Chapter of the Alpha Epsilon Pi Fraternity, have been given the opportunity to be paired with Caleb, a six-year-old boy with Acute Lymphoblastic Leukemia (ALL) and a B+ Hero through The Andrew McDonough B+ Foundation and UDance. We were so happy to be able to meet him and his entire family and are extremely excited to spend more time with them all! To learn about Caleb and his journey, please watch the video.</p>
+            <p>The Brothers of the Rho Deuteron Chapter of the Alpha Epsilon Pi Fraternity, have been given the opportunity to be paired with Caleb, a six-year-old boy with Acute Lymphoblastic Leukemia (ALL) and a B+ Hero through The Andrew McDonough B+ Foundation and UDance. We were so happy to be able to meet him and his entire family and are extremely excited to spend more time with them all! To learn about Caleb and his journey, please watch the video.</p>
         </div>
 
         <div class='col-md-4 col-12'>
             <ngb-carousel>
                 <ng-template ngbSlide *ngFor="let image of hero">
                     <div class="wrapper">
-                        <img src="https://drive.google.com/uc?export=view&id={{image}}" style="width: 100%;">
+                        <img src="https://drive.google.com/uc?export=view&id={{image}}">
                     </div>
                 </ng-template>
             </ngb-carousel>
@@ -82,7 +82,7 @@
             <h4> All of the profits from our fundraiser events are donated to the B+ Foundation towards our UDance goal! </h4>
         </div>
 
-        <div *ngFor="let imageName of ['1bNSsyVTKglXadTpBIow6q8hxqpFWylWC', '1qxSCZIjNI0cmzzYErhwMivJc4DsGZhVT', '1SfUna7pVrcP5j6tq0ZZHci3Bwr6-x52C']" class="col-md-3 mb-5" style="margin: 0 4.1%;">
+        <div *ngFor="let imageName of ['1bNSsyVTKglXadTpBIow6q8hxqpFWylWC', '1qxSCZIjNI0cmzzYErhwMivJc4DsGZhVT', '1SfUna7pVrcP5j6tq0ZZHci3Bwr6-x52C']" class="col-md-3 mb-5 event-card">
             <div class="card">
                 <img class="card-img-top" src="https://drive.google.com/uc?export=view&id={{imageName}}" alt="Card image cap">
             </div>
@@ -93,7 +93,7 @@
                 <ngb-carousel>
                     <ng-template ngbSlide *ngFor="let image of allEvents[i].images;">
                         <div class="wrapper">
-                            <img src="{{image}}" style="width: 100%;">
+                            <img src="{{image}}">
                         </div>
                     </ng-template>
                 </ngb-carousel>
@@ -108,20 +108,20 @@
     </div>
 
 
-    <div class="row justify-content-center" style="padding: 20px 7%;">        
-        <h1 style="color: var(--light-blue); text-align:center;"> Team Members </h1>
+    <div class="row team justify-content-center">        
+        <h1> Team Members </h1>
 
-        <a href="https://www.udancede.org/bpos_partreg.aspx?eventtag={{udanceEventTag}}&teamid={{udanceTeamID}}" class="link" style="font-size: 1rem; color: var(--light-blue); font-weight: 600;">Click Me to Join The Team!</a>
+        <a href="https://www.udancede.org/bpos_partreg.aspx?eventtag={{udanceEventTag}}&teamid={{udanceTeamID}}" class="join-link">Click Me to Join The Team!</a>
         
-        <a href="javascript:void(0)" (click)="showTeam = !showTeam" class="teammember" style="margin: 10px; float: left; width: 100%; font-size: 1rem;">Click Me to {{showTeam ? "Hide Team" : "Show Team"}}</a>
+        <a href="javascript:void(0)" (click)="showTeam = !showTeam" class="teammember showteam">Click Me to {{showTeam ? "Hide Team" : "Show Team"}}</a>
 
-        <div *ngIf="loading" align="center" style="height: 500px; width: 100%;">
-            <div class="spinner-border" role="status" style="margin-top: 245px;"></div>
+        <div *ngIf="loading" align="center" class="spinner">
+            <div class="spinner-border" role="status"></div>
         </div>
         
-        <div *ngIf="showTeam" class="row justify-content-center" style="margin: 20px 0;">
+        <div *ngIf="showTeam" class="row justify-content-center teammembers-container">
 
-            <div *ngFor="let member of udanceTeam" class='col-md-4 col-lg-3' style="margin: 0px;" align="center">
+            <div *ngFor="let member of udanceTeam" class='col-md-4 col-lg-3 m-0' align="center">
                 <h3>
                     <a class="teammember" target="_blank" href="https://www.udancede.org/bpos_partpage.aspx?eventtag={{udanceEventTag}}&teamid={{udanceTeamID}}&partid={{member.pageid}}">{{member.name}} - ${{member.raised}}</a>
                 </h3>
@@ -132,8 +132,8 @@
         </div>
     </div>
 
-    <div class="row justify-content-center" style="background: var(--dark-blue); padding-top: 50px;">
-        <div class="col" style="margin-bottom: 50px; margin-left: 10%; margin-right: 10%;">
+    <div class="row justify-content-center gift-of-life">
+        <div class="col">
             <h1>Gift of Life Foundation </h1>
             <p>The Rho Deuteron chapter of the Alpha Epsilon Pi Fraternity holds swabbing events for the Gift of Life Foundation. It is the mission of the Gift of Life to improve the quality of life of patients awaiting transplantation by maximizing the availability of donor organs and tissues while upholding the highest medical, legal, ethical, and fiscal standards; work in partnership with the region’s hospitals and healthcare professionals to ensure that the family of each potential donor is offered the option of donation in a sensitive and caring manner; provide educational programs and materials to positively predispose all members of the community to organ and tissue donation so that the donation is viewed as a fundamental human responsibility; serve as a community resource by providing support for families of donors as well as transplant recipients and their families, and; serve as a leader in the advancement of organ and tissue donation and transplantation. The brothers all got swabbed and continue to hold swabbing events to join the bone marrow registry to help people indeed of transplants and much more.  </p>
         </div>
