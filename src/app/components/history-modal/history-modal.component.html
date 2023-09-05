@@ -1,6 +1,4 @@
-
-
-<div class="modal-header" style="padding: 0.5rem">
+<div class="modal-header p-2">
     <h5 class="modal-title">New Historical Event</h5>
     <button type="button" class="btn-close" (click)="activeModal.dismiss('Cross click')" aria-label="Close"></button>
 </div>
@@ -13,7 +11,7 @@
                 Section Header
             </label>
         </div>
-        <div class="form-check" style="margin-bottom: 15px;">
+        <div class="form-check mb-1">
             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" [checked]='!isSectionHeader' (click)="onRadioSwitch($event)">
             <label class="form-check-label" for="flexRadioDefault2">
                 New Subsection Event
