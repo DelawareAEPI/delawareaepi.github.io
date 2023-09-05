@@ -1,52 +1,79 @@
+/* Loading Spinner */
+.spinner {
+  height: 500px;
+  width: 100%;
+}
 
-  
-  .image {
-    width:-webkit-fill-available;
-    margin-bottom: 10px;
-    color: white;
-  }
-  
-  h1.title{
-    margin-bottom: 10px;
-    font-family: oldenglish;
-    font-size: 3.2vw;
-    text-align: center; 
-    color: var(--gold);
-  }
+.spinner-border {
+  margin-top: 245px;
+}
 
-  h2 {
-    font-size: 2.2vw;
-  }
+/* Main Composite Container */
+.composite {
+  padding-top: 50px;
+  background: #0e2f45;
+}
 
-  h2.year {
-    text-align: center;
-    color: var(--gold);
-    margin: 0px;
-    font-family: oldenglish;
-    width: min-content;
+@media (max-width: 992px) {
+  .col-5ths {
+    width: 20%;
   }
-  
-  p.rhod{
-    font-family: oldenglish;
-    font-size: 1.8vw;
-    text-align: center;
-    color: var(--gold);
-    font-style: italic;
-    margin: 0px;
-  }
-  
-  p.name {
-    margin-bottom: 20px;
-    font-size: 12px;
-    text-align: center;
-    line-height: 1.6em;
-    font-family: var(--primary-font);
-    font-weight: 400;
-    color: white;
-  }
+}
 
-  @media (max-width: 992px) {
-    .col-5ths {
-        width: 20%;
-    }
+
+/* Composite Center */
+h1.title {
+  margin-bottom: 10px;
+  font-family: oldenglish;
+  font-size: 3.2vw;
+  text-align: center;
+  color: var(--gold);
+}
+
+h2 {
+  font-size: 2.2vw;
+}
+
+h2.year {
+  text-align: center;
+  color: var(--gold);
+  margin: 0px;
+  font-family: oldenglish;
+  width: min-content;
+}
+
+p.rhod {
+  font-family: oldenglish;
+  font-size: 1.8vw;
+  text-align: center;
+  color: var(--gold);
+  font-style: italic;
+  margin: 0px;
+}
+
+/* Individual Brother */
+p.name {
+  margin-bottom: 2px;
+  font-size: 12px;
+  text-align: center;
+  line-height: 1.6em;
+  font-family: var(--primary-font);
+  font-weight: 400;
+  color: white;
+}
+
+p.position {
+  margin-bottom: 20px;
+  font-size: 12px;
+  text-align: center;
+  line-height: 1.6em;
+  font-family: var(--primary-font);
+  font-weight: 400;
+  color: white;
+}
+
+.image {
+  width: -webkit-fill-available;
+  margin-bottom: 10px;
+  color: white;
 }

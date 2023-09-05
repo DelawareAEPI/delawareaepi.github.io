@@ -1,8 +1,8 @@
 <div class="container-fluid header"></div>
 
-<div class="container-fluid brotherhood" style="">
+<div class="container-fluid brotherhood-banner">
 
-    <div class="row" style="margin-bottom: 5%;">
+    <div class="row mb-5" >
         <div class="col-12" align="center">
             <h1> BROTHERHOOD </h1>
             <div *ngIf="isAdmin">
@@ -20,9 +20,9 @@
 
 </div>
 
-<div class="container-fluid">
-    <div class="row" style="margin: 15px 0 30px;">
-        <div *ngFor="let event of eventImages" class="col-12 col-md-6 col-lg-4" style="margin-bottom: 30px;">
+<div class="container-fluid events-section">
+    <div class="row events-container">
+        <div *ngFor="let event of eventImages" class="col-12 col-md-6 col-lg-4 mb-4">
             <div class="card">
                 <img class="card-img-top" src="{{event.imageLink}}" alt="Card image cap">
                 <div class="card-body">
@@ -32,9 +32,9 @@
             </div>
         </div>
 
-        <h1 style="margin-bottom: 30px;"> Gallery </h1>
+        <h1 class="mb-4"> Gallery </h1>
 
-        <div *ngFor="let event of files" class="col-12 col-md-6 col-lg-4 col-xl-3" style="margin-bottom: 30px;">
+        <div *ngFor="let event of files" class="col-12 col-md-6 col-lg-4 col-xl-3 mb-4">
             <div class="card">
                 <img class="card-img-top" src="{{event}}" alt="Card image cap">
             </div>
@@ -42,18 +42,3 @@
     </div>
 </div>
 
-<!--
-<div class="container-fluid">    
-    
-    <div class="row" align="center">
-        <div *ngFor="let event of eventImages" class="col-12 col-md-6 col-xl-4 imagecontainer">
-            <img class="eventImage" src="{{event.imageLink}}">
-            <div class="overlay">
-                <div class="text">{{event.event}}</div>
-                <div class="innerText">{{event.description}}</div>
-            </div>
-        </div>
-    </div>
-
-</div>
--->

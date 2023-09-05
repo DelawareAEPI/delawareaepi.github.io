@@ -1,3 +1,9 @@
+.header {
+  background: var(--light-blue); 
+  background: -webkit-linear-gradient(20deg, #000000aa 0%, #ffffffaa 70%), url("../../../assets/banners/conclave.JPG");
+  background: linear-gradient(20deg, #0000004d 0%, #0000004d 70%), url("../../../assets/banners/conclave.JPG"); 
+}
+
 h1 {
     color: var(--gold);
     font-size: 36pt;
@@ -6,136 +12,29 @@ h1 {
     font-weight: 200;
 }
 
-.brotherhood p {
+/* Brotherhood Banner Section */
+.brotherhood-banner {
+  background-color:var(--dark-blue); 
+  margin-bottom: 30px;
+  padding: 5% 15%
+}
+
+.brotherhood-banner p {
     color: white;
     font-size: 14pt;
     font-family: var(--primary-font);
     font-weight: 300;
 }
 
+/* Events Section */
+.events-container {
+  margin: 15px 0 30px;
+}
+
 .card {
   height: 100%;
 }
-
-p.event{
-    margin: 0;
-}
-
-
-.imagecontainer {
-  position: relative;
-  margin-bottom: 30px;
-}
   
-  .eventImage {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-  
-  .overlay {
-    position: absolute;
-    margin: 0 15px;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: calc(100% - 30px);
-    opacity: 0;
-    transition: .5s ease;
-    background-color: #000000bb;
-  }
-  
-  .imagecontainer:hover .overlay {
-    opacity: 1;
-  }
-
-  .innerText {
-    color: white;
-    padding: 17% 10px 0;
-    font-size: 12px;
-  }
-  
-  .text {
-    color: white;
-    font-size: 20px;
-    position: relative;
-    top: 25%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-
-  .brotherhood {
-    background-color:var(--dark-blue); 
-    margin-bottom: 30px;
-    padding: 5% 15%
-  }
-
-  /*
-  .header {
-    height: 300px;
-    width: 100%;
-    background: black;
-    overflow: hidden;
-  }
-
-  .color-overlay {
-    position: absolute;
-    background-color: rgba(0,0,0,.3);
-    height: 300px;
-    width: -webkit-fill-available;
-  }
-  */
-  
-  
-.header {
-  background: var(--light-blue); 
-  background: -webkit-linear-gradient(20deg, #000000aa 0%, #ffffffaa 70%), url("../../../assets/banners/conclave.JPG");
-  background: linear-gradient(20deg, #0000004d 0%, #0000004d 70%), url("../../../assets/banners/conclave.JPG"); 
-}
-
-.name {
-  margin-bottom: 0;
-  text-align: center;
-  font-size: 15px;
-  line-height: 1.6em;
-  font-family: var(--primary-font);
-  font-weight: 400;
-  color: white;
-}
-
-.image {
-  width:fit-content;
-  margin-bottom: 10px;
-  color: white;
-}
-
-h1.title{
-  margin-bottom: 10px;
-  font-family: oldenglish;
-  font-size: 38pt;
-  text-align: center; 
-  color: var(--gold);
-}
-
-p.rhod{
-  font-family: serif;
-  font-size: 16pt;
-  text-align: center;
-  color: var(--gold);
-  font-style: italic;
-  margin: 0px;
-}
-
-p.name {
-  margin-bottom: 20px;
-  font-size: 12px;
-}
-
 .card-img-top {
   aspect-ratio: 1.5;
 }
