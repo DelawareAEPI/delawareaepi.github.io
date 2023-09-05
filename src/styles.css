@@ -1,22 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
 
+@import url("../node_modules/bootstrap/dist/css/bootstrap.min.css");
 
-/*@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600&display=swap');*/
-
-/*
-:root {
-    --light-blue: #5BADDE;
-    --dark-blue: #2E4668;
-    --gold: #D0A331;
-    --grey: #A6B0BF;
-    --light-grey:#f5f5f5f5;
-  }
-  */
-
-  @import url("../node_modules/bootstrap/dist/css/bootstrap.min.css");
-
+/* Font used in Composite (Active Brothers) */
+@font-face {
+  font-family: oldenglish;
+  src: url(assets/font/OldEnglish.ttf) format("opentype");
+}
 
 :root {
   --light-blue: #5BADDE;
@@ -25,11 +14,6 @@
   --grey: #A6B0BF;
   --light-grey:#f5f5f5f5;
   --primary-font: Raleway;
-}
-
-@font-face {
-  font-family: oldenglish;
-  src: url(assets/font/OldEnglish.ttf) format("opentype");
 }
 
 .header {

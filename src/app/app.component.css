@@ -76,7 +76,35 @@
     transform: translateY(-0.25rem);
   }
 
+  .circle-link img {
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+  }
+
+
+  .navbar {
+    background-color: #333;
+    padding: 0.5rem;
+  }
+
+  .navbar-brand {
+    font-size: 18pt;
+    margin-right: 30px;
+  }
+
   .nav-link {
     font-size: initial;
   }
   
+
+  .cofa-image {
+    width: auto;
+    height: 100px;
+  }
+
+  .copyright {
+    padding-right: 0px;
+    width: max-content;
+    font-style: italic;
+  }
