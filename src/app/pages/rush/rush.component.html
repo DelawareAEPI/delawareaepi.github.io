@@ -2,42 +2,42 @@
 <div class="container-fluid header"></div>
 
 
-<div class="container-fluid" style="background-color:#f5f5f5; padding: 3% 5% 3% 3%;">
+<div class="container-fluid content-section">
 
     <div class="row">  
         <div *ngIf="!isMobile" class="col-4"></div>
         <div class="col">
-            <h1 style="text-align: left; color:#1663be; font-family: Raleway; font-weight; 700;"> RUSH </h1>
+            <h1 class="title"> RUSH </h1>
         </div>
     </div>
 
     <div class="row">
-        <div *ngIf="!isMobile" class="col-4" align="center" style="align-self: baseline;">
+        <div *ngIf="!isMobile" class="col-4 img-container" align="center">
             <img [src]='rushCardImage'>
         </div>
 
         <div class="col" align="center">
             <div *ngIf="isAdmin">
             <p contentEditable (blur)="onBlur($event.target)" *ngFor="let line of rushBlurb | keyvalue" data-id={{line.key}}> {{line.value}} </p>
-            <button class="btn btn-primary" style="background: #007bff; margin: 5px;" (click)="onAddParagraph()">Add Paragraph</button>
-            <button class="btn btn-primary" style="background: #007bff; margin: 5px;" (click)="onRemoveParagraph()">Remove Last Paragraph</button>
-            <button class="btn btn-primary" style="background: #007bff; margin: 5px;" (click)="onSaveChanges()">Save Changes</button>
+            <button class="btn btn-primary admin-btn" (click)="onAddParagraph()">Add Paragraph</button>
+            <button class="btn btn-primary admin-btn" (click)="onRemoveParagraph()">Remove Last Paragraph</button>
+            <button class="btn btn-primary admin-btn" (click)="onSaveChanges()">Save Changes</button>
             </div>
 
             <div *ngIf="!isAdmin">
                 <p *ngFor="let line of rushBlurb | keyvalue" data-id={{line.key}}> {{line.value}} </p>
             </div>
 
-            <p style="margin-top: 1rem;">
+            <p class="mt-2">
                 <span>To learn more about Greek Life at UD, visit 
-                    <span style="text-decoration:underline">
+                    <span>
                         <a href="https://sites.udel.edu/fsll/" target="_blank" rel="noopener">this link</a>
                     </span>
                 </span>
             </p>
             <p>
                 <span>To learn more about IFC Rush, visit 
-                    <span style="text-decoration:underline">
+                    <span>
                         <a href="https://sites.udel.edu/fsll/recruitment/" target="_blank" rel="noopener">click here</a>
                     </span>
                 </span>
@@ -49,7 +49,7 @@
 </div>
 
 
-<div class="container-fluid" style="background-color: var(--dark-blue); padding: 3% 17%;">
+<div class="container-fluid contact-section">
     <span class="rush-form-title" [style.margin-top]="isMobile == true ? '30px' : '0'">
         Interested In Rushing Delaware AEPI?
     </span>
@@ -68,7 +68,7 @@
             <app-custom-input [(inputModel)]="phone" [type]="'phone'"></app-custom-input>
         </div> 
 
-        <div class="col-lg-3" style="margin-bottom: 30px;">
+        <div class="col-lg-3 mb-4">
             <div class="wrap-btn">
                 <div class="bgbtn"></div>
                 <button class="btn1" (click)="submitRushInterest()">Submit</button>

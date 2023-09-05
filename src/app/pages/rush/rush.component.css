@@ -1,5 +1,60 @@
 @import '../../components/custom-input/custom-input.component.css';
 
+.header {
+  background: var(--light-blue); 
+  background: -webkit-linear-gradient(20deg, #0000004d 0%, #0000004d 70%), url("../../../assets/banners/alumn_active_c.jpg"); 
+  background: linear-gradient(20deg, #0000004d 0%, #0000004d 70%), url("../../../assets/banners/alumn_active_c.jpg"); 
+}
+
+/* Main Content Section */
+.content-section {
+  background-color:#f5f5f5;
+  padding: 3% 5% 3% 3%;
+}
+
+.title {
+  text-align: left;
+  color:#1663be;
+  font-family: var(--primary-font);
+}
+
+p {
+  text-align: left;
+  font-family: var(--primary-font);
+  font-size: 14pt;
+}
+
+.img-container {
+  align-self: baseline;
+}
+
+img {
+  flex: 1;
+  height: 100%;
+  object-fit: contain;
+  max-width: -webkit-fill-available;
+}
+
+.admin-btn {
+  background: #007bff;
+  margin: 5px;
+}
+  
+/* Contact Section */
+.contact-section {
+  background-color: var(--dark-blue);
+  padding: 3% 17%;
+}
+.rush-form-title {
+  display: block;
+  font-family: var(--primary-font);
+  font-size: 20px;
+  color: white;
+  line-height: 1.2;
+  text-align: left;
+  padding-bottom: 30px;
+}
+
 app-custom-input.mobile {
   width: 100%; 
   margin: 0 10%;
@@ -14,32 +69,4 @@ app-custom-input.mobile {
   color: white !important;
 }
 
-p {
-  text-align: left;
-  font-family: var(--primary-font);
-  font-size: 14pt;
-}
 
-img {
-  flex: 1;
-  height: 100%;
-  object-fit: contain;
-  max-width: -webkit-fill-available;
-}
-
-  
-.rush-form-title {
-  display: block;
-  font-family: var(--primary-font);
-  font-size: 20px;
-  color: white;
-  line-height: 1.2;
-  text-align: left;
-  padding-bottom: 30px;
-}
-
-.header {
-  background: var(--light-blue); 
-  background: -webkit-linear-gradient(20deg, #0000004d 0%, #0000004d 70%), url("../../../assets/banners/alumn_active_c.jpg"); 
-  background: linear-gradient(20deg, #0000004d 0%, #0000004d 70%), url("../../../assets/banners/alumn_active_c.jpg"); 
-}
