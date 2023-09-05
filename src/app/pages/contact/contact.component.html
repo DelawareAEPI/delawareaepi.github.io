@@ -1,5 +1,5 @@
-<div style="padding-bottom: 10%;">
-    <div class="container-fluid" style="background-color:var(--dark-blue);" [style.padding] = "isMobile == true ? '10%' : '5% 30%'">
+<div class="pb-5 mb-5">
+    <div class="container-fluid banner" [style.padding] = "isMobile == true ? '10%' : '5% 30%'">
 
         <h1> Contact Information </h1>
 
@@ -18,24 +18,24 @@
     
     <!-- <h3> Email Us: aepirhodeuteron@gmail.com </h3> -->
 
-    <div class="wrap-contact2" [style.width]="isMobile == true ? '100%' : '790px'">
-        <form class="contact2-form validate-form">
+    <div class="contact-container" [style.width]="isMobile == true ? '100%' : '790px'">
+        <form class="contact-form validate-form">
         
-            <span class="contact2-form-title"> Email Us </span>
+            <span class="contact-form-title"> Email Us </span>
             
             <app-custom-input class=""  [type]="'name'" [(inputModel)]="name"></app-custom-input>
 
             <app-custom-input class=""  [type]="'email'" [(inputModel)]="email" (validEmail)="isEmailValid($event)"> </app-custom-input>
 
-            <div class='wrap-input2'>
-                <textarea class="input2" type="text" name="message" [(ngModel)]="message" (blur)="updateMessage($event)"></textarea>
-                <span class="focus-input2" data-placeholder="MESSAGE"></span>
+            <div class='input-container'>
+                <textarea class="custom-input" type="text" name="message" [(ngModel)]="message" (blur)="updateMessage($event)"></textarea>
+                <span class="focus-input" data-placeholder="MESSAGE"></span>
             </div>
         
 
-            <div class="wrap-btn">
+            <div class="btn-container">
                 <div class="bgbtn"></div>
-                <button class="btn1" (click)="submitContactForm()">Submit</button>
+                <button class="custom-button" (click)="submitContactForm()">Submit</button>
             </div>
 
         </form>

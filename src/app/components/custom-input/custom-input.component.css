@@ -1,52 +1,17 @@
-input {
-    outline: none;
-    border: none;
-}
-
-textarea {
-  outline: none;
-  border: none;
-}
-
-textarea:focus, input:focus {
-  border-color: transparent !important;
-}
-
-
-
-button {
-    outline: none !important;
-    border: none;
-    background: transparent;
-}
-
-button:hover {
-    cursor: pointer;
-}
-
-
-
-.contact2-form-title {
-  display: block;
-  font-family: var(--primary-font);
-  font-size: 20px;
-  color: #333333;
-  line-height: 1.2;
-  text-align: left;
-  padding-bottom: 30px;
-}
-
-
-.wrap-input2 {
+.input-container {
   position: relative;
   border-bottom: 2px solid #adadad;
   margin-bottom: 30px;
 }
 
-.input2 {
+input {
+  outline: none;
+  border: none;
+}
+
+.custom-input {
   display: block;
   width: 100%;
-  
   font-family: var(--primary-font);
   font-size: 15px;
   color: #555555;
@@ -54,7 +19,7 @@ button:hover {
 
 }
 
-.focus-input2 {
+.focus-input {
   position: absolute;
   display: block;
   width: 100%;
@@ -64,7 +29,7 @@ button:hover {
   pointer-events: none;
 }
 
-.focus-input2::before {
+.focus-input::before {
   content: "";
   display: block;
   position: absolute;
@@ -85,7 +50,7 @@ button:hover {
   background: linear-gradient(45deg, var(--gold), var(--light-blue));
 }
 
-.focus-input2.no-validate::before {
+.focus-input.no-validate::before {
   content: "";
   display: block;
   position: absolute;
@@ -103,7 +68,7 @@ button:hover {
 }
 
 
-.focus-input2::after {
+.focus-input::after {
   content: attr(data-placeholder);
   display: block;
   width: 100%;
@@ -122,46 +87,55 @@ button:hover {
   transition: all 0.4s;
 }
 
-
-input.input2 {
+input.custom-input {
   height: 45px;
 }
 
-input.input2 + .focus-input2::after {
+input.custom-input + .focus-input::after {
   top: 16px;
   left: 0;
 }
 
-textarea.input2 {
+.custom-input:focus + .focus-input::after {
+  top: -13px;
+}
+
+.custom-input:focus + .focus-input::before {
+  width: 100%;
+}
+
+.has-val.custom-input + .focus-input::after {
+  top: -13px;
+}
+
+.has-val.custom-input + .focus-input::before {
+  width: 100%;
+}
+
+
+/* Additional Styles for TextArea */
+textarea.custom-input {
   min-height: 115px;
   padding-top: 13px;
   padding-bottom: 13px;
 }
 
-textarea.input2 + .focus-input2::after {
+textarea {
+  outline: none;
+  border: none;
+}
+
+textarea:focus, input:focus {
+  border-color: transparent !important;
+}
+
+textarea.custom-input + .focus-input::after {
   top: 16px;
   left: 0;
 }
 
-.input2:focus + .focus-input2::after {
-  top: -13px;
-}
 
-.input2:focus + .focus-input2::before {
-  width: 100%;
-}
-
-.has-val.input2 + .focus-input2::after {
-  top: -13px;
-}
-
-.has-val.input2 + .focus-input2::before {
-  width: 100%;
-}
-
-
-
-/* [ Button ]  */
+/* Additional Styles for Button  */
 
 button {
   outline: none !important;
@@ -173,7 +147,7 @@ button:hover {
   cursor: pointer;
 }
 
-.wrap-btn {
+.btn-container {
   display: block;
   position: relative;
   z-index: 1;
@@ -201,7 +175,7 @@ button:hover {
   transition: all .4s;
 }
 
-.btn1 {
+.custom-button {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -219,6 +193,6 @@ button:hover {
 
 }
 
-.wrap-btn:hover .bgbtn {
+.btn-container:hover .bgbtn {
   left: 0;
 }

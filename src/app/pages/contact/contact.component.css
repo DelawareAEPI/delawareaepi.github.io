@@ -1,10 +1,15 @@
 @import '../../components/custom-input/custom-input.component.css';
 
+/* Contact Info Banner */
+.banner {
+  background-color:var(--dark-blue);
+} 
+
 h1 {
     color: var(--gold);
     font-size: 36pt;
     margin-bottom: 50px;
-    font-family: var(--primary-font);
+    font-family: Raleway;
     font-weight: 200;
     text-align: center;
 }
@@ -12,7 +17,7 @@ h1 {
 h3 {
     text-align: center;
     margin: 20px 0px 50px;
-    font-family: var(--primary-font);
+    font-family: Raleway;
     color: var(--gold);
     font-weight: 200;
 }
@@ -20,7 +25,7 @@ h3 {
 p {
     color: white;
     font-size: 16pt;
-    font-family: var(--primary-font);
+    font-family: Raleway;
     font-weight: 300;
 }
 
@@ -34,7 +39,7 @@ p {
    font-size: 14px;
    line-height: 1.8em;
    text-align: center;
-   font-family: var(--primary-font);
+   font-family: Raleway;
    font-weight: 500;
    margin-bottom: 0;
 }
@@ -44,13 +49,13 @@ p {
     text-align: center;
     font-size: 14px;
     line-height: 1.6em;
-    font-family: var(--primary-font);
+    font-family: Raleway;
     font-weight: 500;
 }
 
 
-
-.wrap-contact2 {
+/* Contact Form */
+.contact-container {
     width: 790px;
     background: #fff;
     border-radius: 10px;
@@ -59,31 +64,14 @@ p {
     margin: auto;
 }
 
-.contact2-form-title {
+.contact-form-title {
     display: block;
-    font-family: var(--primary-font);
+    font-family: Raleway;
     font-size: 39px;
     color: #333;
     line-height: 1.2;
     text-align: center;
     padding-bottom: 50px;
 }
-
-  /* Textarea custom input */
-  textarea.input2 {
-    min-height: 115px;
-    padding-top: 13px;
-    padding-bottom: 13px;
-  }
-  
-  textarea {
-    outline: none;
-    border: none;
-  }
-
-  textarea.input2 + .focus-input2::after {
-    top: 16px;
-    left: 0;
-  }
 
  
