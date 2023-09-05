@@ -1,22 +1,17 @@
 
-<div class="container-fluid header" align="center" style="padding: 5%;">
-    <h1 style="font-family: Raleway; color: white;">Alpha Epsilon Pi</h1>
-    <h2 style="font-family: Raleway; color: white;">University of Delaware</h2>
-
+<div class="container-fluid header p-5" align="center">
+    <h1 class="title">Alpha Epsilon Pi</h1>
+    <h2 class="subtitle">University of Delaware</h2>
 </div>
-
 
 
 <div class="container-fluid about">
 
     <div class="row">  
-
         <div *ngIf="!isMobile" class="col-4"></div>
-
         <div class="col">
-            <h1 style="font-size:30pt; font-family: Raleway; font-weight: 300;"> ABOUT US </h1>
+            <h1> ABOUT US </h1>
         </div>
-
     </div>
 
     <div class="row">
@@ -25,15 +20,14 @@
             <img class="rounded-circle aboutImg" src="assets/pidown2122square.jpg">
         </div>
 
-        <div *ngIf="isAdmin" class="col" style="width:75%;">
+        <div *ngIf="isAdmin" class="col about-content">
             <p contentEditable (blur)="onBlur($event.target)" *ngFor="let paragraph of aboutus | keyvalue;" data-id={{paragraph.key}} class="edit">{{paragraph.value}}</p>
-            
             <button class="btn btn-primary" (click)="onAddParagraph()">Add Paragraph</button>
             <button class="btn btn-primary" (click)="onRemoveParagraph()">Remove Last Paragraph</button>
             <button class="btn btn-primary" (click)="onSaveChanges()">Save Changes</button>
         </div>
 
-        <div *ngIf="!isAdmin" class="col" style="width:75%;">
+        <div *ngIf="!isAdmin" class="col about-content">
             <p *ngFor="let paragraph of aboutus | keyvalue;" data-id={{paragraph.key}} class="edit">{{paragraph.value}}</p>
         </div>
     </div>
@@ -63,7 +57,7 @@
 </div>
 
 
-<div class="container-fluid" align="center" style="margin: 5% 10%; width: 80%;">
+<div class="container additional-pages my-5" align="center">
 
     <div class="row">
         <div class="col-md-3 col-10 box">
@@ -82,47 +76,22 @@
         </div>
     </div>
 
-    <!--<div *ngIf="isMobile" class="row" style="margin-bottom: 80px;">
-        <div class="col box">
-          <h4>Philanthropy</h4>
-          <a href="">Coming Soon »</a>
-        </div>
-    </div>
-
-    <div *ngIf="isMobile" class="row" style="margin-bottom: 80px;">
-       <div class="col box">
-          <h4>Alumni Engagement</h4>
-          <a href="">Coming Soon »</a>
-        </div>
-    </div>
-
-    <div *ngIf="isMobile" class="row" style="margin-bottom: 80px;">
-        <div class="col box">
-          <h4>Jewish Involvement</h4>
-          <a href="">Coming Soon »</a>
-        </div>
-    </div>-->
-
 </div>
 
 
 
-<div class="container-fluid udance" align="center" style="padding: 3%">
+<div class="container-fluid udance p-3" align="center">
 
     <div class="row">  
-
-        <div class="col" style="padding: 0px;"> 
+        <div class="col p-0"> 
             <h1> HELP US Support the fight against childhood cancer. To learn more about UDance visit our <a href="philanthropy">Philanthropy page.</a> Donate to our UDance page here: </h1>
         </div>
-
     </div>
 
     <div class="row">
-
-        <div class="col" style="padding: 0px;">
-            <a [href]="udanceLink" target="_blank" rel="noopener" style="font-size:30pt;"> UDance </a>
+        <div class="col p-0">
+            <a class="large-font" [href]="udanceLink" target="_blank" rel="noopener"> UDance </a>
         </div>
-
     </div>
 
 </div>
