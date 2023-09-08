@@ -11,6 +11,7 @@ export class GalleryComponent implements OnInit {
 
 	files: string[] = [];
 	year: string = '';
+	loading: boolean = true;
 
 	constructor(private firebaseService: FirebaseService, private route: ActivatedRoute) { }
 
@@ -27,11 +28,17 @@ export class GalleryComponent implements OnInit {
 	}
 
 	getImages(){
+		let context = this;
 		this.firebaseService.getHistorianGallery(this.year).subscribe((data: any) => {
 			if (data){
 				data.files.forEach(element => {
 					this.files.push("https://drive.google.com/uc?export=view&id=" + element.id);
 				});
+
+				this.loading = false;
+				// setTimeout(function(){
+				// 	context.loading = false;					
+				// }, 750);
 			}
         });
 	}

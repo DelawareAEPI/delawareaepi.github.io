@@ -6,6 +6,7 @@ import { HistoryModalComponent } from '../../components/history-modal/history-mo
 import { AuthenticationService } from 'src/app/services/authentication.service';
 
 import {environment} from "src/environments/environment"
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -20,7 +21,8 @@ export class HistoryComponent implements OnInit {
     isAdmin: boolean = false;
     files: {image:string, year:string}[] = [];
 
-    constructor(private firebaseService: FirebaseService, private modalService: NgbModal, private authService: AuthenticationService) { }
+    constructor(private firebaseService: FirebaseService, private modalService: NgbModal,
+        private authService: AuthenticationService, private router: Router) { }
 
     ngOnInit(): void {
 
@@ -58,6 +60,10 @@ export class HistoryComponent implements OnInit {
             this.isAdmin = data;
         });
         
+    }
+
+    openHistorianGallery(year: string){
+        this.router.navigate([`/gallery/${year}`]);
     }
 
     //Sort from oldest year to newest year
