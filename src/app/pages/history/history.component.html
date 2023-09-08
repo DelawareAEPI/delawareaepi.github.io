@@ -27,7 +27,7 @@
         <h1 class='mb-5'> Class Composites </h1>
 
         <div *ngFor="let composite of files" class="col-12 col-md-6 col-lg-4 mb-4 px-4">
-            <div class="card" (click)="openHistorianGallery(composite.year)">
+            <div class="card" (click)="openHistorianGallery(composite)">
                 <img class="card-img-top" src="{{composite.image}}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title composite-year">{{composite.year}}</h5>

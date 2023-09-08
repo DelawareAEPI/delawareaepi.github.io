@@ -27,6 +27,7 @@ import { HistoryComponent } from './pages/history/history.component';
 import { HistoryModalComponent } from './components/history-modal/history-modal.component';
 import { PhilanthropyComponent } from './pages/philanthropy/philanthropy.component';
 import { GalleryComponent } from './pages/gallery/gallery.component';
+import { GalleryModalComponent } from './components/gallery-modal/gallery-modal.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { GalleryComponent } from './pages/gallery/gallery.component';
     HistoryComponent,
     HistoryModalComponent,
     PhilanthropyComponent,
-    GalleryComponent
+    GalleryComponent,
+    GalleryModalComponent
   ],
   imports: [
     BrowserModule, 

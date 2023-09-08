@@ -62,8 +62,8 @@ export class HistoryComponent implements OnInit {
         
     }
 
-    openHistorianGallery(year: string){
-        this.router.navigate([`/gallery/${year}`]);
+    openHistorianGallery(composite: {image: string, year: string} ){
+        this.router.navigate([`/gallery/${composite.year}`]);
     }
 
     //Sort from oldest year to newest year
