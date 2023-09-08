@@ -9,7 +9,7 @@
   background: var(--light-blue); 
   background: -webkit-linear-gradient(20deg, #D0A331ee 0%, #395998ee 70%), url("../../../assets/banners/pidown2122.jpg");
   background: linear-gradient(20deg, #D0A331ee 0%, #395998ee 70%), url("../../../assets/banners/pidown2122.jpg"); 
-} 
+}
 
 
 /* ABOUT US */
@@ -86,10 +86,11 @@
   border: 1px solid var(--dark-blue);
   box-sizing: border-box;
   display: inline-block;
-  margin: auto;
+  margin: 0 auto;
   padding: 90px 15px 85px;
   position: relative;
   vertical-align: top;
+  transition: all 0.4s ease;
 }
 
 .box:hover {
@@ -119,6 +120,7 @@
   display: block;
   font-size: 16px;
   font-weight: bold;
+  text-decoration: none;
   left: 50%;
   letter-spacing: 2px;
   min-width: 90px;

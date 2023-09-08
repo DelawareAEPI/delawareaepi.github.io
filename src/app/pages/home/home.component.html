@@ -1,4 +1,3 @@
-
 <div class="container-fluid header p-5" align="center">
     <h1 class="title">Alpha Epsilon Pi</h1>
     <h2 class="subtitle">University of Delaware</h2>
@@ -6,7 +5,6 @@
 
 
 <div class="container-fluid about">
-
     <div class="row">  
         <div *ngIf="!isMobile" class="col-4"></div>
         <div class="col">
@@ -15,7 +13,6 @@
     </div>
 
     <div class="row">
-
         <div *ngIf="!isMobile" class="col-4" align="center">
             <img class="rounded-circle aboutImg" src="assets/pidown2122square.jpg">
         </div>
@@ -31,13 +28,10 @@
             <p *ngFor="let paragraph of aboutus | keyvalue;" data-id={{paragraph.key}} class="edit">{{paragraph.value}}</p>
         </div>
     </div>
-
 </div>
 
 
-
 <div class="container-fluid eboard">
-
     <div class="row">
       <div class="col">  
         <h1> The Executive Board </h1>
@@ -45,43 +39,36 @@
     </div>
 
     <div class="row">
-
-        <div *ngFor="let member of board" class="col" align="center">
+        <div *ngFor="let member of board" class="col mb-2" align="center">
             <img class="boardImage rounded-circle" src="https://drive.google.com/uc?export=view&id={{member.image}}">
             <p class="boardName">{{member.name}}</p>
-            <p class="boardPosition">{{member.position}}</p>    
+            <p class="boardPosition">{{member.position}}</p>   
         </div>
-
     </div>
-
 </div>
 
 
 <div class="container additional-pages my-5" align="center">
-
     <div class="row">
         <div class="col-md-3 col-10 box">
           <h4>Philanthropy</h4>
-          <a routerLink="../philanthropy">Learn More »</a>
+          <a routerLink="../philanthropy">Learn More</a>
         </div>
 
        <div class="col-md-3 col-10 box">
           <h4>Academic Excellence</h4>
-          <a routerLink="../academic">Learn More »</a>
+          <a routerLink="../academic">Learn More</a>
         </div>
 
         <div class="col-md-3 col-10 box">
           <h4>Jewish Involvement</h4>
-          <a href="">Coming Soon »</a>
+          <a href="">Coming Soon</a>
         </div>
     </div>
-
 </div>
 
 
-
 <div class="container-fluid udance p-3" align="center">
-
     <div class="row">  
         <div class="col p-0"> 
             <h1> HELP US Support the fight against childhood cancer. To learn more about UDance visit our <a href="philanthropy">Philanthropy page.</a> Donate to our UDance page here: </h1>
@@ -93,6 +80,5 @@
             <a class="large-font" [href]="udanceLink" target="_blank" rel="noopener"> UDance </a>
         </div>
     </div>
-
 </div>
 

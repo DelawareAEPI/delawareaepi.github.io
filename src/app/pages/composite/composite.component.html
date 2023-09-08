@@ -23,7 +23,7 @@
         <div class="col-4 col-lg-6">
             <h1 class="title">Alpha Epsilon Pi</h1>
             <p class="rhod">Rho Deuteron</p>
-            <h2 style="text-align: center; color: var(--gold); margin: 5px 0px ; font-family: oldenglish;">University of Delaware</h2>
+            <h2 class="university">University of Delaware</h2>
         </div>
 
         <div *ngFor="let number of [10,11]" class="col-2 col-lg-1" align="center">
@@ -42,7 +42,7 @@
         <div class="col-4 col-lg-6">
             <div class="row justify-content-center align-items-center">
                 <h2 class="year">{{getYear()}}</h2>
-                <img src="assets/cofa.png" style="width: 8vw; height: auto;">
+                <img class='cofa' src="assets/cofa.png">
                 <h2 class="year">{{getYear() + 1}}</h2>
             </div>
         </div>

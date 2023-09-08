@@ -51,6 +51,17 @@ p.rhod {
   margin: 0px;
 }
 
+h2.university {
+  text-align: center;
+  color: var(--gold);
+  margin: 5px 0px;
+  font-family: oldenglish;
+}
+
+.cofa {
+  width: 8vw; height: auto;
+}
+
 /* Individual Brother */
 p.name {
   margin-bottom: 2px;
