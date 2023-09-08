@@ -24,7 +24,7 @@ export class HistoryComponent implements OnInit {
 
     ngOnInit(): void {
 
-        this.firebaseService.getDriveImages(environment.historyCompositesDriveID).subscribe((data: any) => {
+        this.firebaseService.getFolderContents(environment.historyCompositesDriveID).subscribe((data: any) => {
             data.files.sort(this.compare);
 
             data.files.forEach(element => {

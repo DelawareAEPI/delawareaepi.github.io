@@ -15,5 +15,6 @@ export const environment = {
   philanthropyDriveID: "1C_9SQMYwOzswI9El6TN6Moblv1zS_LZh",
   brotherhoodDriveID: "1cI9j97iuwIEmW4TeFBCxgGE2FO1euVHl",
   historyCompositesDriveID: "1SjEqwMrayxEcF5EG6naYyve8htVxeoYT",
+  historianGalleryDriveID: "1x2AR9uLVVFeMlwKSrsOySbS4KZXlbIyR",
   rosterDriveID: "1UgD_wIiqgUpVBbRVSBNOySmjb1TnAF3tY6Lf9aCAWb4"
 };

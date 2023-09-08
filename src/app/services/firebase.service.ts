@@ -5,8 +5,10 @@ import { initializeApp }  from 'firebase/app';
 import { environment } from "src/environments/environment";
 
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { switchMap, map } from "rxjs/operators";
 
 import { DRIVE_API_KEY } from 'src/config.js';
+import { Observable } from 'rxjs';
 
 const httpOptions = {
     headers: new HttpHeaders({ 'responseType': 'text',
@@ -31,8 +33,35 @@ export class FirebaseService {
         this.db = getDatabase();
     }
 
-    getDriveImages(folderID){
+    getFolderContents(folderID){
         return this.http.get("https://www.googleapis.com/drive/v3/files?q='" + folderID + "'+in+parents&key=" + DRIVE_API_KEY);
+    }
+
+    getHistorianGallery(year: string){
+        //https://taylorackley.medium.com/returning-data-from-a-nested-subscribe-in-angular-rxjs-9aed0afb3c42
+
+        let folderID = environment.historianGalleryDriveID;
+        let context = this;
+        let found = false;
+
+        return Observable.create(function (observer) {
+            context.getFolderContents(folderID).subscribe((folderContent: any) => {
+                for(const file of folderContent.files){
+                    console.log(file);
+                    if (file.name === year){
+                        found = true;
+                        context.getFolderContents(file.id).subscribe((data) => {
+                            observer.next(data);
+                        });
+                        break;
+                    }
+                }
+
+                if (!found){
+                    observer.next('');
+                }
+            });
+        });
     }
 
     getBoard(): Promise<DataSnapshot>{

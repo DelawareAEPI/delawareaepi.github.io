@@ -9,6 +9,7 @@ import { HistoryComponent } from './pages/history/history.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PhilanthropyComponent } from './pages/philanthropy/philanthropy.component';
 import { RushComponent } from './pages/rush/rush.component';
+import { GalleryComponent } from './pages/gallery/gallery.component';
 
 const routes: Routes = [
   {
@@ -35,6 +36,10 @@ const routes: Routes = [
   {
     path:'history',
     component:HistoryComponent
+  },
+  {
+    path:'gallery/:year',
+    component:GalleryComponent
   },
   {
     path:'rush',
