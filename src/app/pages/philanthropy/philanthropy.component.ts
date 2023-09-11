@@ -47,7 +47,6 @@ export class PhilanthropyComponent implements OnInit {
         this.udanceEventTag = "ud" + this.getYear();
         console.log(this.udanceEventTag);
 
-        //this check is to update the admin status whenever the user signs in or signs out
         this.authService.getCurrentAdminStatus().subscribe(data => {
             this.isAdmin = data;
         });
@@ -79,17 +78,6 @@ export class PhilanthropyComponent implements OnInit {
             });
 
             this.loading = false;
-
-            //check user but has to be in this async because it doesn't work right away
-            //this check is for navigating back to this page while being signed in
-            if(this.authService.getUser()){
-                this.authService.getUserDbEntry().then(ss=>{ 
-                    if(ss.val() != null){
-                        this.isAdmin = ss.val().admin;
-                        console.log(this.isAdmin);
-                    }
-                });
-            }
         });
     }
 
