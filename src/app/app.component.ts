@@ -23,6 +23,12 @@ export class AppComponent {
             else
                 if (item.children[0].classList.contains('active')) item.classList.remove('active');
         });
+
+        this.authService.authListener();
+        // Admin status is updated whenever a user signs in or out
+        this.authService.getCurrentAdminStatus().subscribe(data=> {
+            this.updateUserStatus();
+        })
     }
 
     navigate(page: string){
@@ -34,18 +40,21 @@ export class AppComponent {
         });
     }
 
-    userSignIn(){
-        if(this.signIn == "Sign In"){
-            this.authService.signUserOut();//make sure no user is signed in first
-            
-            this.authService.signUserIn()?.then((result) => {
-                const user = result.user;
-                this.authService.createUser(user);
-                this.signIn = "Sign Out: " + user.email?.substring(0, user.email?.indexOf("@"));
-            }).catch((error) => {console.log(error)});
+    updateUserStatus(){
+        const user = this.authService.getUser();
+        if (user){
+            this.signIn = "Sign Out: " + user.email?.substring(0, user.email?.indexOf("@"));
         } else {
-            this.signIn="Sign In";
+            this.signIn = "Sign In";
+        }
+    }
+
+    userSignIn(){
+        if (this.authService.getUser() != null){
+            // User is already signed in
             this.authService.signUserOut();
+        } else {
+            this.authService.signUserIn();
         }
     }
 }

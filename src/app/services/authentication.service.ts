@@ -4,11 +4,11 @@ import { environment } from "src/environments/environment";
 
 import { getDatabase, ref, get, set } from "firebase/database";
 import { initializeApp }  from 'firebase/app';
-import {getAuth, GoogleAuthProvider, signInWithPopup, signOut } from 'firebase/auth';
+import {getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut } from 'firebase/auth';
 import {GoogleSheetsDbService} from 'ng-google-sheets-db';
 
 import { attributesMapping, Brother } from '../pages/composite/brother.model';
-import { Observable, Subject } from 'rxjs';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
 
 
 
@@ -21,7 +21,7 @@ export class AuthenticationService {
 
     db: any;
     user: any;
-    admin = new Subject();
+    admin = new BehaviorSubject(false);
 
     constructor(private googleSheetsDbService: GoogleSheetsDbService) { 
         initializeApp(environment.firebaseConfig),
@@ -29,52 +29,43 @@ export class AuthenticationService {
     }
 
     signUserIn() {
-        
         let provider = new GoogleAuthProvider();
         const auth = getAuth();
 
         if(auth.currentUser == null){
-            return signInWithPopup(auth, provider);
-        } else return null;
+            signInWithPopup(auth, provider);
+        }
     }
+
 
     createUser(user){
         let userRef = ref(this.db, "/users/" + user.uid);
 
-        get(userRef).then(ss=>{ 
-            //if the user does not exist, make a new user
-            if(ss.val() == null){
-                //first check the users email against the emails in the roster
-                //make sure the user is a brother                
-                let isBrother = false, isBoard = false;
-                this.googleSheetsDbService.get('1UgD_wIiqgUpVBbRVSBNOySmjb1TnAF3tY6Lf9aCAWb4', "All Active Brothers", attributesMapping).subscribe(data =>{
-                    for(let brother of data){
-                        if((<Brother>brother).udemail == user.email){
-                            isBrother=true;
-                            if((<Brother>brother).board){
-                                isBoard = true;
-                            }
-                        }
+        //first check the users email against the emails in the roster
+        //make sure the user is a brother                
+        let isBrother = false, isBoard = false;
+        this.googleSheetsDbService.get(environment.rosterDriveID, "All Active Brothers", attributesMapping).subscribe(data =>{
+            for(let brother of data){
+                if((<Brother>brother).udemail == user.email){
+                    isBrother=true;
+                    if((<Brother>brother).board){
+                        isBoard = true;
                     }
-                    if(isBrother){
-                        set(userRef, {admin: isBoard, email: user.email, name: user.displayName, uid: user.uid});
-                        this.updateAdmin(isBoard);
-                    }
-                });
-            } else {
-                this.updateAdmin(ss.val().admin);
+                }
             }
-            
+            // Create record
+            if(isBrother){
+                set(userRef, {admin: isBoard, email: user.email, name: user.displayName, uid: user.uid});
+                this.updateAdmin(isBoard);
+            }
         });
     }
 
     signUserOut(){
         const auth = getAuth();
 
-        console.log(auth.currentUser);
-
         signOut(auth).then(() => {
-            console.log("sign out");
+            console.log("signed out");
             this.updateAdmin(false);
         }).catch((error) => { console.log(error); });
     
@@ -88,13 +79,29 @@ export class AuthenticationService {
         return this.admin.asObservable();
     }
 
-    getUserDbEntry(){
-        let userRef = ref(this.db, "/users/" + getAuth().currentUser?.uid);
+    getUserDbEntry(user){
+        let userRef = ref(this.db, "/users/" + user?.uid);
         return get(userRef);
     }
 
     getUser(){
         return getAuth().currentUser;
+    }
+
+    authListener(){
+        onAuthStateChanged(getAuth(), (user)=>{
+            if (user != null){
+                this.getUserDbEntry(user).then((ss)=>{
+                    // If user does not exist, create user
+                    if (ss.val() == null){
+                        this.createUser(user);
+                    } else {
+                        // if user does exist, set admin status
+                        this.updateAdmin(ss.val().admin);
+                    }
+                })
+            }
+        })
     }
 
 
